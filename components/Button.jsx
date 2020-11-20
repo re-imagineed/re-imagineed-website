@@ -3,7 +3,6 @@ import styled from 'styled-components'
 const StyledButton = styled.button`
     height: 42px;
     width: 120px;
-    margin-left: 40px;
     border-radius: 5px;
     border: none;
     background: ${props => props.theme.yellow};
@@ -21,7 +20,7 @@ const StyledButton = styled.button`
 
 function Button(props) {
     return (
-        <StyledButton>{props.text}</StyledButton>
+        <StyledButton onClick={props.onClick}>{props.text}</StyledButton>
     )
   }
   

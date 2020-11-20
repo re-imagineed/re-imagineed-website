@@ -1,46 +1,41 @@
 import styled from 'styled-components'
 import CopyBlock from './CopyBlock'
-import Logo from './Logo'
+import { LogoBlackL } from './Logo'
 import Subscription from './Subscription';
 
 
 const copy = [
     {
-        headline: 'Re-Imagine Education, Inc',
+        headline: 'How do we re-imagine the culture of education?',
         paragraphs: [
-            'Re-Imagine Education was created to train and support teachers and leaders in applying proven culturally relevant pedagogical practices in urban and urban-like schools to promote increased educational success for all youth.',
-            'We seek to transform education through social and community engagement and prepare educators with the educational interventions and resources that develop the cultural competencies for under-prepared students to achieve success.'
-        ]
-    },
-    {
-        headline: 'Join Us',
-        paragraphs: [
-            'We’re just getting started. Whether you’re interested in our services or just want to follow along, you can join us today by signing up for our newsletter.'
-        ]
-    }]
+            'Our purpose is to produce culturally responsive solutions, strategies and resources to energize educators, empower students of color, and eradicate educational inequity.'        ]
+    }
+]
 
 const StyledMain = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    margin-top: 60px;
+    margin-top: 90px;
     padding: 0 150px;
     padding-bottom: 340px;
 `
 
-const StyledLogoContainer = styled.div`
+const StyledLogoWrapper = styled.div`
     display: flex;
     justify-content: center;
     width: 40%;
+    max-width: 350px;
 `
 
-const StyledCopyContainer = styled.div`
+const StyledContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     width: 60%;
+    max-width: 600px;
     height: 100%;
     margin-left: 100px;
 `
@@ -48,10 +43,10 @@ const StyledCopyContainer = styled.div`
 function Main() {
     return (
         <StyledMain>
-            <StyledLogoContainer>
-                <Logo/>
-            </StyledLogoContainer>
-            <StyledCopyContainer>
+            <StyledLogoWrapper>
+                <LogoBlackL/>
+            </StyledLogoWrapper>
+            <StyledContentWrapper>
                 {/* Dynamically generates blocks of copy from copy object. */}
                 { copy.map((block, i) => <CopyBlock 
                                             key={block.headline + i}
@@ -60,7 +55,7 @@ function Main() {
                                          />
                 )}
                 <Subscription/>
-            </StyledCopyContainer>
+            </StyledContentWrapper>
         </StyledMain>
     )
 }
