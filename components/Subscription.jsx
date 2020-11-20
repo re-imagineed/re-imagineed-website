@@ -2,6 +2,8 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import Button from './Button'
+import Lottie from 'react-lottie'
+import animationData from '../public/lotties/check-success-anim.json'
 
 const StyledInputField = styled.input`
     height: 42px;
@@ -29,35 +31,46 @@ const StyledFormDescription = styled.p`
     font-size: 1.2em;
 `
 
+const StyledSuccessNotif = styled.div`
+    display: flex;
+    align-items: center;
+    height: 42px;
+    margin-bottom: 20px;
+
+    p {
+        color: ${props => props.theme.green};
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+`
+
+const LottieWrapper = styled.div`
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+`
+
 function Subscription() {
 
     const mailchimpURL = 'https://holbertonschool.us7.list-manage.com/subscribe/post?u=5080e466c5f746c8b294721bc&amp;id=c3ed33fa09'
     const [emailIputText, setEmailInputText] = useState('')
+    const [submissionStatus, setSubmissionStatus] = useState('');
+
+    const defaultLottieOptions = {
+        loop: false,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+          preserveAspectRatio: 'xMidYMid slice'
+        }
+      };
 
     const submit = (e, subscribe) => {
         e.preventDefault();
 
         // Subscribe form data to MailChimp list.
         subscribe({EMAIL: emailIputText})
-
-        // // Validate email submission.
-        // if (emailValidator.validate(emailIputText) == true) {
-
-        //     // POST email to Strapi instance.
-        //     axios.post('https://reimagine-strapi.herokuapp.com/email-addresses', {
-        //         email: emailIputText,
-        //     })
-        //     .then(function (response) {
-        //         console.log(response);
-        //     })
-        //     .catch(function (error) {
-        //         console.log(error);
-        //     });
-        // } else {
-        //     console.log('E-mail is invalid');
-        // }
     }
-
 
     return (
         <>
@@ -67,16 +80,27 @@ function Subscription() {
             <MailchimpSubscribe
                 url={mailchimpURL}
                 render={({ subscribe, status, message }) => (
-                    <StyledForm onSubmit={e => submit(e, subscribe)}>
-                        <StyledInputField
-                            type='email'
-                            placeholder='Email Address'
-                            onChange={e => setEmailInputText(e.target.value)}
-                        />
-                        <Button text='Subscribe'/>
-                        <p>{status}</p>
-                        <p>{message}</p>
-                    </StyledForm>
+                    status === 'success' || status === 'error' ?
+                        <StyledSuccessNotif>
+                            <LottieWrapper>
+                                <Lottie
+                                    options={defaultLottieOptions}
+                                    height={28}
+                                    width={28}
+                                />
+                            </LottieWrapper>
+                            {status === 'success' && <p>You're subscribed!</p>}
+                            {status === 'error' && <p>You're already subscribed.</p>}
+                        </StyledSuccessNotif>
+                    :
+                        <StyledForm onSubmit={e => submit(e, subscribe)}>
+                            <StyledInputField
+                                type='email'
+                                placeholder='Email Address'
+                                onChange={e => setEmailInputText(e.target.value)}
+                            />
+                            <Button text='Subscribe'/>
+                        </StyledForm>
                 )}
             />
         </>
