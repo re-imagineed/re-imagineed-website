@@ -1,8 +1,10 @@
 import styled, { css } from 'styled-components'
+import { device } from '../utils/media-breakpoints'
 
 
 const StlyedContact = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
 
     * {
@@ -10,8 +12,10 @@ const StlyedContact = styled.div`
         margin-top: 0px;
     }
 
-    p {
-        margin-bottom: 5px;
+    p { margin-bottom: 5px; }
+
+    @media ${device.laptop} {
+        flex-direction: row;
     }
 `
 
@@ -19,7 +23,10 @@ const StyledContactList = styled.span`
     display: flex;
     flex-direction: column;
     padding-top: 7px;
-    margin-left: 60px;
+
+    @media ${device.laptop} {
+        margin-left: 60px;
+    }
 `
 
 const ContactItem = styled.div`

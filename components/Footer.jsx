@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device } from '../utils/media-breakpoints'
 import Contact from './Contact'
 import Socials from './Socials'
 
@@ -14,12 +15,16 @@ const StyledFooter = styled.footer`
 
 const StyledContentWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    height: 240px;
     width: 90%;
     max-width: 1400px;
     padding: 30px 0;
+
+    @media ${device.laptop} {
+        flex-direction: row;
+    }
 `
 
 function Footer() {

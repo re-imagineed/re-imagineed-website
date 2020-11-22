@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device } from '../utils/media-breakpoints'
 import { useState } from 'react'
 import ComingSoonBanner from './ComingSoonBanner'
 import { LogoWhiteS } from './Logo'
@@ -17,8 +18,17 @@ const StyledHeader = styled.header`
     background-color: ${props => props.theme.navy};
 
     h1 {
+        font-size: 1.2em;
         color: ${props => props.theme.white};
         margin: 5px 0;
+
+        @media ${device.mobileM} {
+            font-size: 1.5em;
+        }
+
+        @media ${device.laptop} {
+            font-size: 2em;
+        }
     }
 `
 
@@ -36,8 +46,21 @@ const StyledContent = styled.div`
 `
 
 const StyledLogoWrapper = styled.div`
-    height: 48px;
+    height: 36px;
     margin-right: 20px;
+
+    div {
+        height: 36px;
+        width: 36px;
+    }
+
+    @media ${device.laptop} {
+        height: 48px;
+        div {
+            height: 48px;
+            width: 48px;
+        }
+    }
 `
 
 function Header() {

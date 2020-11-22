@@ -1,14 +1,14 @@
 import styled from 'styled-components'
+import { device } from '../utils/media-breakpoints'
 
 const StyledCopyBlock = styled.div`
     margin-bottom: 20px;
 
-    h1 {
-        font-size: 2.5em;
-    }
+    h1 { font-size: 1.5em; }
+    p { font-size: 1.2em; }
 
-    p {
-        font-size: 1.2em;
+    @media ${device.laptop} {
+        h1 { font-size: 2.5em; }
     }
 `
 

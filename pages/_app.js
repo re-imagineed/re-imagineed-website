@@ -35,7 +35,9 @@ const theme = {
   lightblue: '#409AE9',
   yellow: '#F1C012',
   white: '#FFFFFF',
-  green: '#41A87F'
+  green: '#41A87F',
+  orange: '#F8A645',
+  red: '#CF4749'
 }
 
 function App({ Component, pageProps }) {

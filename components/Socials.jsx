@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device } from '../utils/media-breakpoints'
 import Image from 'next/image'
 
 
@@ -16,7 +17,15 @@ const StyledSocials = styled.div`
 
 const StyledIconWrapper = styled.div`
     width: 28px;
-    margin-left: 20px;
+    margin: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+
+
+    @media ${device.laptop} {
+        margin: auto;
+        margin-left: 20px;
+    }
 `
 
 function Socials() {
