@@ -56,7 +56,7 @@ const StyledContentWrapper = styled.div`
     }
 `
 
-function Main() {
+function Main(props) {
     return (
         <StyledMain>
             <StyledLogoWrapper>
@@ -70,7 +70,7 @@ function Main() {
                                             paragraphs={block.paragraphs}
                                          />
                 )}
-                <Subscription/>
+                <Subscription mailchimpURL={props.mailchimpURL}/>
             </StyledContentWrapper>
         </StyledMain>
     )

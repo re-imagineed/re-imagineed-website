@@ -83,9 +83,9 @@ const LottieWrapper = styled.div`
     margin-right: 10px;
 `
 
-function Subscription() {
+function Subscription(props) {
 
-    const mailchimpURL = process.env.MAILCHIMP_URL
+    const mailchimpURL = props.mailchimpURL
     const [emailIputText, setEmailInputText] = useState('')
 
     // Subscribe form data to MailChimp list.
@@ -102,7 +102,6 @@ function Subscription() {
             <MailchimpSubscribe
                 url={mailchimpURL}
                 render={({ subscribe, status, message }) => (
-                    console.log(message),
 
                     // If subscription was valid or redundant.
                     status === 'success' ||

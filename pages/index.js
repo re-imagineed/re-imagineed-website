@@ -4,6 +4,10 @@ import Footer from '../components/Footer'
 import Main from '../components/Main'
 import Header from '../components/Header'
 
+export const config = {
+  env: ['MAILCHIMP_URL']
+}
+
 const StyledContainer = styled.div`
   position: relative;
   display: flex;
@@ -15,7 +19,7 @@ const StyledContainer = styled.div`
   background-color: ${props => props.theme.lightgrey};
 `
 
-export default function Home() {
+function Home(props) {
   return (
     <StyledContainer>
       <Head>
@@ -23,8 +27,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header/>
-      <Main/>
+      <Main mailchimpURL={props.main.mailchimpURL}/>
       <Footer/>
     </StyledContainer>
   )
 }
+
+export async function getStaticProps() {
+  return {
+    props: {
+      main: {
+        mailchimpURL: process.env.MAILCHIMP_URL
+      }
+    }
+  }
+}
+
+export default Home
