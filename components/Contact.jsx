@@ -59,14 +59,14 @@ function Contact(props) {
             <StyledContactList>
                 <ContactItem>
                     <p><ItemTitle name='true'>Isiah King</ItemTitle>
-                        &nbsp;&nbsp;<ItemTitle title='true'>founder</ItemTitle></p>
+                        &nbsp;&nbsp;<ItemTitle title='true'>Founder</ItemTitle></p>
                     <a href='mailto:iking@re-imagineed.org' title='Email Isiah'>
                         <p>iking@re-imagineed.org</p>
                     </a>
                 </ContactItem>
                 <ContactItem>
                     <p><ItemTitle name='true'>Keith Streicher</ItemTitle>
-                        &nbsp;&nbsp;<ItemTitle title='true'>founder</ItemTitle></p>
+                        &nbsp;&nbsp;<ItemTitle title='true'>Founder</ItemTitle></p>
                     <a href='mailto:keith@re-imagineed.org' title='Email Keith'>
                         <p>keith@re-imagineed.org</p>
                     </a>
