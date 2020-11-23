@@ -61,18 +61,18 @@ const StlyedErrorNotif = styled.div`
     bottom: -60px;
     display: flex;
     align-items: center;
+`
 
-    p {
-        font-weight: 500;
+const StyledErrorText = styled.p`
+    font-weight: 500;
 
-        ${props => props.error && css`
-            color: ${props => props.theme.orange};
-        `}
+    ${props => props.error === 'true' && css`
+        color: ${props => props.theme.orange};
+    `}
 
-        ${props => props.invalid && css`
-            color: ${props => props.theme.red};
-        `}
-    }
+    ${props => props.invalid === 'true' && css`
+        color: ${props => props.theme.red};
+    `}
 `
 
 const LottieWrapper = styled.div`
@@ -85,13 +85,12 @@ const LottieWrapper = styled.div`
 
 function Subscription() {
 
-    const mailchimpURL = 'https://holbertonschool.us7.list-manage.com/subscribe/post?u=5080e466c5f746c8b294721bc&amp;id=c3ed33fa09'
+    const mailchimpURL = process.env.MAILCHIMP_URL
     const [emailIputText, setEmailInputText] = useState('')
 
+    // Subscribe form data to MailChimp list.
     const submit = (e, subscribe) => {
         e.preventDefault();
-
-        // Subscribe form data to MailChimp list.
         subscribe({EMAIL: emailIputText})
     }
 
@@ -103,9 +102,7 @@ function Subscription() {
             <MailchimpSubscribe
                 url={mailchimpURL}
                 render={({ subscribe, status, message }) => (
-                    console.log(status),
                     console.log(message),
-
 
                     // If subscription was valid or redundant.
                     status === 'success' ||
@@ -123,7 +120,7 @@ function Subscription() {
                             }
                         </StyledSuccessNotif>
 
-                    : // If subscribe unattempted or unable to subscribe.
+                    : // If form unsubmitted or subscription failed.
 
                         <StyledForm onSubmit={e => submit(e, subscribe)}>
                             <StyledInputField
@@ -133,23 +130,26 @@ function Subscription() {
                             />
                             <Button text='Subscribe'/>
                             <StlyedErrorNotif>
-                        {parseMailchimpSubscribeMessage(message) === 'otherError' &&
-                            <>
-                                <LottieWrapper>
-                                    <LottieError/>
-                                </LottieWrapper>
-                                <p error='true'>An error occured. Please try again later.</p>
-                            </>
-                        }
-                        {parseMailchimpSubscribeMessage(message) === 'invalidEmail' &&
-                            <>
-                                <LottieWrapper>
-                                    <LottieFail/>
-                                </LottieWrapper>
-                                <p invalid='true'>Invalid email address.</p>
-                            </>
-                        }
-                        </StlyedErrorNotif>
+                                {/* If the mailchimp integration returns a non-specified error. */}
+                                {parseMailchimpSubscribeMessage(message) === 'otherError' &&
+                                    <>
+                                        <LottieWrapper>
+                                            <LottieError/>
+                                        </LottieWrapper>
+                                        <StyledErrorText error="true">An error occured. Please try again later.</StyledErrorText>
+                                    </>
+                                }
+
+                                {/* If the mailchimp integration returns an invalid email error. */}
+                                {parseMailchimpSubscribeMessage(message) === 'invalidEmail' &&
+                                    <>
+                                        <LottieWrapper>
+                                            <LottieFail/>
+                                        </LottieWrapper>
+                                        <StyledErrorText invalid="true">Invalid email address.</StyledErrorText>
+                                    </>
+                                }
+                            </StlyedErrorNotif>
                         </StyledForm>
                 )}
             />
@@ -157,39 +157,4 @@ function Subscription() {
     )
   }
   
-  export default Subscription
-
-//   <>
-//   <StyledFormDescription>
-//       Subscribe to our newsletter for updates.
-//   </StyledFormDescription>
-//   <MailchimpSubscribe
-//       url={mailchimpURL}
-//       render={({ subscribe, status, message }) => (
-//           console.log(message),
-//           status === 'success' || status === 'error' ?
-//               <StyledSuccessNotif>
-//                   <LottieWrapper>
-//                       <Lottie
-//                           options={defaultLottieOptions}
-//                           height={28}
-//                           width={28}
-//                       />
-//                   </LottieWrapper>
-//                   {status === 'success' && <p>You're subscribed!</p>}
-//                   {status === 'error' && <p>You're already subscribed.</p>}
-//               </StyledSuccessNotif>
-//           :
-//               <StyledForm onSubmit={e => submit(e, subscribe)}>
-//                   <StyledInputField
-//                       type='email'
-//                       placeholder='Email Address'
-//                       onChange={e => setEmailInputText(e.target.value)}
-//                   />
-//                   <Button text='Subscribe'/>
-//               </StyledForm>
-//       )}
-//   />
-// </>
-// )
-// }
+export default Subscription
