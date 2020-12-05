@@ -9,7 +9,8 @@ const copy = [
     {
         headline: 'How do we Re-Imagine the culture of education?',
         paragraphs: [
-            'Our purpose is to produce culturally responsive solutions, strategies and resources to energize educators, empower students of color, and eradicate educational inequity.'        ]
+            'Our purpose is to eliminate educational inequity, provide advocacy for equality through policy reform, and support retention of educators of color through our professional learning institute.'
+        ]
     }
 ]
 
