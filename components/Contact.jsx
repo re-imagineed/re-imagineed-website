@@ -71,7 +71,7 @@ function Contact(props) {
                         <p>keith@re-imagineed.org</p>
                     </a>
                 </ContactItem>
-                <ContactItem><p>(262) 993-0031</p></ContactItem>
+                <ContactItem><p>(414) 485-5817</p></ContactItem>
             </StyledContactList>
         </StlyedContact>
     )
