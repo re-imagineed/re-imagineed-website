@@ -7,9 +7,10 @@ import Subscription from './Subscription';
 
 const copy = [
     {
-        headline: 'How do we Re-Imagine the culture of education?',
+        // headline: 'How do we Re-Imagine the culture of education?',
         paragraphs: [
-            'Our purpose is to eliminate educational inequity, provide advocacy for equality through policy reform, and support retention of educators of color through our professional learning institute.'
+            'Our purpose is to eliminate educational inequity, provide advocacy for diversity, equity, and inclusion through policy reform, and support retention of educators of color through mentoring, collaboration, and professional learning opportunities.',
+            'The mission of Re-Imagine Education is to Attract, Retain, Elevate educators of color and create a culture of inclusivity through mentorship, accountability, and partnership.'
         ]
     }
 ]
