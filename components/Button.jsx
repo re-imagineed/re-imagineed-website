@@ -1,20 +1,24 @@
 import styled from 'styled-components'
 
 const StyledButton = styled.button`
-    height: 42px;
-    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 15px;
     border-radius: 5px;
     border: none;
-    background: ${props => props.theme.yellow};
+    background: ${props => props.theme.navy};
     cursor: pointer;
     outline: none;
 
     &:hover {
-        opacity: 80%;
+        opacity: 1;
+        background: ${props => props.theme.lightblue};
     }
 
     font-size: 1.2em;
-    font-weight: bold;
+    font-weight: 500;
     color: white;
 `
 

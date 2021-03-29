@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { device } from '../utils/media-breakpoints'
-import CopyBlock from './CopyBlock'
-import { LogoBlackL } from './Logo'
-import Subscription from './Subscription';
+import { device } from '../../utils/media-breakpoints'
+import CopyBlock from '../CopyBlock'
+import { LogoBlackL } from '../Logo'
+import Subscription from '../Subscription';
 
 
 const copy = [

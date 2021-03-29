@@ -24,7 +24,7 @@ const StyledInputField = styled.input`
 
     @media ${device.laptop} {
         width: 300px;
-        margin-bottom: auto;
+        margin-bottom: ${props => props.isFooter ? "20px" : "0px"};
     }
 `
 
@@ -32,10 +32,12 @@ const StyledForm = styled.form`
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: left;
     margin-bottom: 20px;
 
     @media ${device.laptop} {
-        flex-direction: row;
+        flex-direction: ${props => props.isFooter ? "column" : "row"};
+        align-items: ${props => props.isFooter ? "left" : "center"};
     }
 `
 
@@ -97,7 +99,7 @@ function Subscription(props) {
     return (
         <>
             <StyledFormDescription>
-                Subscribe to our newsletter for updates.
+                {props.formDescription}
             </StyledFormDescription>
             <MailchimpSubscribe
                 url={mailchimpURL}
@@ -121,11 +123,15 @@ function Subscription(props) {
 
                     : // If form unsubmitted or subscription failed.
 
-                        <StyledForm onSubmit={e => submit(e, subscribe)}>
+                        <StyledForm 
+                            onSubmit={e => submit(e, subscribe)}
+                            isFooter={props.isFooter}
+                        >
                             <StyledInputField
                                 type='email'
                                 placeholder='Email Address'
                                 onChange={e => setEmailInputText(e.target.value)}
+                                isFooter={props.isFooter}
                             />
                             <Button text='Subscribe'/>
                             <StlyedErrorNotif>
@@ -154,6 +160,6 @@ function Subscription(props) {
             />
         </>
     )
-  }
+}
   
 export default Subscription

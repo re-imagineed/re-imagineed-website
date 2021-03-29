@@ -7,26 +7,19 @@ const StlyedContact = styled.div`
     flex-direction: column;
     align-items: flex-start;
 
+    margin-bottom: 20px;
+
     * {
         color: white;
         margin-top: 0px;
     }
 
     p { margin-bottom: 5px; }
-
-    @media ${device.laptop} {
-        flex-direction: row;
-    }
 `
 
 const StyledContactList = styled.span`
     display: flex;
     flex-direction: column;
-    padding-top: 7px;
-
-    @media ${device.laptop} {
-        margin-left: 60px;
-    }
 `
 
 const ContactItem = styled.div`

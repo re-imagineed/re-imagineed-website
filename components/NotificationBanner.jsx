@@ -11,7 +11,7 @@ const StyledBanner = styled.div`
     width: 100%;
     height: 40px;
     min-height: 40px;
-    background-color: ${props => props.theme.lightblue};
+    background-color: ${props => props.theme.yellow};
 
     h3 {
         font-size: 1em;
@@ -40,7 +40,7 @@ const ImageWrapper = styled.div`
 }
 `
 
-function ComingSoonBanner(props) {
+function NotificationBanner(props) {
 
     const isTabletOrDesktop = useMediaQuery({
         query: `${device.tablet}`
@@ -69,4 +69,4 @@ function ComingSoonBanner(props) {
     )
 }
 
-export default ComingSoonBanner
+export default NotificationBanner
