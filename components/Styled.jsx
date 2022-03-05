@@ -49,7 +49,7 @@ export const StyledSectionAnchor = styled.div`
 
 export const StyledP1 = styled.p`
     font-size: 1em;
-    line-height: 1.4em;
+    line-height: 1.5em;
 
     @media ${device.tablet} {
         font-size: 1.2em;
@@ -58,6 +58,7 @@ export const StyledP1 = styled.p`
 
 export const StyledP2 = styled.p`
     font-size: 0.9em;
+    line-height: 1.5em;
 
     @media ${device.tablet} {
         font-size: 1em;
@@ -70,6 +71,12 @@ export const StyledP3 = styled.p`
     @media ${device.tablet} {
         font-size: 0.9em;
     }
+`
+
+export const StyledInlineLink = styled.a`
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: underline;
 `
 
 const lineExpand = keyframes`

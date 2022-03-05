@@ -24,8 +24,6 @@ const StyledHeaderWrapper = styled.div`
     top: 0;
     max-width: 100vw;
     height: 60px;
-    /* transition: transform 0.3s, height 0.3s;
-    transform: translateY(${props => props.banner ? '0px' : '-40px'}); */
 `
 
 const StyledHeader = styled.header`
@@ -288,10 +286,6 @@ function Header() {
     return (
         <StyledHeaderWrapper banner={bannerPresent}>
             <StyledHeader>
-                {/* <NotificationBanner 
-                    onBannerClose={closeBanner}
-                    bannerPresent={bannerPresent}
-                /> */}
                 <StyledContentWrapper>
                     <StyledLeftContent>
                         <Link href="/"><a>
@@ -322,10 +316,10 @@ function Header() {
                                             <StyledDropdownNavLinks>Overview</StyledDropdownNavLinks>
                                             </Link>
                                         <Link href="/about/#our_mission">
-                                            <StyledDropdownNavLinks>Our Mission</StyledDropdownNavLinks>
+                                            <StyledDropdownNavLinks>Mission</StyledDropdownNavLinks>
                                         </Link>
                                         <Link href="/about/#our_team">
-                                            <StyledDropdownNavLinks>Our Team</StyledDropdownNavLinks>
+                                            <StyledDropdownNavLinks>Leadership</StyledDropdownNavLinks>
                                         </Link>
                                     </StyledDropdown>
                                 </StyledDropdownWrapper>

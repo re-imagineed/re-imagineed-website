@@ -180,7 +180,7 @@ function Home(props) {
                   <h1>Our Mission</h1>
                   <StyledDividerLine/>
                   <StyledP1>
-                    To Attract, Retain, and Elevate educators of color and to create a culture of inclusivity through mentorship, accountability, and partnership.
+                  To attract, retain, and elevate aspiring and current educators of color. Creating a culture of inclusivity through mentorship, accountability, and partnership.
                   </StyledP1>
                 </div>
 
@@ -188,7 +188,7 @@ function Home(props) {
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <StyledSection index={1}>
+          {/* <StyledSection index={1}>
             <StyledSectionContentWrapper>
               <h1>Offerings & Support</h1>
               <StyledDividerLine/>
@@ -203,9 +203,9 @@ function Home(props) {
                 <Link href="/programs"><StyledButtonLink>Explore Our Progams & Services</StyledButtonLink></Link>
               </div>
             </StyledSectionContentWrapper>
-          </StyledSection>
+          </StyledSection> */}
 
-          <StyledSection index={2}>
+          <StyledSection index={1}>
             <StyledSectionContentWrapper>
               <h1>Who We Are</h1>
               <StyledDividerLine/>
@@ -248,7 +248,7 @@ function Home(props) {
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <StyledSection index={4}>
+          <StyledSection index={3}>
             <SubscribeBanner mailchimpURL={props.mailchimpURL}/>
           </StyledSection>
 
