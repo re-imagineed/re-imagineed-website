@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import _Head from '../components/Head'
-import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine} from '../components/Styled'
+import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine, StyledInlineLink} from '../components/Styled'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import TeamProfile from '../components/TeamProfile'
@@ -9,14 +9,21 @@ import { device } from '../utils/media-breakpoints'
 
 
 const overviewCopy = [
-  "Re-Imagine Education Inc. (RED), was launched in July 2020 as one of the newest movements in education. Re-Imagine Education is an education management and consulting firm centered on building diversity/inclusion within industries and facilitates professional learning training, coaching, and innovative solutions for academia in an initiative to support and retain educators of color in the field.",
-  "Our purpose is to eliminate educational inequity, provide advocacy for diversity, equity, and inclusion through policy reform, and support the recruitment and retention of educators of color to create a culture of inclusivity through mentorship, accountability, and partnership.  The Re-Imagine team seeks to promote culturally responsive teaching and leadership practices to transform schools and shift the culture of education.",
-  "RED develops culturally responsive tools, strategies and resources that will equip school leaders and teachers in their role. Lastly, RED actively collaborates with schools  and community organizations to host educator focused programs and events.",
-  "RED was created to aid in supporting and retaining teachers of color, and also build awareness in applying proven culturally relevant and equitable pedagogical practices in urban and urban-like schools to promote increased educational success for all youth. We seek to transform education through social and community engagement and prepare educators of color with the educational interventions and resources that develop the cultural competencies for under-prepared students to achieve success.",
-  "In this moment and time of great unrest and uncertainty within our communities and schools, it is imperative to properly influence the next generation and provide  training around diversity, culture, and inclusion for educators and leaders alike.  Re-Imagine Education was founded by Isiah King, an education consultant with 16 years of experience in schools throughout Wisconsin, and Keith Streicher, an education consultant and department director at the University of Wisconsin-Milwaukee. Both men possess more than a decade of education experience at the K-12 and university level. "
+  "Re-Imagine Education’s mission is to attract, retain,and elevate BIPOC aspiring and current educators. A part of our mission is to create a culture of inclusivity through mentorship, accountability, and partnership.",
+  "Re-Imagine Education was created by Isiah King and Keith Streicher, who have more than a decade of education experience at the K-12 and University level. Our purpose is to:",
+  "Offer embed equity and cultural responsiveness in teacher preparation and professional learning",
+  "Foster culture of equity throughout school-level practice and policy",
+  "Support for teachers during critical early years",
+  "We seek to transform education through social and community engagement, and to prepare educators with the educational interventions and resources that develop the cultural competencies for underprepared students to achieve success.",
+  "Boosting overall academic performance",
+  "Improving reading and math test scores",
+  "Improving graduation rates",
+  "Increasing aspirations to attend college",
+  "Reducing the number of absences",
+  "In this moment and time of great unrest and uncertainty within our communities and schools, it is imperative to properly influence the next generation. Re-Imagine exists to support in closing these disparities in the K-12 education sector."
 ]
 
-const missionStatement = "The mission of Re-Imagine Education is to Attract, Retain, and Elevate educators of color and to create a culture of inclusivity through mentorship, accountability, and partnership."
+const missionStatement = "To attract, retain, and elevate aspiring and current educators of color. Creating a culture of inclusivity through mentorship, accountability, and partnership."
 
 const coreValues = [
   {title: "Results", description: "Results are the effects or outcome of something. We assume personal responsibility for the ambitious results that support our mission and serve educators. We use results as self-reflective tools for our improvement, and we ground our performance and decision-making in data. Data helps us to both frame our challenges and eliminate barriers that get in the way of operating simply, quickly and effectively. Excellence is always the goal, and good is the enemy of great."},
@@ -28,26 +35,25 @@ const coreValues = [
 const goals = [
   "Recruiting new ethnic minorities into education.",
   "Accelerating the careers of ethinic minorities already working in education.",
-  "Mobilizing and supporting underserved parents to advocate for changes that benefit their children.",
   "Building the capacity of education organizations to become more diverse, equitable and inclusive."
 ]
 
 const teamMembers = [
   {
     name: "Isiah King",
-    title: "Co-Founder & Executive Director",
-    imageURL: "/images/isiah-portrait.jpeg",
-    imageDimensions: { width: 646, height: 800},
+    title: "Co-Founder & Co-Chief Executive Officer",
+    imageURL: "/images/isiah_5x4_cropped.png",
+    imageDimensions: { width: 1121, height: 897},
     copy: [
-      "Isiah King is one of the Founders of Re-Imagine Education, Inc. He is a native of Milwaukee, Wisconsin with over 16 years of experience working in education. As a former founding principal of an elementary school in Beloit, WI, he currently serves as the Network Culture Leader for LUMIN Schools in his hometown of Milwaukee. He is a member of the accreditation engagement review team with Cognia which offers accreditation to help schools drive continuous improvement.  In his career as an educator, Isiah has served as a teacher, dean of students, and principal at schools in the city of Milwaukee & Beloit.",
-      "He has worked in public, charter, and private school sectors.  In addition to his current role, he is an education consultant with Education PowerED in Dallas, TX. He has years of experience in educational leadership, policy development, community engagement for social justice and equity."
+      "Isiah King has served in public, charter, and private schools for over 16 years. Isiah has consulted and facilitated workshops in schools, districts, and networks to improve in a variety of areas including culturally responsive practices, educational equity, restorative practice, and leadership development.",
+      "Isiah brings best practices he’s learned regarding how to serve historically underserved students at an exceptionally high level. Isiah is charged with creating vibrant school cultures that support bold student achievement outcomes. He leads through a strong commitment to diversity and inclusiveness, assisting schools to build critical mindsets and tangible skill sets so school leaders can implement that vision with a high level of success."
     ]
   },
   {
     name: "Keith Streicher",
-    imageURL: "/images/keith-portrait.jpeg",
-    imageDimensions: { width: 461, height: 571},
-    title: "Co-Founder & Chief Executive Officer",
+    imageURL: "/images/keith_5x4.png",
+    imageDimensions: { width: 453, height: 362},
+    title: "Co-Founder & Co-Chief Executive Officer",
     copy: [
       "Keith Streicher is one of the Co-Founders of Re-Imagine Education, Inc. He is a veteran of the U.S. Army and served his country in the mountains of the Republic of South Korea and in the valleys of Iraq Anbar province. Following his service, Mr. Streicher completed his bachelor’s degree at the Catholic University of America and an Executive Entrepreneurship Certificate Program from the Stanford Graduate School of Business. He has served Congresswoman Eleanor Holmes-Norton as an intern, Congressman Beto O'Rourke as a Military Legislative Assistant, and the Obama administration as a White House intern and United States Department of Veterans Affairs Secretarial Appointee advising the Secretary, the second largest federal agency, and the United States Congress on veteran’s issues as a veteran’s expert. ",
       "Recently, Keith Streicher has served as the Interim Business Operations Manager for Rocketship Transformation Prep, Program Director for the Wisconsin Veterans Chamber of Commerce, and former Campaign Manager for Councilwoman Chantia Lewis-Chantia for Progress. Keith sits on the Rite Hite YMCA advisory board as Chair of the Annual Giving Campaign and Social Responsibility committee, Board of Trustees for Milwaukee’s Finest Scholars, and Board of Directors of Outpost Natural Foods, Milwaukee County War Museum VEI Committee, and the City of Milwaukee’s African American Male Initiative. He currently serves as Director of the Veterans Upward Bound Trio & Pre-College Department at the University of Wisconsin-Milwaukee."
@@ -92,7 +98,6 @@ const StyledGoal = styled.li`
     padding-inline-start:10px;
   }
 `
-
 const StyledGoalNumberWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -120,7 +125,23 @@ function About(props) {
               <StyledSectionContentWrapper>
                 <h1>Overview</h1>
                 <StyledDividerLine/>
-                {overviewCopy.map( (p, i) => <StyledP2 key={i}>{p}</StyledP2> )}
+                <StyledP2>{overviewCopy[0]}</StyledP2>
+                <StyledP2>{overviewCopy[1]}</StyledP2>
+                <ul>
+                  <li>{overviewCopy[2]}</li>
+                  <li>{overviewCopy[3]}</li>
+                  <li>{overviewCopy[4]}</li>
+                </ul>
+                <StyledP2>{overviewCopy[5]}</StyledP2>
+                <StyledP2>Launched in July 2020, Re-Imagine Education is a training development program that is focused on increasing and diversifying the teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP2>
+                <ul>
+                  <li>{overviewCopy[6]}</li>
+                  <li>{overviewCopy[7]}</li>
+                  <li>{overviewCopy[8]}</li>
+                  <li>{overviewCopy[9]}</li>
+                  <li>{overviewCopy[10]}</li>
+                </ul>
+                <StyledP2>{overviewCopy[11]}</StyledP2>
               </StyledSectionContentWrapper>
             </StyledSection>
 
@@ -163,7 +184,7 @@ function About(props) {
             <StyledSectionAnchor id={"our_team"}/>
             <StyledSection index={2}>
               <StyledSectionContentWrapper>
-                <h1>Our Team</h1>
+                <h1>Senior Leadership Team</h1>
                 <StyledDividerLine/>
                 {teamMembers.map( (member, i) =>
                 <div key={i}>

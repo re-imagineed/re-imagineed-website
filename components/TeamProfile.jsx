@@ -28,7 +28,7 @@ const StyledProfileHead = styled.div`
 const StyledImageWrapper = styled.div`
     display: flex;
     border: 10px solid ${props => props.theme.yellow};
-    width: 200px;
+    max-width: 300px;
     min-width: 100px;
     height: auto;
 `
