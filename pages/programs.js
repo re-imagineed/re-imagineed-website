@@ -78,37 +78,14 @@ function Programs(props) {
         <_Head/>
         <Header/>
         <StyledMain>
-          <StyledSection index={0}>
-            <StyledSectionContentWrapper>
-              
-              <h1>Programs & Services</h1>
-              <StyledDividerLine/>
-              <StyledP1>Re-Imagine Education develops culturally responsive tools, strategies and resources that will equip school leaders and teachers in their role. Lastly, RED actively collaborates with schools  and community organizations to host educator focused programs and events.</StyledP1>
-              
-              {/* <StyledProgramContainer>
-                {programs.map((program, i) =>
-                  <StyledProgramModule key={i}>
-                    <StyledProgramHeader>
-                      <h2>{program.title}</h2>
-                    </StyledProgramHeader>
-                    <StyledProgramBody>
-                      <StyledP2>{program.description}</StyledP2>
-                      {program.other ? program.other.map((item, i) =>
-                        <StyledP2 key={i}>{item.title + ': ' + item.content}</StyledP2>
-                      )
-                      : null}
-                    </StyledProgramBody>
-                  </StyledProgramModule>
-                )}
-              </StyledProgramContainer> */}
-
-            </StyledSectionContentWrapper>
-          </StyledSection>
-
           <StyledSection index={1}>
             <StyledSectionContentWrapper>
-              <h1>Attract</h1>
+
+              <h1>Programs & Services</h1>
               <StyledDividerLine/>
+              <div style={{width: "100%", height: "60px"}}></div>
+
+              <h1>Attract</h1>
               <StyledP2>Recruits students in high school, college and career changers who are interested in pursuing a career in K-12 education.</StyledP2>
               <ul>
                 <li>Talent Recruitment</li>
@@ -119,10 +96,9 @@ function Programs(props) {
                 <li>Howard-Streicher & King Scholarship Program</li>
                 <li>Access to Teacher Developmental Resources</li>
               </ul>
-              <div style={{width: "100%", height: "60px"}}></div>
+              <div style={{width: "100%", height: "40px"}}></div>
 
               <h1>Retain</h1>
-              <StyledDividerLine/>
               <StyledP2>Provides professional learning support through training, workshops, coaching, and mentorship to improve educator practice.</StyledP2>
               <ul>
                 <li>Culture & Instructional Coaching</li>
@@ -130,10 +106,9 @@ function Programs(props) {
                 <li>Educator Development Workshops, Retreats, & Conferences</li>
                 <li>Access to Teacher Toolbox Resources</li>
               </ul>
-              <div style={{width: "100%", height: "60px"}}></div>
+              <div style={{width: "100%", height: "40px"}}></div>
 
               <h1>Elevate</h1>
-              <StyledDividerLine/>
               <StyledP2>Building the capacity of schools and education organizations to become more diverse, equitable and inclusive in their school-wide culture.</StyledP2>
               <ul>
                 <li>Network Collaborative</li>
@@ -142,16 +117,15 @@ function Programs(props) {
                 <li>School Leadership Development</li>
                 <li>Trauma-Informed & Anti-Racism Training</li>
               </ul>
-              <div style={{width: "100%", height: "60px"}}></div>
+              <div style={{width: "100%", height: "40px"}}></div>
             </StyledSectionContentWrapper>
           </StyledSection>
 
           <StyledSection index={2}>
             <StyledSectionContentWrapper>
-              
-              <h2>Connect with Re-Imagine Education to discuss your organization's needs!</h2>
+              <h1>Donations</h1>
               <StyledDividerLine/>
-
+              <StyledP2>Connect with Re-Imagine Education to discuss your organization's needs!</StyledP2>
               <StyledOL>
                 <li>Schedule a 30 minute <StyledInlineLink target="_blank" href="https://calendly.com/isiah-king-1/30min">Consultation Meeting</StyledInlineLink> with our team</li>
                 <li>Complete our <StyledInlineLink target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdFUadJx1nCJfO1siouNrgk23g-prQ3QNL02py7z5aFZwK2Q/viewform">Services Request Form</StyledInlineLink></li>
