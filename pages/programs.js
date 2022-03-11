@@ -123,7 +123,7 @@ function Programs(props) {
 
           <StyledSection index={2}>
             <StyledSectionContentWrapper>
-              <h1>Donations</h1>
+              <h1>Connect with RE | Donate to Support the Mission!</h1>
               <StyledDividerLine/>
               <StyledP2>Connect with Re-Imagine Education to discuss your organization's needs!</StyledP2>
               <StyledOL>
