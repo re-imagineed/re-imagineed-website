@@ -132,7 +132,7 @@ function Programs(props) {
               </StyledOL>              
               <StyledP2>Help us to increase and diversify the teacher pipeline in education. Support the cause with a donation to Re-Imagine Education from your phone or computer:</StyledP2>
               <StyledUL>
-                <li>Text “REIMAGINEED” to 53-555 or visit <StyledInlineLink target="_blank" href="https://givebutter.com/re-imagine-ed">givebutter.com/re-imagine-ed</StyledInlineLink></li>
+                <li>Visit <StyledInlineLink target="_blank" href="https://re-imagineed.networkforgood.com/projects/159532-re-imagine-education">re-imagineed.networkforgood.com/projects/159532-re-imagine-education</StyledInlineLink></li>
                 <li>Tax Exempt/EIN #: 85-2324820</li>
               </StyledUL>
             </StyledSectionContentWrapper>
