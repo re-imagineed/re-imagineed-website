@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import _Head from '../components/Head'
-import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine, StyledInlineLink} from '../components/Styled'
+import {StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine, StyledInlineLink} from '../components/Styled'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import TeamProfile from '../components/TeamProfile'
@@ -113,96 +113,123 @@ const StyledGoalNumberWrapper = styled.div`
     margin: 20px 20px 20px 5px;
   }
 `
+export function Overview(props) {
+  return (
+    <StyledContainer>
+      <StyledP1>{overviewCopy[0]}</StyledP1>
+      <StyledP1>{overviewCopy[1]}</StyledP1>
+      <ul>
+        <li>{overviewCopy[2]}</li>
+        <li>{overviewCopy[3]}</li>
+        <li>{overviewCopy[4]}</li>
+      </ul>
+      <StyledP1>{overviewCopy[5]}</StyledP1>
+      <StyledP1>Launched in July 2020, Re-Imagine Education is a training development program that is focused on increasing and diversifying the teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP1>
+      <ul>
+        <li>{overviewCopy[6]}</li>
+        <li>{overviewCopy[7]}</li>
+        <li>{overviewCopy[8]}</li>
+        <li>{overviewCopy[9]}</li>
+        <li>{overviewCopy[10]}</li>
+      </ul>
+      <StyledP2>{overviewCopy[11]}</StyledP2>
 
+    </StyledContainer>
+  )
+}
+
+export function Mission(props) {
+  return (
+    <StyledContainer>
+      <StyledP1>{missionStatement}</StyledP1>
+      <br />
+      <h1>Core Values</h1>
+      <StyledDividerLine />
+      <StyledCoreValuesList>
+        {coreValues.map((value, i) =>
+          <StyledCoreValue key={i}>
+            <h2>{value.title}</h2>
+            <StyledP3>{value.description}</StyledP3>
+          </StyledCoreValue>
+        )}
+      </StyledCoreValuesList>
+      <br />
+      <h1>Goals</h1>
+      <StyledDividerLine />
+      <StyledGoalList>
+        {goals.map((goal, i) =>
+          <StyledGoal key={i}>
+            <StyledGoalNumberWrapper><Image
+              src={'/icons/number' + (i + 1) + '.svg'}
+              alt={(i + 1)}
+              width={48}
+              height={48}
+            /></StyledGoalNumberWrapper>
+            <StyledP1>{goal}</StyledP1>
+          </StyledGoal>
+        )}
+      </StyledGoalList>
+    </StyledContainer>
+  )
+}
+
+export function Team(props) {
+  return (
+     
+      // <StyledSection index={2}>
+      //    <StyledSectionAnchor id={"our_team"} />
+      //   <StyledSectionContentWrapper>
+      //     <h1>Senior Leadership Team</h1>
+      //     <StyledDividerLine />
+          teamMembers.map((member, i) =>
+            <div key={i}>
+              <TeamProfile
+                name={member.name}
+                title={member.title}
+                imageURL={member.imageURL}
+                imageDimensions={member.imageDimensions}
+                copy={member.copy}
+                justification={i % 2 == 0 ? 0 : 1}
+              ></TeamProfile>
+              {i != teamMembers.length - 1 ? <StyledDividerLine /> : null}
+            </div>
+          )
+      //   </StyledSectionContentWrapper>
+      // </StyledSection>
+  )
+}
 function About(props) {
     return (
       <StyledContainer>
-        <_Head/>
-        <Header/>
+        <_Head />
+        <Header />
         <StyledMain>
+          <StyledSection index={0}>
+            <StyledSectionAnchor id={"overview"} />
+            <StyledSectionContentWrapper>
+              <h1>Overview</h1>
+              <Overview />
+            </StyledSectionContentWrapper>
+          </StyledSection>
 
-            <StyledSectionAnchor id={"overview"}/>
-            <StyledSection index={0}>
-              <StyledSectionContentWrapper>
-                <h1>Overview</h1>
-                <StyledDividerLine/>
-                <StyledP2>{overviewCopy[0]}</StyledP2>
-                <StyledP2>{overviewCopy[1]}</StyledP2>
-                <ul>
-                  <li>{overviewCopy[2]}</li>
-                  <li>{overviewCopy[3]}</li>
-                  <li>{overviewCopy[4]}</li>
-                </ul>
-                <StyledP2>{overviewCopy[5]}</StyledP2>
-                <StyledP2>Launched in July 2020, Re-Imagine Education is a training development program that is focused on increasing and diversifying the teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP2>
-                <ul>
-                  <li>{overviewCopy[6]}</li>
-                  <li>{overviewCopy[7]}</li>
-                  <li>{overviewCopy[8]}</li>
-                  <li>{overviewCopy[9]}</li>
-                  <li>{overviewCopy[10]}</li>
-                </ul>
-                <StyledP2>{overviewCopy[11]}</StyledP2>
-              </StyledSectionContentWrapper>
-            </StyledSection>
+          <StyledSection index={1}>
+            <StyledSectionAnchor id={"our_mission"} />
+            <StyledSectionContentWrapper>
+              <h1>Our Mission</h1>
+              <StyledDividerLine />
+              <Mission />
+            </StyledSectionContentWrapper>
+          </StyledSection>
 
-            <StyledSectionAnchor id={"our_mission"}/>
-            <StyledSection index={1}>
-              <StyledSectionContentWrapper>
-                <h1>Our Mission</h1>
-                <StyledDividerLine/>
-                <StyledP1>{missionStatement}</StyledP1>
-                <br/>
-                <h1>Core Values</h1>
-                <StyledDividerLine/>
-                <StyledCoreValuesList>
-                  {coreValues.map( (value, i) => 
-                    <StyledCoreValue key={i}>
-                      <h2>{value.title}</h2>
-                      <StyledP3>{value.description}</StyledP3>
-                    </StyledCoreValue>
-                  )}
-                </StyledCoreValuesList>
-                <br/>
-                <h1>Goals</h1>
-                <StyledDividerLine/>
-                <StyledGoalList>
-                  {goals.map( (goal, i) =>
-                    <StyledGoal key={i}>
-                      <StyledGoalNumberWrapper><Image
-                        src={'/icons/number' + (i + 1) + '.svg'}
-                        alt={(i + 1)}
-                        width={48}
-                        height={48}
-                      /></StyledGoalNumberWrapper>
-                      <StyledP1>{goal}</StyledP1>
-                    </StyledGoal>
-                  )}
-                </StyledGoalList>
-              </StyledSectionContentWrapper>
-            </StyledSection>
 
-            <StyledSectionAnchor id={"our_team"}/>
-            <StyledSection index={2}>
-              <StyledSectionContentWrapper>
-                <h1>Senior Leadership Team</h1>
-                <StyledDividerLine/>
-                {teamMembers.map( (member, i) =>
-                <div key={i}>
-                  <TeamProfile
-                    name={member.name}
-                    title={member.title}
-                    imageURL={member.imageURL}
-                    imageDimensions={member.imageDimensions}
-                    copy={member.copy}
-                    justification={i % 2 == 0 ? 0 : 1}
-                  ></TeamProfile>
-                  {i != teamMembers.length - 1 ? <StyledDividerLine/> : null}
-                </div>
-                )}
-              </StyledSectionContentWrapper>
-            </StyledSection>
-
+          <StyledSection index={2}>
+            <StyledSectionAnchor id={"our_team"} />
+            <StyledSectionContentWrapper>
+              <h1>Senior Leadership Team</h1>
+              <StyledDividerLine />
+              <Team />
+            </StyledSectionContentWrapper>
+          </StyledSection>
         </StyledMain>
         <Footer
           isHomePage={false}
