@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { device } from '../utils/media-breakpoints'
 
 
-const StlyedContact = styled.div`
+const StyledContact = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -47,7 +47,7 @@ const ItemTitle = styled.span`
 
 function Contact(props) {
     return (
-        <StlyedContact>
+        <StyledContact>
             <h2>Contact</h2>
             <StyledContactList>
                 <ContactItem>
@@ -66,7 +66,7 @@ function Contact(props) {
                 </ContactItem>
                 <ContactItem><p>(414) 485-5817</p></ContactItem>
             </StyledContactList>
-        </StlyedContact>
+        </StyledContact>
     )
 }
 
