@@ -21,6 +21,7 @@ const StyledContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 90%;
     max-width: 1400px;
@@ -54,7 +55,7 @@ function Footer(props) {
     return (
         <StyledFooter>
            <StyledContentWrapper>
-                <Contact/>
+    
                 {props.isHomePage ? null :
                     <StyledSubscriptionWrapper>
                         <h2>Subscribe</h2>
