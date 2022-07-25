@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive'
 import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine} from '../components/Styled'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import Contact from '../components/Contact'
 import { OfferingsTable } from '../components/Tables'
 import SubscribeBanner from '../components/SubscribeBanner'
 import { Overview, Mission, Team } from './about'
@@ -299,16 +300,20 @@ function Home(props) {
               <Team />
             </StyledSectionContentWrapper>
           </StyledSection>
-
-
           <StyledSection index={5}>
             <StyledSectionContentWrapper>
               <Donate />
             </StyledSectionContentWrapper>
           </StyledSection>
-
-
           <StyledSection index={6}>
+            <StyledSectionContentWrapper>
+              <Contact color='black'>
+
+                </Contact>
+            </StyledSectionContentWrapper>
+          </StyledSection>
+
+          <StyledSection index={7}>
             <SubscribeBanner mailchimpURL={props.mailchimpURL} />
           </StyledSection>
 

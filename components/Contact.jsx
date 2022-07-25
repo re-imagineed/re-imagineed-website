@@ -10,7 +10,7 @@ const StyledContact = styled.div`
     margin-bottom: 20px;
 
     * {
-        color: white;
+        color: black;
         margin-top: 0px;
     }
 
