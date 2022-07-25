@@ -116,6 +116,7 @@ const StyledGoalNumberWrapper = styled.div`
 export function Overview(props) {
   return (
     <StyledContainer>
+      <h1>Overview</h1>
       <StyledP1>{overviewCopy[0]}</StyledP1>
       <StyledP1>{overviewCopy[1]}</StyledP1>
       <ul>
@@ -132,8 +133,7 @@ export function Overview(props) {
         <li>{overviewCopy[9]}</li>
         <li>{overviewCopy[10]}</li>
       </ul>
-      <StyledP2>{overviewCopy[11]}</StyledP2>
-
+      <StyledP1>{overviewCopy[11]}</StyledP1>
     </StyledContainer>
   )
 }
@@ -141,6 +141,7 @@ export function Overview(props) {
 export function Mission(props) {
   return (
     <StyledContainer>
+       <h1>Our Mission</h1>
       <StyledP1>{missionStatement}</StyledP1>
       <br />
       <h1>Core Values</h1>
@@ -173,29 +174,29 @@ export function Mission(props) {
   )
 }
 
+function TeamMembers(props) {
+  return (teamMembers.map((member, i) => 
+  <div key={i}>
+    <TeamProfile
+      name={member.name}
+      title={member.title}
+      imageURL={member.imageURL}
+      imageDimensions={member.imageDimensions}
+      copy={member.copy}
+      justification={i % 2 == 0 ? 0 : 1}
+    ></TeamProfile>
+    {i != teamMembers.length - 1 ? <StyledDividerLine /> : null}
+  </div>
+  )
+)
+
+}
 export function Team(props) {
   return (
-     
-      // <StyledSection index={2}>
-      //    <StyledSectionAnchor id={"our_team"} />
-      //   <StyledSectionContentWrapper>
-      //     <h1>Senior Leadership Team</h1>
-      //     <StyledDividerLine />
-          teamMembers.map((member, i) =>
-            <div key={i}>
-              <TeamProfile
-                name={member.name}
-                title={member.title}
-                imageURL={member.imageURL}
-                imageDimensions={member.imageDimensions}
-                copy={member.copy}
-                justification={i % 2 == 0 ? 0 : 1}
-              ></TeamProfile>
-              {i != teamMembers.length - 1 ? <StyledDividerLine /> : null}
-            </div>
-          )
-      //   </StyledSectionContentWrapper>
-      // </StyledSection>
+    <StyledContainer>
+      <h1>Senior Leadership Team</h1>
+      <TeamMembers></TeamMembers>
+    </StyledContainer>
   )
 }
 function About(props) {
@@ -203,11 +204,11 @@ function About(props) {
       <StyledContainer>
         <_Head />
         <Header />
+
         <StyledMain>
           <StyledSection index={0}>
             <StyledSectionAnchor id={"overview"} />
             <StyledSectionContentWrapper>
-              <h1>Overview</h1>
               <Overview />
             </StyledSectionContentWrapper>
           </StyledSection>
@@ -215,17 +216,15 @@ function About(props) {
           <StyledSection index={1}>
             <StyledSectionAnchor id={"our_mission"} />
             <StyledSectionContentWrapper>
-              <h1>Our Mission</h1>
               <StyledDividerLine />
               <Mission />
             </StyledSectionContentWrapper>
           </StyledSection>
 
-
           <StyledSection index={2}>
             <StyledSectionAnchor id={"our_team"} />
             <StyledSectionContentWrapper>
-              <h1>Senior Leadership Team</h1>
+
               <StyledDividerLine />
               <Team />
             </StyledSectionContentWrapper>

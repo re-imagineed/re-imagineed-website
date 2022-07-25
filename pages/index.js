@@ -147,6 +147,21 @@ const StyledImageWrapper = styled.div`
   }
 `
 
+const StyledImageWrapper2 = styled.div`
+  display: flex;
+  border: 10px solid ${props => props.theme.yellow};
+  max-width: 800px;
+  min-width: 200px;
+  height: auto;
+  margin: 20px 0;
+
+  @media ${device.laptop} {
+    max-width: 1024px;
+    min-width: 200px;
+    margin: ${props => props.justified == "right" ? "0px 0px 0px 40px" : "0px 40px 0px 0px"};
+  }
+`
+
 function Home(props) {
     const isDesktop = useMediaQuery({
       query: `${device.laptop}`
@@ -205,33 +220,36 @@ function Home(props) {
               </div>
             </StyledSectionContentWrapper>
           </StyledSection> */}
-
+     
           <StyledSection index={1}>
             <StyledSectionContentWrapper>
               <Overview />
-         
-            </StyledSectionContentWrapper>
-            </StyledSection>
-      
-            <StyledSection index={2}>
-            <StyledSectionContentWrapper>
-              <Mission />
-            </StyledSectionContentWrapper>
-            </StyledSection>
-
-            <StyledSection index={3}>
-            <StyledSectionContentWrapper>
-              <Team />
-
-
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <StyledSection index={4}>
+          <StyledSection index={2}>
+            <StyledSectionContentWrapper>
+              <Mission />
+            </StyledSectionContentWrapper>
+          </StyledSection>
+
+          <StyledSection index={3}>
             <StyledSectionContentWrapper>
 
               <h1>Who We Are</h1>
               <StyledDividerLine />
+              <div style={{ width: "100%", height: "60px" }}></div>
+              <StyledContentContainer>
+              <StyledImageWrapper2 justified={"left"}>
+                  <Image
+                    src={"/images/team1.jpeg"}
+                    alt={"Team"}
+                    width={1200}
+                    height={1200}
+                  />
+                </StyledImageWrapper2>
+                </StyledContentContainer>
+                <div style={{ width: "100%", height: "60px" }}></div>
               <StyledContentContainer>
                 <StyledP1>
                   In this moment and time of great unrest and uncertainty within our communities and schools, it is imperative to properly influence the next generation and provide  training around diversity, culture, and inclusion for educators and leaders alike.
@@ -260,19 +278,31 @@ function Home(props) {
                     height={960}
                   />
                 </StyledImageWrapper>
+
+      
                 {isDesktop ?
                   <StyledP1>
                     Re-Imagine Education was founded by Isiah King, an education consultant with 16 years of experience in schools throughout Wisconsin, and Keith Streicher, an education consultant and department director at the University of Wisconsin-Milwaukee. Both men possess more than a decade of education experience at the K-12 and university level.
                   </StyledP1>
                   : null
                 }
+                  
+    
               </StyledContentContainer>
+            
               <div style={{ width: "100%", height: "60px" }}></div>
             </StyledSectionContentWrapper>
-
           </StyledSection>
 
-          <StyledSection index={3}>
+          <StyledSection index={4}>
+            <StyledSectionContentWrapper>
+              <Team />
+            </StyledSectionContentWrapper>
+          </StyledSection>
+
+
+
+          <StyledSection index={6}>
             <SubscribeBanner mailchimpURL={props.mailchimpURL} />
           </StyledSection>
 
