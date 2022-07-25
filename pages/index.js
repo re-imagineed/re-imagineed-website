@@ -11,7 +11,7 @@ import Header from '../components/Header'
 import { OfferingsTable } from '../components/Tables'
 import SubscribeBanner from '../components/SubscribeBanner'
 import { Overview, Mission, Team } from './about'
-
+import Donate from './donate'
 
 const StyledFeatureSection = styled.section`
   display: flex;
@@ -300,6 +300,12 @@ function Home(props) {
             </StyledSectionContentWrapper>
           </StyledSection>
 
+
+          <StyledSection index={5}>
+            <StyledSectionContentWrapper>
+              <Donate />
+            </StyledSectionContentWrapper>
+          </StyledSection>
 
 
           <StyledSection index={6}>
