@@ -221,9 +221,10 @@ function Home(props) {
               </div>
             </StyledSectionContentWrapper>
           </StyledSection> */}
-     
+          <StyledSectionAnchor id={"about_us"} />
           <StyledSection index={1}>
             <StyledSectionContentWrapper>
+              <h1> ============ About Us =========== </h1>
               <Overview />
             </StyledSectionContentWrapper>
           </StyledSection>
@@ -234,6 +235,8 @@ function Home(props) {
             </StyledSectionContentWrapper>
           </StyledSection>
 
+          <StyledSectionAnchor id={"team"} />
+          <h1> ========== TEAM ========== </h1>
           <StyledSection index={3}>
             <StyledSectionContentWrapper>
 
@@ -287,8 +290,6 @@ function Home(props) {
                   </StyledP1>
                   : null
                 }
-                  
-    
               </StyledContentContainer>
             
               <div style={{ width: "100%", height: "60px" }}></div>
@@ -300,16 +301,20 @@ function Home(props) {
               <Team />
             </StyledSectionContentWrapper>
           </StyledSection>
+
+          <h1> ========== DONATE ========== </h1>
+          <StyledSectionAnchor id={"donate"} />
           <StyledSection index={5}>
             <StyledSectionContentWrapper>
               <Donate />
             </StyledSectionContentWrapper>
           </StyledSection>
+
+          <h1> ========== CONTACT ========= </h1>
+          <StyledSectionAnchor id={"contact"} />
           <StyledSection index={6}>
             <StyledSectionContentWrapper>
-              <Contact color='black'>
-
-                </Contact>
+              <Contact />
             </StyledSectionContentWrapper>
           </StyledSection>
 

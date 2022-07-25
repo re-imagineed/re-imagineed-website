@@ -117,6 +117,7 @@ export function Overview(props) {
   return (
     <StyledContainer>
       <h1>Overview</h1>
+      <StyledDividerLine />
       <StyledP1>{overviewCopy[0]}</StyledP1>
       <StyledP1>{overviewCopy[1]}</StyledP1>
       <ul>
@@ -141,7 +142,8 @@ export function Overview(props) {
 export function Mission(props) {
   return (
     <StyledContainer>
-       <h1>Our Mission</h1>
+      <h1>Our Mission</h1>
+      <StyledDividerLine />
       <StyledP1>{missionStatement}</StyledP1>
       <br />
       <h1>Core Values</h1>
@@ -195,6 +197,7 @@ export function Team(props) {
   return (
     <StyledContainer>
       <h1>Senior Leadership Team</h1>
+      <StyledDividerLine />
       <TeamMembers></TeamMembers>
     </StyledContainer>
   )
