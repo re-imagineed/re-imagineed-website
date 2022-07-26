@@ -52,7 +52,7 @@ const teamMembers = [
   },
   {
     name: "Keith Streicher",
-    imageURL: "/images/keith_5x4.png",
+    imageURL: "/images/keith-portrait2.jpeg",
     imageDimensions: { width: 453, height: 362},
     title: "Co-Founder & Co-Chief Executive Officer",
     copy: [
