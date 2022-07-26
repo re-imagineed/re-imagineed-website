@@ -182,7 +182,7 @@ function Home(props) {
                   Our purpose is to eliminate educational inequity, provide advocacy for diversity, equity, and inclusion through policy reform, and support retention of educators of color through mentoring, collaboration, and professional learning opportunities.
                 </StyledP1>
 
-                <Link href="/about"><StyledButtonLink>Learn More</StyledButtonLink></Link>
+                <Link href="#about_us"><StyledButtonLink>Learn More</StyledButtonLink></Link>
               </div>
             </StyledFeatureContainer>
           </StyledFeatureSection>
@@ -221,25 +221,29 @@ function Home(props) {
               </div>
             </StyledSectionContentWrapper>
           </StyledSection> */}
+      
+
           <StyledSectionAnchor id={"about_us"} />
+          <h1> ============ About Us =========== </h1>
+          <div style={{ width: "100%", height: "20px" }}></div>
           <StyledSection index={1}>
             <StyledSectionContentWrapper>
-              <h1> ============ About Us =========== </h1>
               <Overview />
             </StyledSectionContentWrapper>
           </StyledSection>
-
+          <StyledSectionAnchor id={"our_mission"} />
           <StyledSection index={2}>
             <StyledSectionContentWrapper>
               <Mission />
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <StyledSectionAnchor id={"team"} />
+
+          <StyledSectionAnchor id={"our_team"} />
           <h1> ========== TEAM ========== </h1>
+          <div style={{ width: "100%", height: "20px" }}></div>
           <StyledSection index={3}>
             <StyledSectionContentWrapper>
-
               <h1>Who We Are</h1>
               <StyledDividerLine />
               <div style={{ width: "100%", height: "60px" }}></div>
@@ -296,29 +300,38 @@ function Home(props) {
             </StyledSectionContentWrapper>
           </StyledSection>
 
+
+          <StyledSectionAnchor id={"leadership"} />
           <StyledSection index={4}>
             <StyledSectionContentWrapper>
               <Team />
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <h1> ========== DONATE ========== </h1>
+
           <StyledSectionAnchor id={"donate"} />
-          <StyledSection index={5}>
+          <h1> ========== DONATE ========== </h1>
+          <div style={{ width: "100%", height: "20px" }}></div>
+          <StyledSection index={5}>       
             <StyledSectionContentWrapper>
               <Donate />
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <h1> ========== CONTACT ========= </h1>
+
+
           <StyledSectionAnchor id={"contact"} />
+          <h1> ========== CONTACT ========= </h1>
+          <div style={{ width: "100%", height: "20px" }}></div>
           <StyledSection index={6}>
             <StyledSectionContentWrapper>
               <Contact />
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <StyledSection index={7}>
+          <StyledSectionAnchor id={"subscribe"} />
+          <h1> ========== SUBSCRIBE========= </h1>
+          <StyledSection index={8}>
             <SubscribeBanner mailchimpURL={props.mailchimpURL} />
           </StyledSection>
 

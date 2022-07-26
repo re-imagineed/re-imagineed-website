@@ -6,7 +6,8 @@ import { device } from '../utils/media-breakpoints'
 import { useState } from 'react'
 import NotificationBanner from './NotificationBanner'
 import { LogoWhiteS } from './Logo'
-
+import { LogoBlackL } from './Logo'
+import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine} from '../components/Styled'
 
 const slideIn = keyframes`
     0% {
@@ -197,7 +198,6 @@ const StyledCaretWrapper = styled.div`
     display: inline-flex;
     align-items: center;
 `
-
 const NavMenuButton = styled.button`
     display: flex;
     justify-content: center;
@@ -288,21 +288,17 @@ function Header() {
             <StyledHeader>
                 <StyledContentWrapper>
                     <StyledLeftContent>
-                        <Link href="/"><a>
-                            <StyledLogoWrapper>
-                                <LogoWhiteS/>
-                            </StyledLogoWrapper>
+                        <Link href="/"><a>               
                             <h1>Re-Imagine Education</h1>
                         </a></Link>
-                    </StyledLeftContent>
-                    <StyledRightContent>
-                        {isTabletOrDesktop === true
+                            {isTabletOrDesktop === true
                         ?
-                            <>
+                    <StyledContentWrapper>
+                            
                                 <Link href="/"><StyledNavLink>Home</StyledNavLink></Link>
-                                <Link href="/programs"><StyledNavLink>Programs & Services</StyledNavLink></Link>
-                                <StyledDropdownWrapper>
-                                    <Link href="/about"><StyledNavLink>
+                                <Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link>
+                                {/* <StyledDropdownWrapper>
+                                    <Link href="#about"><StyledNavLink>
                                         About Us
                                         <StyledCaretWrapper><Image
                                             src="/icons/down_caret-24px.svg"
@@ -312,18 +308,22 @@ function Header() {
                                         /></StyledCaretWrapper>
                                     </StyledNavLink></Link>
                                     <StyledDropdown>
-                                        <Link href="/about/#overview">
+                                        <Link href="#overview">
                                             <StyledDropdownNavLinks>Overview</StyledDropdownNavLinks>
                                             </Link>
-                                        <Link href="/about/#our_mission">
+                                        <Link href="#our_mission">
                                             <StyledDropdownNavLinks>Mission</StyledDropdownNavLinks>
                                         </Link>
-                                        <Link href="/about/#our_team">
+                                        <Link href="#our_team">
                                             <StyledDropdownNavLinks>Leadership</StyledDropdownNavLinks>
                                         </Link>
                                     </StyledDropdown>
-                                </StyledDropdownWrapper>
-                            </>
+                                </StyledDropdownWrapper> */}
+                                <Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link>
+                                <Link href="#donate"><StyledNavLink>Donate</StyledNavLink></Link>
+                                <Link href="#contact"><StyledNavLink>Contact</StyledNavLink></Link>
+                            
+                            </StyledContentWrapper>
                         :
                             <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
                                 <Image
@@ -335,6 +335,12 @@ function Header() {
                                 />
                             </NavMenuButton>
                         }
+                    </StyledLeftContent>
+                    <StyledRightContent>
+                        <StyledLogoWrapper>
+                            <LogoWhiteS />
+                        </StyledLogoWrapper>
+                        <Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link>
                     </StyledRightContent>
                 </StyledContentWrapper>
             </StyledHeader>
@@ -342,17 +348,17 @@ function Header() {
                 <StyledNavMenu>
                     <StyledLinksWrapper>
                         <Link href="/"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
-                        <Link href="/programs"><StyledNavLink onClick={toggleNavMenu}>Programs & Services</StyledNavLink></Link>
-                        <Link href="/about"><StyledNavLink onClick={toggleNavMenu}>About Us</StyledNavLink></Link>
+                        <Link href="#about_us"><StyledNavLink onClick={toggleNavMenu}>About us </StyledNavLink></Link>
+                        <Link href="#our_team"><StyledNavLink onClick={toggleNavMenu}>Team</StyledNavLink></Link>
                     </StyledLinksWrapper>
                     <StyledSublinksWrapper>
-                        <Link href="/about/#overview">
+                        <Link href="#overview">
                             <StyledDropdownNavLinks onClick={toggleNavMenu}>Overview</StyledDropdownNavLinks>
                         </Link>
-                        <Link href="/about/#our_mission">
+                        <Link href="#our_mission">
                             <StyledDropdownNavLinks onClick={toggleNavMenu}>Our Mission</StyledDropdownNavLinks>
                         </Link>
-                        <Link href="/about/#our_team">
+                        <Link href="#our_team">
                             <StyledDropdownNavLinks onClick={toggleNavMenu}>Our Team</StyledDropdownNavLinks>
                         </Link>
                     </StyledSublinksWrapper>
