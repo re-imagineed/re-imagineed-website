@@ -148,10 +148,10 @@ const StyledImageWrapper = styled.div`
   }
 `
 
-const StyledImageWrapper2 = styled.div`
+const StyledBigImageWrapper = styled.div`
   display: flex;
   border: 10px solid ${props => props.theme.yellow};
-  max-width: 800px;
+  max-width: 1200px;
   min-width: 200px;
   height: auto;
   margin: 20px 0;
@@ -248,14 +248,14 @@ function Home(props) {
               <StyledDividerLine />
               <div style={{ width: "100%", height: "60px" }}></div>
               <StyledContentContainer>
-              <StyledImageWrapper2 justified={"left"}>
+              <StyledBigImageWrapper>
                   <Image
                     src={"/images/team1.jpeg"}
                     alt={"Team"}
                     width={1200}
-                    height={1200}
+                    height={900}
                   />
-                </StyledImageWrapper2>
+                </StyledBigImageWrapper>
                 </StyledContentContainer>
                 <div style={{ width: "100%", height: "60px" }}></div>
               <StyledContentContainer>
