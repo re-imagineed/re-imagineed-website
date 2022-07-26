@@ -23,7 +23,7 @@ const theme = {
   carrot: '#ee693f',
   tangerine: '#f69454',
   off_white28: '#fcfdfe',
-  pear_garden: '#739f3d',
+  pear_green: '#739f3d',
 
   // #37 Sunny Citrus of https://www.canva.com/learn/100-color-combinations/
   citrus: '#faaf08',
