@@ -28,28 +28,62 @@ const StyledHeaderWrapper = styled.div`
 `
 
 const StyledHeader = styled.header`
+  width: 100%;
 
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: ${(props) => props.theme.navy};
 
-    background-color: ${props => props.theme.navy};
+  h1 {
+    font-size: 1.2em;
+    color: ${(props) => props.theme.white};
+    margin: 5px 0;
 
-    h1 {
-        font-size: 1.2em;
-        color: ${props => props.theme.white};
-        margin: 5px 0;
-
-        @media ${device.mobileM} {
-            font-size: 1.5em;
-        }
-
-        @media ${device.laptop} {
-            font-size: 2em;
-        }
+    @media ${device.mobileM} {
+      font-size: 1.5em;
     }
+
+    @media ${device.laptop} {
+      font-size: 2em;
+    }
+  }
+  .navigation-bar ul {
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+    display:block;
+    vertical-align:top;
+    word-break: keep-all;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    white-space: nowrap;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    padding: 8px;
+    // border: 1px solid #bbb;
+  }
+  li a:hover {
+    background-color: ${(props) => props.theme.red};
+  }
+  li:last-child {
+    border-right: none;
+  }
+  .active {
+    background-color: #04AA6D;
 `
 
 const StyledContentWrapper = styled.div`
@@ -233,7 +267,7 @@ const NavMenuButton = styled.button`
 
 const StyledNavMenu = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     position: -webkit-sticky;
     z-index: 1;
@@ -287,16 +321,21 @@ function Header() {
         <StyledHeaderWrapper banner={bannerPresent}>
             <StyledHeader>
                 <StyledContentWrapper>
+
                     <StyledLeftContent>
+                    <nav class="navigation-bar">
+                    <ul>
                         <Link href="/"><a>               
                             <h1>Re-Imagine Education</h1>
                         </a></Link>
+                
                             {isTabletOrDesktop === true
                         ?
                     <StyledContentWrapper>
-                            
-                                <Link href="/"><StyledNavLink>Home</StyledNavLink></Link>
-                                <Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link>
+                   
+                   
+                                <li><Link href="/"><StyledNavLink>Home</StyledNavLink></Link></li>
+                                <li><Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link></li>
                                 {/* <StyledDropdownWrapper>
                                     <Link href="#about"><StyledNavLink>
                                         About Us
@@ -319,10 +358,11 @@ function Header() {
                                         </Link>
                                     </StyledDropdown>
                                 </StyledDropdownWrapper> */}
-                                <Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link>
-                                <Link href="#donate"><StyledNavLink>Donate</StyledNavLink></Link>
-                                <Link href="#contact"><StyledNavLink>Contact</StyledNavLink></Link>
-                            
+                                <li><Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link></li>
+                                <li><Link href="#donate"><StyledNavLink>Donate</StyledNavLink></Link></li>
+                                <li><Link href="#contact"><StyledNavLink>Contact</StyledNavLink></Link></li>
+                         
+                           
                             </StyledContentWrapper>
                         :
                             <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
@@ -335,6 +375,8 @@ function Header() {
                                 />
                             </NavMenuButton>
                         }
+                           </ul>
+                         </nav>
                     </StyledLeftContent>
                     <StyledRightContent>
                         <StyledLogoWrapper>
@@ -348,7 +390,7 @@ function Header() {
                 <StyledNavMenu>
                     <StyledLinksWrapper>
                         <Link href="/"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
-                        <Link href="#about_us"><StyledNavLink onClick={toggleNavMenu}>About us </StyledNavLink></Link>
+                        <Link href="#about_us"><StyledNavLink onClick={toggleNavMenu}>About us</StyledNavLink></Link>
                         <Link href="#our_team"><StyledNavLink onClick={toggleNavMenu}>Team</StyledNavLink></Link>
                     </StyledLinksWrapper>
                     <StyledSublinksWrapper>
