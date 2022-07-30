@@ -179,15 +179,17 @@ function Home(props) {
               <div>
                 <h1>Re-Imagine Education, Inc.</h1>
                 <StyledP1>
-                  Our purpose is to eliminate educational inequity, provide advocacy for diversity, equity, and inclusion through policy reform, and support retention of educators of color through mentoring, collaboration, and professional learning opportunities.
+                Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
                 </StyledP1>
 
-                <Link href="#about_us"><StyledButtonLink>Learn More</StyledButtonLink></Link>
+                <StyledLogoWrapper>
+                  <LogoBlackL />
+                </StyledLogoWrapper>
               </div>
             </StyledFeatureContainer>
           </StyledFeatureSection>
 
-          <StyledSection index={0}>
+          {/* <StyledSection index={0}>
             <StyledSectionContentWrapper>
               <StyledContentContainer>
                 <StyledLogoWrapper>
@@ -203,7 +205,7 @@ function Home(props) {
 
               </StyledContentContainer>
             </StyledSectionContentWrapper>
-          </StyledSection>
+          </StyledSection> */}
 
           {/* <StyledSection index={1}>
             <StyledSectionContentWrapper>
