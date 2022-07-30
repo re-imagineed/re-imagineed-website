@@ -47,7 +47,7 @@ const StyledFeatureContainer = styled.div`
   margin: 0px;
   padding: 40px;
 
-  background-color: ${props => props.theme.yellow};
+  background-color: ${props => props.theme.grapefruit};
 
   h1 {
     font-size: 2em;
@@ -298,13 +298,7 @@ function Home(props) {
               </StyledContentContainer>
             
               <div style={{ width: "100%", height: "60px" }}></div>
-            </StyledSectionContentWrapper>
-          </StyledSection>
-
-
-          <StyledSectionAnchor id={"leadership"} />
-          <StyledSection index={4}>
-            <StyledSectionContentWrapper>
+   
               <Team />
             </StyledSectionContentWrapper>
           </StyledSection>
@@ -313,7 +307,7 @@ function Home(props) {
           <StyledSectionAnchor id={"donate"} />
           <h1> ========== DONATE ========== </h1>
           <div style={{ width: "100%", height: "20px" }}></div>
-          <StyledSection index={5}>       
+          <StyledSection index={4}>       
             <StyledSectionContentWrapper>
               <Donate />
             </StyledSectionContentWrapper>
@@ -324,7 +318,7 @@ function Home(props) {
           <StyledSectionAnchor id={"contact"} />
           <h1> ========== CONTACT ========= </h1>
           <div style={{ width: "100%", height: "20px" }}></div>
-          <StyledSection index={6}>
+          <StyledSection index={5}>
             <StyledSectionContentWrapper>
               <Contact />
             </StyledSectionContentWrapper>
@@ -332,7 +326,7 @@ function Home(props) {
 
           <StyledSectionAnchor id={"subscribe"} />
           <h1> ========== SUBSCRIBE========= </h1>
-          <StyledSection index={8}>
+          <StyledSection index={6}>
             <SubscribeBanner mailchimpURL={props.mailchimpURL} />
           </StyledSection>
 
