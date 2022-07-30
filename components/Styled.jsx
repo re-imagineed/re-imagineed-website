@@ -30,7 +30,7 @@ export const StyledSection = styled.section`
 
     width: 100%;
 
-    background-color: ${props => props.index % 2 == 0 ? props.theme.lightgrey : props.theme.white};
+    background-color: ${props => props.index % 2 == 0 ? props.theme.citrus : props.theme.grapefruit};
 `
 
 export const StyledSectionContentWrapper = styled.div`
