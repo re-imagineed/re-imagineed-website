@@ -135,7 +135,7 @@ const StyledLogoWrapper = styled.div`
 
 const StyledImageWrapper = styled.div`
   display: flex;
-  border: 10px solid ${props => props.theme.yellow};
+  border: 10px solid ${props => props.theme.off_white37};
   max-width: 250px;
   min-width: 200px;
   height: auto;
@@ -150,7 +150,7 @@ const StyledImageWrapper = styled.div`
 
 const StyledBigImageWrapper = styled.div`
   display: flex;
-  border: 10px solid ${props => props.theme.yellow};
+  border: 10px solid ${props => props.theme.off_white37};
   max-width: 1200px;
   min-width: 200px;
   height: auto;
