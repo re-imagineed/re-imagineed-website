@@ -41,6 +41,7 @@ const StyledHeader = styled.header`
     color: ${(props) => props.theme.white};
     margin: 5px 0;
 
+
     @media ${device.mobileM} {
       font-size: 1.5em;
     }
@@ -51,13 +52,11 @@ const StyledHeader = styled.header`
   }
   .navigation-bar ul {
     padding: 0px;
-    margin: 0px;
+    margin: 5px;
     text-align: left;
-    display:block;
+    display: flex;
     vertical-align:top;
-    word-break: keep-all;
-  }
-  ul {
+
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -73,17 +72,15 @@ const StyledHeader = styled.header`
 
   li a {
     display: block;
-    padding: 8px;
+    padding: 2px;
     // border: 1px solid #bbb;
   }
   li a:hover {
     background-color: ${(props) => props.theme.red};
   }
-  li:last-child {
-    border-right: none;
-  }
-  .active {
-    background-color: #04AA6D;
+  
+.active {
+    background-color: ${(props) => props.theme.yellow};
 `
 
 const StyledContentWrapper = styled.div`
@@ -300,6 +297,27 @@ const StyledSublinksWrapper = styled.div`
     }
 `
 
+const StyledRedButtonLink = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: ${props => props.theme.red};
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        opacity: 1;
+        background: ${props => props.theme.lightblue};
+    }
+
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+`
 function Header() {
 
     const [bannerPresent, setBannerPresent] = useState(true)
@@ -321,22 +339,16 @@ function Header() {
         <StyledHeaderWrapper banner={bannerPresent}>
             <StyledHeader>
                 <StyledContentWrapper>
-
                     <StyledLeftContent>
-                    <nav class="navigation-bar">
-                    <ul>
-                        <Link href="/"><a>               
+                        <nav class="navigation-bar">
                             <h1>Re-Imagine Education</h1>
-                        </a></Link>
-                
-                            {isTabletOrDesktop === true
-                        ?
-                    <StyledContentWrapper>
-                   
-                   
-                                <li><Link href="/"><StyledNavLink>Home</StyledNavLink></Link></li>
-                                <li><Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link></li>
-                                {/* <StyledDropdownWrapper>
+                            <ul>
+                                {isTabletOrDesktop === true
+                                    ?
+                                    <StyledContentWrapper>
+                                        <li><Link href="/"><StyledNavLink>Home</StyledNavLink></Link></li>
+                                        <li><Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link></li>
+                                        {/* <StyledDropdownWrapper>
                                     <Link href="#about"><StyledNavLink>
                                         About Us
                                         <StyledCaretWrapper><Image
@@ -358,35 +370,36 @@ function Header() {
                                         </Link>
                                     </StyledDropdown>
                                 </StyledDropdownWrapper> */}
-                                <li><Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link></li>
-                                <li><Link href="#donate"><StyledNavLink>Donate</StyledNavLink></Link></li>
-                                <li><Link href="#contact"><StyledNavLink>Contact</StyledNavLink></Link></li>
-                         
-                           
-                            </StyledContentWrapper>
-                        :
-                            <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
-                                <Image
-                                    src={navMenuActive ? "/icons/close-white.svg" : "/icons/menu-24px.svg"}
-                                    alt="Menu"
-                                    fill="white"
-                                    width={48}
-                                    height={48}
-                                />
-                            </NavMenuButton>
-                        }
-                           </ul>
-                         </nav>
+                                        <li><Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link></li>
+
+                                        <li><Link href="#contact"><StyledNavLink>Contact</StyledNavLink></Link></li>
+
+
+                                    </StyledContentWrapper>
+                                    :
+                                    <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
+                                        <Image
+                                            src={navMenuActive ? "/icons/close-white.svg" : "/icons/menu-24px.svg"}
+                                            alt="Menu"
+                                            fill="white"
+                                            width={48}
+                                            height={48}
+                                        />
+                                    </NavMenuButton>
+                                }
+                            </ul>
+                        </nav>
                     </StyledLeftContent>
                     <StyledRightContent>
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>
-                        <Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link>
+                        <Link href="https://tinyurl.com/redonations"><a><StyledRedButtonLink>Donate</StyledRedButtonLink></a></Link>
+                        <li><Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link></li>
                     </StyledRightContent>
                 </StyledContentWrapper>
             </StyledHeader>
-            {navMenuActive ? 
+            {navMenuActive ?
                 <StyledNavMenu>
                     <StyledLinksWrapper>
                         <Link href="/"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
