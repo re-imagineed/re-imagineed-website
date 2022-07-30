@@ -22,11 +22,11 @@ const StyledContentWrapper = styled.div`
     flex-direction: column;
     align-items: flex-start;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 90%;
     max-width: 1400px;
     padding: 30px 0;
-
+    align-content: center;
     @media ${device.laptop} {
         flex-direction: row;
     }
