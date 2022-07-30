@@ -41,7 +41,7 @@ const StyledFeatureContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
+  align-content: center;
   width: 100%;
   min-height: 400px;
   margin: 0px;
@@ -118,7 +118,6 @@ const StyledLogoWrapper = styled.div`
   justify-content: center;
   min-width: 200px;
   max-width: 250px;
-
   margin: 30px 0px 30px 0px;
 
   @media ${device.tablet} {
@@ -129,7 +128,7 @@ const StyledLogoWrapper = styled.div`
     min-width: 300px;
     max-width: 400px;
 
-    margin: 40px 100px 40px 0px;
+    margin: 40px 100px 40px 150px;
   }
 `
 
