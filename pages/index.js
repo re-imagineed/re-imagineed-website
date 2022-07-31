@@ -31,7 +31,7 @@ const StyledFeatureSection = styled.section`
     min-height: 700px;
     width: 100%;
 
-    background-image: url("/images/isiah1.jpeg");
+    background-image: url("/images/main.png");
     background-size: fill;
     background-position: right center;
     background-repeat: no-repeat;
@@ -46,6 +46,8 @@ const StyledFeatureContainer = styled.div`
   align-content: center;
   width: 100%;
   min-height: 400px;
+  
+  00px;
   margin: 0px;
   padding: 40px;
 
