@@ -11,7 +11,9 @@ import Header from '../components/Header'
 import Contact from '../components/Contact'
 import { OfferingsTable } from '../components/Tables'
 import SubscribeBanner from '../components/SubscribeBanner'
-import { Overview, Mission, Team } from './about'
+import { Overview, Mission, Team, BoardOfDirectors
+
+} from './about'
 import Donate from './donate'
 
 const StyledFeatureSection = styled.section`
@@ -245,60 +247,8 @@ function Home(props) {
           <div style={{ width: "100%", height: "20px" }}></div>
           <StyledSection index={3}>
             <StyledSectionContentWrapper>
-              <h1>Who We Are</h1>
+              <h1>Team</h1>
               <StyledDividerLine />
-              <div style={{ width: "100%", height: "60px" }}></div>
-              <StyledContentContainer>
-              <StyledBigImageWrapper>
-                  <Image
-                    src={"/images/team1.jpeg"}
-                    alt={"Team"}
-                    width={1200}
-                    height={900}
-                  />
-                </StyledBigImageWrapper>
-                </StyledContentContainer>
-                <div style={{ width: "100%", height: "60px" }}></div>
-              <StyledContentContainer>
-                <StyledP1>
-                  In this moment and time of great unrest and uncertainty within our communities and schools, it is imperative to properly influence the next generation and provide  training around diversity, culture, and inclusion for educators and leaders alike.
-                </StyledP1>
-                <StyledImageWrapper justified={"right"}>
-                  <Image
-                    src={"/images/isiah2.jpeg"}
-                    alt={"Isiah"}
-                    width={720}
-                    height={960}
-                  />
-                </StyledImageWrapper>
-              </StyledContentContainer>
-              <StyledContentContainer>
-                {!isDesktop ?
-                  <StyledP1>
-                    Re-Imagine Education was founded by Isiah King, an education consultant with 16 years of experience in schools throughout Wisconsin, and Keith Streicher, an education consultant and department director at the University of Wisconsin-Milwaukee. Both men possess more than a decade of education experience at the K-12 and university level.
-                  </StyledP1>
-                  : null
-                }
-                <StyledImageWrapper justified={"left"}>
-                  <Image
-                    src={"/images/keith2.jpeg"}
-                    alt={"Keith"}
-                    width={720}
-                    height={960}
-                  />
-                </StyledImageWrapper>
-
-      
-                {isDesktop ?
-                  <StyledP1>
-                    Re-Imagine Education was founded by Isiah King, an education consultant with 16 years of experience in schools throughout Wisconsin, and Keith Streicher, an education consultant and department director at the University of Wisconsin-Milwaukee. Both men possess more than a decade of education experience at the K-12 and university level.
-                  </StyledP1>
-                  : null
-                }
-              </StyledContentContainer>
-            
-              <div style={{ width: "100%", height: "60px" }}></div>
-   
               <Team />
             </StyledSectionContentWrapper>
           </StyledSection>
