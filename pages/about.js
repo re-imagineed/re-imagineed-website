@@ -176,7 +176,6 @@ export function Mission(props) {
       {/* <h1>Our Mission</h1>
       <StyledDividerLine />
       <StyledP1>{missionStatement}</StyledP1> */}
- 
       <h1>Core Values</h1>
       <StyledDividerLine />
       <StyledCoreValuesList>
@@ -187,7 +186,7 @@ export function Mission(props) {
           </StyledCoreValue>
         )}
       </StyledCoreValuesList>
-      <br />
+      <div style={{ width: "100%", height: "70px" }}></div>
       <h1>Goals</h1>
       <StyledDividerLine />
       <StyledGoalList>
