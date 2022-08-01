@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { device } from '../utils/media-breakpoints'
 import Image from 'next/image'
 import { StyledP2 } from './Styled'
+import BoardMember from './BOD'
 
 const StyledProfileWrapper = styled.article`
     display: flex;

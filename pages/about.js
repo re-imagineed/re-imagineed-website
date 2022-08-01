@@ -10,12 +10,11 @@ import BoardOfDirectors from '../components/BOD'
 
 
 const overviewCopy = [
-  "Re-Imagine Education’s mission is to attract, retain,and elevate BIPOC aspiring and current educators. A part of our mission is to create a culture of inclusivity through mentorship, accountability, and partnership.",
+  "Our mission is to attract, retain,and elevate educators of color. To create a culture of inclusivity through mentorship, accountability, and partnership.",
   "Re-Imagine Education was created by Isiah King and Keith Streicher, who have more than a decade of education experience at the K-12 and University level. Our purpose is to:",
   "Offer embed equity and cultural responsiveness in teacher preparation and professional learning",
-  "Foster culture of equity throughout school-level practice and policy",
   "Support for teachers during critical early years",
-  "We seek to transform education through social and community engagement, and to prepare educators with the educational interventions and resources that develop the cultural competencies for underprepared students to achieve success.",
+  "Support for aspiring teachers entering the education field",
   "Boosting overall academic performance",
   "Improving reading and math test scores",
   "Improving graduation rates",
@@ -35,9 +34,9 @@ const coreValues = [
 ]
 
 const goals = [
-  "Recruiting new ethnic minorities into education.",
-  "Accelerating the careers of ethinic minorities already working in education.",
-  "Building the capacity of education organizations to become more diverse, equitable and inclusive."
+  {goal: "ATTRACT", description: "Recruiting new ethnic minorities into education."},
+  {goal: "RETAIN", description: "Accelerating the careers of ethinic minorities already working in education."},
+  {goal: "ELEVATE", description: "Building the capacity of education organizations to become more diverse, equitable and inclusive."}
 ]
 
 const teamMembers = [
@@ -114,10 +113,40 @@ const StyledGoalNumberWrapper = styled.div`
     margin: 20px 20px 20px 5px;
   }
 `
+
+export const  StyledGoalWrapper = styled.p`
+    font-size: 1em;
+    line-height: 1.5em;
+
+    @media ${device.tablet} {
+        font-size: 1em;
+    }
+
+    dl {
+      padding: 0.5em;
+      font-size: 1.2em;
+    }
+    dt {
+      float: left;
+      clear: left;
+      width: 100px;
+      text-align: left;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    dt::after {
+      content: ":";
+    }
+    dd {
+      margin: 0 0 0 0px;
+      padding: 0 0 0.7em 0;
+    }
+`
+
+
 export function Overview(props) {
   return (
     <StyledContainer>
-      <h1>Overview</h1>
       <StyledDividerLine />
       <StyledP1>{overviewCopy[0]}</StyledP1>
       <StyledP1>{overviewCopy[1]}</StyledP1>
@@ -126,16 +155,17 @@ export function Overview(props) {
         <li>{overviewCopy[3]}</li>
         <li>{overviewCopy[4]}</li>
       </ul>
-      <StyledP1>{overviewCopy[5]}</StyledP1>
-      <StyledP1>Launched in July 2020, Re-Imagine Education is a training development program that is focused on increasing and diversifying the teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP1>
+   
+      <StyledP1>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
+teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP1>
       <ul>
+      <li>{overviewCopy[5]}</li>
         <li>{overviewCopy[6]}</li>
         <li>{overviewCopy[7]}</li>
         <li>{overviewCopy[8]}</li>
         <li>{overviewCopy[9]}</li>
-        <li>{overviewCopy[10]}</li>
       </ul>
-      <StyledP1>{overviewCopy[11]}</StyledP1>
+      <StyledP1>{overviewCopy[10]}</StyledP1>
     </StyledContainer>
   )
 }
@@ -143,10 +173,10 @@ export function Overview(props) {
 export function Mission(props) {
   return (
     <StyledContainer>
-      <h1>Our Mission</h1>
+      {/* <h1>Our Mission</h1>
       <StyledDividerLine />
-      <StyledP1>{missionStatement}</StyledP1>
-      <br />
+      <StyledP1>{missionStatement}</StyledP1> */}
+ 
       <h1>Core Values</h1>
       <StyledDividerLine />
       <StyledCoreValuesList>
@@ -161,20 +191,27 @@ export function Mission(props) {
       <h1>Goals</h1>
       <StyledDividerLine />
       <StyledGoalList>
-        {goals.map((goal, i) =>
-          <StyledGoal key={i}>
-            <StyledGoalNumberWrapper><Image
-              src={'/icons/number' + (i + 1) + '.svg'}
-              alt={(i + 1)}
-              width={48}
-              height={48}
-            /></StyledGoalNumberWrapper>
-            <StyledP1>{goal}</StyledP1>
-          </StyledGoal>
-        )}
+        <Goals />
       </StyledGoalList>
     </StyledContainer>
   )
+}
+function Goal(props) {
+  return (
+  <StyledGoalWrapper>
+    <dl> <dt> {props.goal}</dt><dd class="normal">{props.description}</dd> </dl>
+</StyledGoalWrapper>
+  )
+}
+
+function Goals(props) {
+  return (goals.map((goal, i) => 
+    <Goal
+      goal={goal.goal}
+      description={goal.description}
+    ></Goal>
+  ))
+
 }
 
 function TeamMembers(props) {
