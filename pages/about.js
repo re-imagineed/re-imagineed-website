@@ -147,7 +147,8 @@ export const  StyledGoalWrapper = styled.p`
 export function Overview(props) {
   return (
     <StyledContainer>
-      <StyledDividerLine />
+    
+      <h1>About Us</h1>
       <StyledP1>{overviewCopy[0]}</StyledP1>
       <StyledP1>{overviewCopy[1]}</StyledP1>
       <ul>
@@ -173,9 +174,7 @@ teacher pipeline. A more diverse teacher and leader workforce is crucial for all
 export function Mission(props) {
   return (
     <StyledContainer>
-      {/* <h1>Our Mission</h1>
-      <StyledDividerLine />
-      <StyledP1>{missionStatement}</StyledP1> */}
+            <div style={{ width: "100%", height: "40px" }}></div>
       <h1>Core Values</h1>
       <StyledDividerLine />
       <StyledCoreValuesList>
@@ -186,7 +185,7 @@ export function Mission(props) {
           </StyledCoreValue>
         )}
       </StyledCoreValuesList>
-      <div style={{ width: "100%", height: "70px" }}></div>
+      <div style={{ width: "100%", height: "40px" }}></div>
       <h1>Goals</h1>
       <StyledDividerLine />
       <StyledGoalList>
@@ -268,7 +267,6 @@ function About(props) {
           <StyledSection index={2}>
             <StyledSectionAnchor id={"our_team"} />
             <StyledSectionContentWrapper>
-
               <StyledDividerLine />
               <Team />
             </StyledSectionContentWrapper>

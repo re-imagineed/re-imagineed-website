@@ -15,6 +15,7 @@ import { Overview, Mission, Team, BoardOfDirectors
 
 } from './about'
 import Donate from './donate'
+import ContactUs from '../components/ContactForm'
 
 const StyledFeatureSection = styled.section`
   display: flex;
@@ -44,7 +45,7 @@ const StyledFeatureContainer = styled.div`
   align-items: center;
   justify-content: center;
   align-content: center;
-  width: 100%;
+  width: 30%;
   min-height: 400px;
   
   00px;
@@ -179,7 +180,7 @@ function Home(props) {
 
           <StyledFeatureSection>
             <StyledFeatureContainer>
-              <div>
+            <div>
                 <h1>Re-Imagine Education, Inc.</h1>
                 <StyledP1>
                 Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
@@ -247,24 +248,11 @@ function Home(props) {
             </StyledSectionContentWrapper>
           </StyledSection>
 
-
-          <StyledSectionAnchor id={"donate"} />
-          <h1> ========== DONATE ========== </h1>
-          <div style={{ width: "100%", height: "20px" }}></div>
-          <StyledSection index={3}>       
-            <StyledSectionContentWrapper>
-              <Donate />
-            </StyledSectionContentWrapper>
-          </StyledSection>
-
-
-
           <StyledSectionAnchor id={"contact"} />
-          <h1> ========== CONTACT ========= </h1>
           <div style={{ width: "100%", height: "20px" }}></div>
-          <StyledSection index={5}>
+          <StyledSection index={3}>
             <StyledSectionContentWrapper>
-              <Contact />
+              <ContactUs />
             </StyledSectionContentWrapper>
           </StyledSection>
 
