@@ -15,16 +15,17 @@ const StyledContainer = styled.div`
 `
 
 const StyledSubscribeHeader = styled.h1`
-    font-size: 4em;
+    font-size: 1.7em;
+    font-weight: normal;
 `
 
 function SubscribeBanner(props) {
     return (
         <StyledContainer>
             <StyledSectionContentWrapper>
-                <StyledSubscribeHeader>Join Us</StyledSubscribeHeader>
+                <StyledSubscribeHeader>Join our email list for updates</StyledSubscribeHeader>
                 <Subscription
-                    formDescription={"Sign-up for our newsletter for updates and information on our programs."}
+                    formDescription={""}
                     mailchimpURL={props.mailchimpURL}
                 />
             </StyledSectionContentWrapper>
