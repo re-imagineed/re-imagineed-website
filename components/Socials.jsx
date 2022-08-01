@@ -7,7 +7,8 @@ const socialImages = [
     { alt: 'LinkedIn', src: '/icons/linkedin.png', url: 'https://www.linkedin.com/company/re-imagine-education-inc', width: 128, height: 128 },
     { alt: 'Twitter', src: '/icons/twitter.svg', url: 'https://twitter.com/reimagineeduca3', width: 128, height: 128 },
     { alt: 'Facebook', src: '/icons/facebook.png', url: 'https://www.facebook.com/Re-Imagine-Education-Inc-100972571807919', width: 128, height: 128 },
-    { alt: 'Instagram', src: '/icons/instagram.png', url: 'https://www.instagram.com/reimagineed/', width: 128, height: 128 }
+    { alt: 'Instagram', src: '/icons/instagram.png', url: 'https://www.instagram.com/reimagineed/', width: 128, height: 128 },
+    { alt: 'link.tree', src: '/icons/linktree.png', url: 'https://linktr.ee/reimagineed/', width: 128, height: 128 }
 ]
 
 const StyledSocials = styled.div`
