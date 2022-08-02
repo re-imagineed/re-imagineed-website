@@ -126,6 +126,7 @@ export const  StyledGoalWrapper = styled.p`
       padding: 0.5em;
       font-size: 1.2em;
     }
+    
     dt {
       float: left;
       clear: left;
@@ -141,6 +142,10 @@ export const  StyledGoalWrapper = styled.p`
       margin: 0 0 0 0px;
       padding: 0 0 0.7em 0;
     }
+    dd.normal {
+      font-weight: normal;
+    }
+  
 `
 
 
@@ -174,7 +179,7 @@ teacher pipeline. A more diverse teacher and leader workforce is crucial for all
 export function Mission(props) {
   return (
     <StyledContainer>
-            <div style={{ width: "100%", height: "40px" }}></div>
+      <div style={{ width: "100%", height: "40px" }}></div>
       <h1>Core Values</h1>
       <StyledDividerLine />
       <StyledCoreValuesList>
@@ -197,13 +202,13 @@ export function Mission(props) {
 function Goal(props) {
   return (
   <StyledGoalWrapper>
-    <dl> <dt> {props.goal}</dt><dd class="normal">{props.description}</dd> </dl>
+    <dl> <dt>{props.goal}</dt><dd class="normal">{props.description}</dd> </dl>
 </StyledGoalWrapper>
   )
 }
 
 function Goals(props) {
-  return (goals.map((goal, i) => 
+  return (goals.map((goal) => 
     <Goal
       goal={goal.goal}
       description={goal.description}
