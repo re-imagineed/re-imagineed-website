@@ -346,7 +346,7 @@ function Header() {
                                 {isTabletOrDesktop === true
                                     ?
                                     <StyledContentWrapper>
-                                        <li><Link href="/"><StyledNavLink>Home</StyledNavLink></Link></li>
+                                        <li><Link href="/#"><StyledNavLink>Home</StyledNavLink></Link></li>
                                         <li><Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link></li>
                                         {/* <StyledDropdownWrapper>
                                     <Link href="#about"><StyledNavLink>
