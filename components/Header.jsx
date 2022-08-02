@@ -39,7 +39,7 @@ const StyledHeader = styled.header`
   h1 {
     font-size: 1.2em;
     color: ${(props) => props.theme.white};
-    margin: 5px 0;
+    margin: 5px 25px;
 
 
     @media ${device.mobileM} {
@@ -50,9 +50,10 @@ const StyledHeader = styled.header`
       font-size: 2em;
     }
   }
+  
   .navigation-bar ul {
     padding: 0px;
-    margin: 5px;
+    margin: 5px 20px;
     text-align: left;
     display: flex;
     vertical-align:top;
@@ -348,33 +349,8 @@ function Header() {
                                     <StyledContentWrapper>
                                         <li><Link href="/#"><StyledNavLink>Home</StyledNavLink></Link></li>
                                         <li><Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link></li>
-                                        {/* <StyledDropdownWrapper>
-                                    <Link href="#about"><StyledNavLink>
-                                        About Us
-                                        <StyledCaretWrapper><Image
-                                            src="/icons/down_caret-24px.svg"
-                                            alt="Menu"
-                                            width={24}
-                                            height={24}
-                                        /></StyledCaretWrapper>
-                                    </StyledNavLink></Link>
-                                    <StyledDropdown>
-                                        <Link href="#overview">
-                                            <StyledDropdownNavLinks>Overview</StyledDropdownNavLinks>
-                                            </Link>
-                                        <Link href="#our_mission">
-                                            <StyledDropdownNavLinks>Mission</StyledDropdownNavLinks>
-                                        </Link>
-                                        <Link href="#our_team">
-                                            <StyledDropdownNavLinks>Leadership</StyledDropdownNavLinks>
-                                        </Link>
-                                    </StyledDropdown>
-                                </StyledDropdownWrapper> */}
                                         <li><Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link></li>
-
                                         <li><Link href="#contact"><StyledNavLink>Contact</StyledNavLink></Link></li>
-
-
                                     </StyledContentWrapper>
                                     :
                                     <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
@@ -402,21 +378,11 @@ function Header() {
             {navMenuActive ?
                 <StyledNavMenu>
                     <StyledLinksWrapper>
-                        <Link href="/"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
+                        <Link href="/#"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
                         <Link href="#about_us"><StyledNavLink onClick={toggleNavMenu}>About us</StyledNavLink></Link>
                         <Link href="#our_team"><StyledNavLink onClick={toggleNavMenu}>Team</StyledNavLink></Link>
+                        <Link href="#contact"><StyledNavLink onClick={toggleNavMenu}>Contact</StyledNavLink></Link>
                     </StyledLinksWrapper>
-                    <StyledSublinksWrapper>
-                        <Link href="#overview">
-                            <StyledDropdownNavLinks onClick={toggleNavMenu}>Overview</StyledDropdownNavLinks>
-                        </Link>
-                        <Link href="#our_mission">
-                            <StyledDropdownNavLinks onClick={toggleNavMenu}>Our Mission</StyledDropdownNavLinks>
-                        </Link>
-                        <Link href="#our_team">
-                            <StyledDropdownNavLinks onClick={toggleNavMenu}>Our Team</StyledDropdownNavLinks>
-                        </Link>
-                    </StyledSublinksWrapper>
                 </StyledNavMenu>
                 :
                 null
