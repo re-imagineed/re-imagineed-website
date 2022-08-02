@@ -5,7 +5,7 @@ import { device } from '../utils/media-breakpoints'
 import parseMailchimpSubscribeMessage from '../utils/parseMailchimpSubscribeMessage'
 import Button from './Button'
 import { LottieError, LottieFail, LottieSuccess } from './LottieAnimations'
-
+import { StyledP2, StyledP1, StyledInlineLink } from './Styled'
 const StyledInputField = styled.input`
   height: 32px;
   width: 260px;
@@ -50,12 +50,14 @@ const StyledTextAreaInputField = styled.textarea`
 const StyledForm = styled.form`
   flex-direction: column;
   align-items: left;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   align-content: left;
 
   .column {
     float: left;
     width: 50%;
+    padding: 50px;
+    margin-bottom: 10px;
   }
 
   /* Clear floats after the columns */
@@ -64,7 +66,17 @@ const StyledForm = styled.form`
     display: table;
     clear: both;
   }
+  .underlined {
+    text-decoration: underline;
+  }
 
+  .li {
+    font-weight: bold;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    align-content: left;
+  }
   @media ${device.laptop} {
     flex-direction: ${(props) => (props.isFooter ? "column" : "row")};
     align-items: ${(props) => (props.isFooter ? "left" : "center")};
@@ -132,13 +144,34 @@ function ContactUs(props) {
     return (
 
         <StyledForm id="contact-form">
-            <StyledInputField
-                type='text'
-                placeholder='Name'
-                required
-                onChange={e => setNameInputText(e.target.value)}
-                isFooter={props.isFooter}
-            />
+            <div class="column">
+
+                <StyledP1>
+                    Fill out the contact form below to learn more about the following programs and services:
+                </StyledP1>
+                {/* <h3 class="underlined">Programs and Services </h3> */}
+                <ul>
+                    <li>Teacher Like Me Exploration Program </li>
+                    <li>Ready, Set, Teach Program </li>
+                    <li>RED Network Collaborative</li>
+                    <li>Howard-Streicher & King Scholarship Foundation</li>
+                </ul>
+                <div style={{ width: "100%", height: "60px" }}></div>
+
+                <StyledP1><h3>Connect with Re-Imagine Education to discuss your organization's needs!</h3></StyledP1>
+                <ol>
+                    <li>Schedule a 30 minute <StyledInlineLink target="_blank" href="https://calendly.com/isiah-king-1/30min">Consultation Meeting</StyledInlineLink> with our team</li>
+                    <li>Complete our <StyledInlineLink target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdFUadJx1nCJfO1siouNrgk23g-prQ3QNL02py7z5aFZwK2Q/viewform">Services Request Form</StyledInlineLink></li>
+                </ol>
+            </div>
+            <div class="column">
+                <StyledInputField
+                    type='text'
+                    placeholder='Name'
+                    required
+                    onChange={e => setNameInputText(e.target.value)}
+                    isFooter={props.isFooter}
+                />
 
             <div>
                 <StyledInputField
@@ -167,9 +200,9 @@ function ContactUs(props) {
                     onChange={e => setMessageInputText(e.target.value)}
                     isFooter={props.isFooter}
                 />
-
             </div>
             <Button text='Submit'/>
+            </div>
         </StyledForm>
     )
 }
