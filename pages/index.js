@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import Image from 'next/image'
-import Link from 'next/link'
 import { LogoBlackL } from '../components/Logo'
 import _Head from '../components/Head'
 import { device } from '../utils/media-breakpoints'
@@ -8,13 +6,8 @@ import { useMediaQuery } from 'react-responsive'
 import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine} from '../components/Styled'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Contact from '../components/Contact'
-import { OfferingsTable } from '../components/Tables'
 import SubscribeBanner from '../components/SubscribeBanner'
-import { Overview, Mission, Team, BoardOfDirectors
-
-} from './about'
-import Donate from './donate'
+import { Overview, Mission, Team } from './about'
 import ContactUs from '../components/ContactForm'
 
 const StyledFeatureSection = styled.section`
