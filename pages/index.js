@@ -257,6 +257,7 @@ function Home(props) {
           </StyledSection>
 
           <StyledSectionAnchor id={"subscribe"} />
+          <div style={{ width: "100%", height: "20px" }}></div>
           <StyledSection index={4}>
             <SubscribeBanner mailchimpURL={props.mailchimpURL} />
           </StyledSection>
