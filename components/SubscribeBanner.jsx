@@ -15,8 +15,10 @@ const StyledContainer = styled.div`
 `
 
 const StyledSubscribeHeader = styled.h1`
-    font-size: 1.7em;
-    font-weight: normal;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0px 0px 20px 50px;
+    
 `
 
 function SubscribeBanner(props) {

@@ -52,6 +52,9 @@ const StyledForm = styled.form`
   align-items: left;
   margin-bottom: 10px;
   align-content: left;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5em;
 
   .column {
     float: left;
@@ -66,20 +69,31 @@ const StyledForm = styled.form`
     display: table;
     clear: both;
   }
-  .underlined {
+
+  .underline {
     text-decoration: underline;
   }
 
-  .li {
+  ul {
+    font-weight: bold;
+  }
+
+  li {
     font-weight: bold;
     margin-right: 20px;
     margin-bottom: 10px;
     padding-left: 15px;
-    align-content: left;
   }
+
   @media ${device.laptop} {
     flex-direction: ${(props) => (props.isFooter ? "column" : "row")};
     align-items: ${(props) => (props.isFooter ? "left" : "center")};
+  }
+
+  Button.right {
+    align-content: "right";
+    justify-content: "right";
+    margin-left: 500px;
   }
 `
 
@@ -127,6 +141,23 @@ const LottieWrapper = styled.div`
     margin-right: 10px;
 `
 
+const StyledButton2 = styled.button`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    // width: 100px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: ${props => props.theme.navy};
+    cursor: pointer;
+
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+`
+
 function ContactUs(props) {
 
     const mailchimpURL = props.mailchimpURL
@@ -147,24 +178,27 @@ function ContactUs(props) {
             <div class="column">
 
                 <StyledP1>
-                    Fill out the contact form below to learn more about the following programs and services:
+                    Fill out the contact form to learn more about the following programs and services:
                 </StyledP1>
-                {/* <h3 class="underlined">Programs and Services </h3> */}
+                {/* <h3 class="underline">Programs and Services </h3> */}
                 <ul>
                     <li>Teacher Like Me Exploration Program </li>
                     <li>Ready, Set, Teach Program </li>
                     <li>RED Network Collaborative</li>
                     <li>Howard-Streicher & King Scholarship Foundation</li>
                 </ul>
+
                 <div style={{ width: "100%", height: "60px" }}></div>
 
-                <StyledP1><h3>Connect with Re-Imagine Education to discuss your organization's needs!</h3></StyledP1>
+                <StyledP1>Connect with Re-Imagine Education to discuss your organization's needs!</StyledP1>
                 <ol>
                     <li>Schedule a 30 minute <StyledInlineLink target="_blank" href="https://calendly.com/isiah-king-1/30min">Consultation Meeting</StyledInlineLink> with our team</li>
                     <li>Complete our <StyledInlineLink target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdFUadJx1nCJfO1siouNrgk23g-prQ3QNL02py7z5aFZwK2Q/viewform">Services Request Form</StyledInlineLink></li>
                 </ol>
             </div>
+
             <div class="column">
+            <div style={{ width: "100%", height: "60px" }}></div>
                 <StyledInputField
                     type='text'
                     placeholder='Name'
@@ -173,35 +207,36 @@ function ContactUs(props) {
                     isFooter={props.isFooter}
                 />
 
-            <div>
-                <StyledInputField
-                    type='email'
-                    placeholder='Email Address'
-                    aria-describedby="emailHelp"
-                    required
-                    onChange={e => setNameInputText(e.target.value)}
-                    isFooter={props.isFooter}
-                />
-            </div>
+                <div>
+                    <StyledInputField
+                        type='email'
+                        placeholder='Email Address'
+                        aria-describedby="emailHelp"
+                        required
+                        onChange={e => setNameInputText(e.target.value)}
+                        isFooter={props.isFooter}
+                    />
+                </div>
 
-            <div>
-                <StyledInputField
-                    type='text'
-                    placeholder='Phone Number'
-                    onChange={e => setEmailInputText(e.target.value)}
-                    isFooter={props.isFooter}
-                />
-            </div>
+                <div>
+                    <StyledInputField
+                        type='text'
+                        placeholder='Phone Number'
+                        onChange={e => setEmailInputText(e.target.value)}
+                        isFooter={props.isFooter}
+                    />
+                </div>
 
-            <div>
-                <StyledTextAreaInputField
-                    placeholder='Type your message here ...'
-                    row="5"
-                    onChange={e => setMessageInputText(e.target.value)}
-                    isFooter={props.isFooter}
-                />
-            </div>
-            <Button text='Submit'/>
+                <div>
+                    <StyledTextAreaInputField
+                        placeholder='Type your message here ...'
+                        row="5"
+                        onChange={e => setMessageInputText(e.target.value)}
+                        isFooter={props.isFooter}
+                    />
+                </div>
+                <div style={{ width: "100%", height: "30px" }}></div>
+                <StyledButton2 style={{ width: "150px", height: "50px" }}> Submit </StyledButton2>
             </div>
         </StyledForm>
     )

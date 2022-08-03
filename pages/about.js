@@ -116,7 +116,7 @@ const StyledGoalNumberWrapper = styled.div`
 
 export const  StyledGoalWrapper = styled.p`
     font-size: 1em;
-    line-height: 1.5em;
+    line-height: 1.5em;   
 
     @media ${device.tablet} {
         font-size: 1em;
@@ -132,16 +132,23 @@ export const  StyledGoalWrapper = styled.p`
       clear: left;
       width: 100px;
       text-align: left;
-      text-decoration: underline;
       font-weight: bold;
     }
+
+    dt.underline {
+      text-decoration: underline;
+    }
+
     dt::after {
       content: ":";
+      font-weight: normal;
     }
+
     dd {
       margin: 0 0 0 0px;
       padding: 0 0 0.7em 0;
     }
+
     dd.normal {
       font-weight: normal;
     }
@@ -202,7 +209,10 @@ export function Mission(props) {
 function Goal(props) {
   return (
   <StyledGoalWrapper>
-    <dl> <dt>{props.goal}</dt><dd class="normal">{props.description}</dd> </dl>
+      <dl> 
+        <dt class="underline">{props.goal}</dt>
+        <dd class="normal">{props.description}</dd> 
+      </dl>
 </StyledGoalWrapper>
   )
 }
