@@ -236,7 +236,7 @@ function ContactUs(props) {
                     />
                 </div>
                 <div style={{ width: "100%", height: "30px" }}></div>
-                <StyledButton2 style={{ width: "150px", height: "50px" }}> Submit </StyledButton2>
+                <StyledButton2 style={{ width: "150px", height: "50px" }}>Contact Us</StyledButton2>
             </div>
         </StyledForm>
     )
