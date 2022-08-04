@@ -25,10 +25,11 @@ const StyledFeatureSection = styled.section`
     min-height: 700px;
     width: 100%;
 
-    background-image: url("/images/main.png");
+    background-image: url("/images/team1.jpeg");
     background-size: fill;
     background-position: right center;
     background-repeat: no-repeat;
+    background-blend-mode: normal;
   }
 `
 
@@ -271,17 +272,9 @@ function Home(props) {
             </StyledSectionContentWrapper>
           </StyledSection>
 
-          <StyledSectionAnchor id={"contact"} />
-          <div style={{ width: "100%", height: "20px" }}></div>
-          <StyledSection index={3}>
-            <StyledSectionContentWrapper>
-              <ContactUs />
-            </StyledSectionContentWrapper>
-          </StyledSection>
-
           <StyledSectionAnchor id={"subscribe"} />
           <div style={{ width: "100%", height: "20px" }}></div>
-          <StyledSection index={4}>
+          <StyledSection index={3}>
             <SubscribeBanner mailchimpURL={props.mailchimpURL} />
           </StyledSection>
 

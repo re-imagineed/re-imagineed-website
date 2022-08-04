@@ -34,7 +34,7 @@ const StyledHeader = styled.header`
   flex-direction: column;
   align-items: center;
 
-  background-color: ${(props) => props.theme.navy};
+  background-color: ${(props) => props.theme.sky};
 
   h1 {
     font-size: 1.2em;

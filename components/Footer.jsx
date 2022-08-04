@@ -10,7 +10,7 @@ const StyledFooter = styled.footer`
     height: auto;
     display: flex;
     justify-content: center;
-    background-color: ${props => props.theme.navy};
+    background-color: ${props => props.theme.sky};
 
     @media ${device.laptop} {
         height: 350px;
