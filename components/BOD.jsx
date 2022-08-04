@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { device } from '../utils/media-breakpoints'
 import Image from 'next/image'
 import { StyledP2 } from './Styled'
+import { Styled2Columns, StyledImage, StyledImage2, StyledImage3, StyledImage4, StyledImage5 } from '../pages/about'
 
 const StyledBODWrapper = styled.article`
     display: flex;
@@ -43,7 +44,8 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-
+<Styled2Columns>
+    <div class="column">
     <StyledBODWrapper>
      <div style={{width: "100%", height: "40px"}}></div>
       <h2 id="h2u">Board Of Directors</h2>
@@ -56,6 +58,11 @@ function BoardOfDirectors(props) {
         <li><StyledNameWrapper><h3>{bodMembers[4]}</h3></StyledNameWrapper></li>
   
     </StyledBODWrapper>
+    </div>
+    <div class="column">
+      <StyledImage5/>
+    </div>
+</Styled2Columns>
   )
 }
 

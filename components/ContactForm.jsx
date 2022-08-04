@@ -167,7 +167,7 @@ function ContactUs(props) {
     const [messageInputText, setMessageInputText] = useState('')
 
 
-    const submit = (e, submit) => {
+    const contactUs = (e, contactUs) => {
         e.preventDefault();
         submit({ NAME: nameInputText, EMAIL: emailIputText, PHONE: phoneInputText, MESSAGE: messageInputText })
     }

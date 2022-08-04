@@ -154,41 +154,131 @@ export const  StyledGoalWrapper = styled.p`
     }
   
 `
+export const Styled2Columns = styled.div`
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 10px;
+  align-content: left;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5em;
 
+  .column {
+    float: left;
+    width: 50%;
+    padding: 50px;
+    margin-bottom: 10px;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+`
+const Styled2Rows = styled.div`
+  flex-direction: row;
+  align-items: left;
+  margin-bottom: 10px;
+  align-content: left;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1.5em;
+
+  .row {
+    float: left;
+    width: 50%;
+    padding: 50px;
+    margin-bottom: 10px;
+  }
+`
+export const StyledImage = styled.div`
+  width: 500px;
+  min-height: 300px;
+  background-color: white;
+  background: url("/images/fun1.png") no-repeat center top;
+}
+`
+
+export const StyledImage2 = styled.div`
+  width: 500px;
+  min-height: 300px;
+  margin-top: 80px;
+  background-color: white;
+  background: url("/images/learn.png") no-repeat center top;
+}
+`
+
+export const StyledImage3 = styled.div`
+  width: 500px;
+  min-height: 300px;
+  background-size: auto;
+  background-color: black;
+  background: url("/images/team1.jpeg") no-repeat center top;
+}
+`
+
+export const StyledImage4 = styled.div`
+  width: 500px;
+  min-height: 400px;
+  background-color: white;
+  background: url("/images/isiah-keith.png") no-repeat center top;
+}
+`
+export const StyledImage5 = styled.div`
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  background-size: auto;
+  background: url("/images/fun2.png") no-repeat center top;
+}
+`
 
 export function Overview(props) {
   return (
     <StyledContainer>
-    
-      <h1>About Us</h1>
-      <StyledP1>{overviewCopy[0]}</StyledP1>
-      <StyledP1>{overviewCopy[1]}</StyledP1>
-      <ul>
-        <li>{overviewCopy[2]}</li>
-        <li>{overviewCopy[3]}</li>
-        <li>{overviewCopy[4]}</li>
-      </ul>
-   
-      <StyledP1>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
-teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP1>
-      <ul>
-      <li>{overviewCopy[5]}</li>
-        <li>{overviewCopy[6]}</li>
-        <li>{overviewCopy[7]}</li>
-        <li>{overviewCopy[8]}</li>
-        <li>{overviewCopy[9]}</li>
-      </ul>
-      <StyledP1>{overviewCopy[10]}</StyledP1>
+    <Styled2Columns>
+      <div class="column">
+      
+          <h1>About Us</h1>
+          <div style={{ width: "100%", height: "10px" }}></div>
+          <StyledP1>{overviewCopy[0]}</StyledP1>
+          <StyledP1>{overviewCopy[1]}</StyledP1>
+          <ul>
+            <li>{overviewCopy[2]}</li>
+            <li>{overviewCopy[3]}</li>
+            <li>{overviewCopy[4]}</li>
+          </ul>
+
+          <StyledP1>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
+            teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP1>
+          <ul>
+            <li>{overviewCopy[5]}</li>
+            <li>{overviewCopy[6]}</li>
+            <li>{overviewCopy[7]}</li>
+            <li>{overviewCopy[8]}</li>
+            <li>{overviewCopy[9]}</li>
+          </ul>
+          <StyledP1>{overviewCopy[10]}</StyledP1>
+      </div>
+      <div class="column">
+        <div style={{ width: "100%", height: "80px" }}></div>
+            <StyledImage2></StyledImage2>
+      </div>
+      <div style={{ width: "100%", height: "80px" }}></div>
+    </Styled2Columns>
+    <div style={{ width: "100%", height: "40px" }}></div>
     </StyledContainer>
+
   )
 }
 
 export function Mission(props) {
   return (
     <StyledContainer>
-      <div style={{ width: "100%", height: "40px" }}></div>
+
       <h1>Core Values</h1>
-      <StyledDividerLine />
       <StyledCoreValuesList>
         {coreValues.map((value, i) =>
           <StyledCoreValue key={i}>
@@ -198,11 +288,22 @@ export function Mission(props) {
         )}
       </StyledCoreValuesList>
       <div style={{ width: "100%", height: "40px" }}></div>
-      <h1>Goals</h1>
-      <StyledDividerLine />
-      <StyledGoalList>
-        <Goals />
-      </StyledGoalList>
+
+      <Styled2Columns>
+        <div class="column">
+          <div style={{ width: "100%", height: "40px" }}></div>
+
+          <h1>Goals</h1>
+          <StyledGoalList>
+            <Goals />
+          </StyledGoalList>
+        </div>
+        <div class="column">
+
+          <div style={{ width: "100%", height: "80px" }}></div>
+          <StyledImage5></StyledImage5>
+        </div>
+      </Styled2Columns>
     </StyledContainer>
   )
 }

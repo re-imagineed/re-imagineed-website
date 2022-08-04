@@ -160,6 +160,36 @@ const StyledBigImageWrapper = styled.div`
   }
 `
 
+const StyledAnimationWrapper = styled.div`
+display: flex;
+@keyframes example {
+  // from {background-color: red;}
+  // to {background-color: yellow;}
+  0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50%  {background-color: blue;}
+  100% {background-color: green;}
+}
+`
+
+const StyledAnimationImages = styled.div`
+
+width: 500px;
+min-height: 300px;
+animation-name: example;
+animation-duration: 4s
+background-color: white;
+background: url("/images/fun1.png") no-repeat  right top;
+}
+.fun1 {
+  background-image: url("/images/fun1.png");
+}
+
+.fun2 {
+  background-image: url("/images/fun2.png");
+}
+`
+
 function Home(props) {
     const isDesktop = useMediaQuery({
       query: `${device.laptop}`

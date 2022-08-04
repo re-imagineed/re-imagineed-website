@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Subscription from './Subscription'
 import { StyledSectionContentWrapper } from './Styled'
+import { Styled2Columns, StyledImage4 } from '../pages/about'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -17,7 +18,7 @@ const StyledContainer = styled.div`
 const StyledSubscribeHeader = styled.h1`
     font-size: 1.2em;
     font-weight: bold;
-    margin: 0px 0px 20px 50px;
+    margin: 120px 0px 20px 50px;
     
 `
 
@@ -25,11 +26,20 @@ function SubscribeBanner(props) {
     return (
         <StyledContainer>
             <StyledSectionContentWrapper>
+                <Styled2Columns>
+                <div class="column">
+<StyledImage4/>
+                     </div>
+                    <div class="column">
+
                 <StyledSubscribeHeader>Join our email list for updates</StyledSubscribeHeader>
                 <Subscription
                     formDescription={""}
                     mailchimpURL={props.mailchimpURL}
                 />
+                </div>
+    
+                </Styled2Columns>
             </StyledSectionContentWrapper>
         </StyledContainer>
     )
