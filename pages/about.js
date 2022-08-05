@@ -333,7 +333,6 @@ export function GoalList(props) {
           <div style={{ width: "100%", height: "100px" }}></div>
           <h1>Goals</h1>
           <StyledGoalList>
-
             <Goals />
           </StyledGoalList>
         </div>
@@ -398,29 +397,26 @@ function TeamMembers(props) {
 
 export function Team(props) {
   return (
-
     <StyledContainer>
       <StyledDividerLine />
       <TeamMembers/>
       <BoardOfDirectors/>
     </StyledContainer>
-
   )
 }
 export function AboutUs(props) {
     return (
       <StyledContainer>
         <Overview />
-   
         <CoreValues />
         <StyledImageWrapper>
-              <Image
-                src="/images/main_big.png"
-                width={1293}
-                height={491}
-                alt="main"
-              />
-            </StyledImageWrapper>
+          <Image
+            src="/images/main_big.png"
+            width={1293}
+            height={491}
+            alt="main"
+          />
+        </StyledImageWrapper>
         <GoalList />
       </StyledContainer>
     )

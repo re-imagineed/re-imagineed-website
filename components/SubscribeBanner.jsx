@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 import Subscription from './Subscription'
 import { StyledSectionContentWrapper } from './Styled'
-import { Styled2Columns, StyledIsiahKeith } from '../pages/about'
-
+import { Styled2Columns, StyledImageWrapper } from '../pages/about'
+import Image from 'next/image'
 const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -26,19 +26,27 @@ function SubscribeBanner(props) {
     return (
         <StyledContainer>
             <StyledSectionContentWrapper>
+                <div style={{ width: "100%", height: "50px" }}></div>
                 <Styled2Columns>
-                <div class="column">
-<StyledIsiahKeith/>
-                     </div>
+                    <div class="column">
+                        <StyledImageWrapper>
+                            <Image
+                                src="/images/isiah-keith.png"
+                                width={399}
+                                height={400}
+                                alt="join"
+                            />
+                        </StyledImageWrapper>
+                    </div>
                     <div class="column">
 
-                <StyledSubscribeHeader>Join our email list for updates</StyledSubscribeHeader>
-                <Subscription
-                    formDescription={""}
-                    mailchimpURL={props.mailchimpURL}
-                />
-                </div>
-    
+                        <StyledSubscribeHeader>Join our email list for updates</StyledSubscribeHeader>
+                        <Subscription
+                            formDescription={""}
+                            mailchimpURL={props.mailchimpURL}
+                        />
+                    </div>
+
                 </Styled2Columns>
             </StyledSectionContentWrapper>
         </StyledContainer>
