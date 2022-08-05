@@ -26,16 +26,16 @@ const overviewCopy = [
 const missionStatement = "To attract, retain, and elevate aspiring and current educators of color. Creating a culture of inclusivity through mentorship, accountability, and partnership."
 
 const coreValues = [
-  {title: "Results", description: "Results are the effects or outcome of something. We assume personal responsibility for the ambitious results that support our mission and serve educators. We use results as self-reflective tools for our improvement, and we ground our performance and decision-making in data. Data helps us to both frame our challenges and eliminate barriers that get in the way of operating simply, quickly and effectively. Excellence is always the goal, and good is the enemy of great."},
-  {title: "Diversity", description: "Diversity is the recognition that all of the ways in which people differ create crucial diversity of thought, ideas, perspectives, and values. These identity categories are both visible and invisible, including but not limited to race, ethnicity, gender, age, national origin, religion, disability, sexual orientation, gender identity, socioeconomic status, education, marital status, and language. We also recognize that individuals are affiliated with multiple identities, both seen and unseen, and experience those identities differently."},
-  {title: "Equity-Focused", description: "Equity is the act of developing fair systems, procedures, and resource distribution mechanisms to create equitable opportunity for all people, with a focus on eliminating barriers that have prevented the full participation of historically and currently oppressed groups. Equity is not a one-size-fits-all model, and is not about being difference-blind, but rather about actively engaging with difference and eliminating barriers to opportunity."},
-  {title: "Inclusive", description: "Inclusion is the act of creating environments in which any individual or group can be and feel welcomed, respected, supported, and valued to fully participate. An inclusive and welcoming climate embraces differences and offers respect in words and actions for all people, allowing everyone to bring their full, authentic selves to their work."},
-  {title: "Never Stop Growing", description: "A growth mindset is when an individual believes their talents can be developed through hard work, good strategies, and input from others. To effectively contribute to the mission of Re-Imagine Education, we foster an environment where we are constantly learning from one another."}
+  {title: "RESULTS-DRIVEN", description: "Results are the effects or outcome of something. We assume personal responsibility for the ambitious results that support our mission and serve educators. We use results as self-reflective tools for our improvement, and we ground our performance and decision-making in data. Data helps us to both frame our challenges and eliminate barriers that get in the way of operating simply, quickly and effectively. Excellence is always the goal, and good is the enemy of great."},
+  {title: "DIVERSITY", description: "Diversity is the recognition that all of the ways in which people differ create crucial diversity of thought, ideas, perspectives, and values. These identity categories are both visible and invisible, including but not limited to race, ethnicity, gender, age, national origin, religion, disability, sexual orientation, gender identity, socioeconomic status, education, marital status, and language. We also recognize that individuals are affiliated with multiple identities, both seen and unseen, and experience those identities differently."},
+  {title: "EQUITY-FOCUSED", description: "Equity is the act of developing fair systems, procedures, and resource distribution mechanisms to create equitable opportunity for all people, with a focus on eliminating barriers that have prevented the full participation of historically and currently oppressed groups. Equity is not a one-size-fits-all model, and is not about being difference-blind, but rather about actively engaging with difference and eliminating barriers to opportunity."},
+  {title: "INCLUSION", description: "Inclusion is the act of creating environments in which any individual or group can be and feel welcomed, respected, supported, and valued to fully participate. An inclusive and welcoming climate embraces differences and offers respect in words and actions for all people, allowing everyone to bring their full, authentic selves to their work."},
+  {title: "NEVER STOP GROWING", description: "A growth mindset is when an individual believes their talents can be developed through hard work, good strategies, and input from others. To effectively contribute to the mission of Re-Imagine Education, we foster an environment where we are constantly learning from one another."}
 ]
 
 const goals = [
   {goal: "ATTRACT", description: "Recruiting new ethnic minorities into education."},
-  {goal: "RETAIN", description: "Accelerating the careers of ethinic minorities already working in education."},
+  {goal: "RETAIN", description: "Accelerating the careers of ethnic minorities already working in education."},
   {goal: "ELEVATE", description: "Building the capacity of education organizations to become more diverse, equitable and inclusive."}
 ]
 
@@ -63,12 +63,11 @@ const teamMembers = [
 ]
 
 const StyledCoreValuesList = styled.ul`
-  list-style: url('/icons/cheese-bullet-0.5x.svg');
   margin-left: 0px;
-  padding-left: 30px;
+  padding-left: 20px;
+  padding-bottom: 0px;
 
   @media ${device.laptop} {
-    list-style: url('/icons/cheese-bullet-1x.svg');
     margin-left: 20px;
   }
 `
@@ -115,9 +114,10 @@ const StyledGoalNumberWrapper = styled.div`
 `
 
 export const  StyledGoalWrapper = styled.p`
-    font-size: 1em;
-    line-height: 1.5em;   
-
+    font-size: 2em;
+    line-height: 2em;   
+    font-weight: normal;
+  
     @media ${device.tablet} {
         font-size: 1em;
     }
@@ -127,7 +127,7 @@ export const  StyledGoalWrapper = styled.p`
       font-size: 1.2em;
     }
     
-    dt {
+    dl dt {
       float: left;
       clear: left;
       width: 100px;
@@ -135,21 +135,21 @@ export const  StyledGoalWrapper = styled.p`
       font-weight: bold;
     }
 
-    dt.underline {
+    dl dt.underline {
       text-decoration: underline;
     }
 
-    dt::after {
+    dl dt::after {
       content: ":";
       font-weight: normal;
     }
 
-    dd {
+    dl dd {
       margin: 0 0 0 0px;
       padding: 0 0 0.7em 0;
     }
 
-    dd.normal {
+    dl dd.normal {
       font-weight: normal;
     }
   
@@ -179,8 +179,7 @@ export const Styled2Columns = styled.div`
 `
 const Styled2Rows = styled.div`
   flex-direction: row;
-  align-items: left;
-  margin-bottom: 10px;
+  align-items: center;
   align-content: left;
   font-weight: bold;
   font-size: 1em;
@@ -188,45 +187,20 @@ const Styled2Rows = styled.div`
 
   .row {
     float: left;
-    width: 50%;
-    padding: 50px;
-    margin-bottom: 10px;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
 `
-export const StyledImage = styled.div`
-  width: 500px;
-  min-height: 300px;
-  background-color: white;
-  background: url("/images/fun1.png") no-repeat center top;
-}
-`
 
-export const StyledImage2 = styled.div`
-  width: 500px;
-  min-height: 300px;
-  margin-top: 80px;
-  background-color: white;
-  background: url("/images/learn.png") no-repeat center top;
-}
+export const StyledImageWrapper = styled.div`
+display: flex;
+border: 10px solid ${props => props.theme.off_white37};
+max-width: 1000px;
+min-width: 200px;
 `
-
-export const StyledImage3 = styled.div`
-  width: 500px;
-  min-height: 300px;
-  background-size: auto;
-  background-color: black;
-  background: url("/images/team1.jpeg") no-repeat center top;
-}
-`
-
-export const StyledImage4 = styled.div`
-  width: 500px;
-  min-height: 400px;
-  background-color: white;
-  background: url("/images/isiah-keith.png") no-repeat center top;
-}
-`
-export const StyledImage5 = styled.div`
+export const StyledImageFun2 = styled.div`
   width: 500px;
   height: 300px;
   background-color: white;
@@ -234,15 +208,50 @@ export const StyledImage5 = styled.div`
   background: url("/images/fun2.png") no-repeat center top;
 }
 `
+export const StyledImageLearn = styled.div`
+  width: 500px;
+  min-height: 500px;
+  margin-top: 300px;
+  margin-bottom: 0px;
+  margin-left:0px;
+  background-color: white;
+  background: url("/images/learn.png") no-repeat left top;
+}
+`
+
+export const StyledImageIsiah1 = styled.div`
+  width: 700px;
+  min-height: 500px;
+  margin-top: 50px;
+  background-size: auto;
+  background-color: white;
+  background: url("/images/main2.png") no-repeat left top;
+}
+`
+export const StyledImageKeith2 = styled.div`
+  width: 500px;
+  min-height: 300px;
+  background-size: auto;
+  background-color: white;
+  background: url("/images/keith2.jpeg") no-repeat center top;
+}
+`
+export const StyledIsiahKeith = styled.div`
+  width: 500px;
+  min-height: 400px;
+  background-color: white;
+  background: url("/images/isiah-keith.png") no-repeat center top;
+}
+`
+
 
 export function Overview(props) {
   return (
-    <StyledContainer>
-    <Styled2Columns>
-      <div class="column">
-      
+      <Styled2Columns>
+        <div class="column">
           <h1>About Us</h1>
-          <div style={{ width: "100%", height: "10px" }}></div>
+          <StyledDividerLine />
+          <div style={{ width: "100%", height: "50px" }}></div>
           <StyledP1>{overviewCopy[0]}</StyledP1>
           <StyledP1>{overviewCopy[1]}</StyledP1>
           <ul>
@@ -261,58 +270,98 @@ export function Overview(props) {
             <li>{overviewCopy[9]}</li>
           </ul>
           <StyledP1>{overviewCopy[10]}</StyledP1>
-      </div>
-      <div class="column">
-        <div style={{ width: "100%", height: "80px" }}></div>
-            <StyledImage2></StyledImage2>
-      </div>
-      <div style={{ width: "100%", height: "80px" }}></div>
-    </Styled2Columns>
-    <div style={{ width: "100%", height: "40px" }}></div>
-    </StyledContainer>
+        </div>
+            
+        <div style={{ width: "100%", height: "300px" }}></div>
+   
+            <StyledImageWrapper>
+              <Image
+                src="/images/learn.png"
+                width="700"
+                height="472"
+                style='margin: 50px 0; transform: rotate(180deg)'
+                alt="Learn"
+              />
+            </StyledImageWrapper>
+      
+          
+      
+      </Styled2Columns>
 
   )
 }
 
-export function Mission(props) {
+export function CoreValues(props) {
   return (
     <StyledContainer>
-
-      <h1>Core Values</h1>
-      <StyledCoreValuesList>
-        {coreValues.map((value, i) =>
-          <StyledCoreValue key={i}>
-            <h2>{value.title}</h2>
-            <StyledP3>{value.description}</StyledP3>
-          </StyledCoreValue>
-        )}
-      </StyledCoreValuesList>
-      <div style={{ width: "100%", height: "40px" }}></div>
-
       <Styled2Columns>
         <div class="column">
-          <div style={{ width: "100%", height: "40px" }}></div>
+          <StyledImageWrapper>
+            <Image
+              src="/images/fun1.png"
+              width="900"
+              height="500"
+              alt="Fun"
+            />
+          </StyledImageWrapper>
+        </div>
+        <div class="column">
+          <div style={{ width: "100%", height: "10px" }}></div>
+          <div style={{ marginLeft: "100px" }}>
+            <h1>Core Values</h1>
+            <StyledCoreValuesList>
+              {coreValues.map((value, i) =>
+                <StyledCoreValue key={i}>
+                  <h2>{value.title}</h2>
+                </StyledCoreValue>
+              )}
 
+            </StyledCoreValuesList>
+          </div>
+        </div>
+      </Styled2Columns>
+    </StyledContainer>
+)}
+
+export function GoalList(props) {
+  return (
+    <StyledContainer>
+      <Styled2Columns>
+
+
+        <div class="column">
+          <div style={{ width: "100%", height: "100px" }}></div>
           <h1>Goals</h1>
           <StyledGoalList>
+
             <Goals />
           </StyledGoalList>
         </div>
-        <div class="column">
 
-          <div style={{ width: "100%", height: "80px" }}></div>
-          <StyledImage5></StyledImage5>
+        <div class="column">
+          <StyledImageWrapper>
+            <Image
+              src="/images/isiah2.jpeg"
+              width="540"
+              height="720"
+              alt="Teacher"
+            />
+          </StyledImageWrapper>
         </div>
+
       </Styled2Columns>
     </StyledContainer>
   )
 }
+
+
 function Goal(props) {
   return (
   <StyledGoalWrapper>
       <dl> 
         <dt class="underline">{props.goal}</dt>
         <dd class="normal">{props.description}</dd> 
+        <div></div>
       </dl>
 </StyledGoalWrapper>
   )
@@ -358,40 +407,21 @@ export function Team(props) {
 
   )
 }
-function About(props) {
+export function AboutUs(props) {
     return (
       <StyledContainer>
-        <_Head />
-        <Header />
-
-        <StyledMain>
-          <StyledSection index={0}>
-            <StyledSectionAnchor id={"overview"} />
-            <StyledSectionContentWrapper>
-              <Overview />
-            </StyledSectionContentWrapper>
-          </StyledSection>
-
-          <StyledSection index={1}>
-            <StyledSectionAnchor id={"our_mission"} />
-            <StyledSectionContentWrapper>
-              <StyledDividerLine />
-              <Mission />
-            </StyledSectionContentWrapper>
-          </StyledSection>
-
-          <StyledSection index={2}>
-            <StyledSectionAnchor id={"our_team"} />
-            <StyledSectionContentWrapper>
-              <StyledDividerLine />
-              <Team />
-            </StyledSectionContentWrapper>
-          </StyledSection>
-        </StyledMain>
-        <Footer
-          isHomePage={false}
-          mailchimpURL={props.mailchimpURL}
-        />
+        <Overview />
+   
+        <CoreValues />
+        <StyledImageWrapper>
+              <Image
+                src="/images/main_big.png"
+                width={1293}
+                height={491}
+                alt="main"
+              />
+            </StyledImageWrapper>
+        <GoalList />
       </StyledContainer>
     )
 }
@@ -404,4 +434,4 @@ export async function getStaticProps() {
   }
 }
 
-export default About
+export default AboutUs

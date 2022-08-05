@@ -13,7 +13,7 @@ const StyledFooter = styled.footer`
     background-color: ${props => props.theme.sky};
 
     @media ${device.laptop} {
-        height: 350px;
+        height: 150px;
     }
 `
 

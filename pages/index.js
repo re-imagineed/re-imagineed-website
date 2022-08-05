@@ -7,7 +7,7 @@ import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SubscribeBanner from '../components/SubscribeBanner'
-import { Overview, Mission, Team } from './about'
+import { Team,  AboutUs } from './about'
 import ContactUs from '../components/ContactForm'
 
 const StyledFeatureSection = styled.section`
@@ -257,8 +257,8 @@ function Home(props) {
           <div style={{ width: "100%", height: "20px" }}></div>
           <StyledSection index={1}>
             <StyledSectionContentWrapper>
-              <Overview />
-              <Mission />
+       
+        <AboutUs/>
             </StyledSectionContentWrapper>
           </StyledSection>
 

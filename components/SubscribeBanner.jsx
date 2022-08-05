@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Subscription from './Subscription'
 import { StyledSectionContentWrapper } from './Styled'
-import { Styled2Columns, StyledImage4 } from '../pages/about'
+import { Styled2Columns, StyledIsiahKeith } from '../pages/about'
 
 const StyledContainer = styled.div`
     display: flex;
@@ -28,7 +28,7 @@ function SubscribeBanner(props) {
             <StyledSectionContentWrapper>
                 <Styled2Columns>
                 <div class="column">
-<StyledImage4/>
+<StyledIsiahKeith/>
                      </div>
                     <div class="column">
 

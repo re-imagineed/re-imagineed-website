@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components'
 import { device } from '../utils/media-breakpoints'
 import Image from 'next/image'
 import { StyledP2 } from './Styled'
-import { Styled2Columns, StyledImage, StyledImage2, StyledImage3, StyledImage4, StyledImage5 } from '../pages/about'
+import { Styled2Columns, StyledImageWrapper, StyledImageLearn, StyledImageIsiah1, StyledIsiahKeith, StyledImageFun2 } from '../pages/about'
 
 const StyledBODWrapper = styled.article`
     display: flex;
@@ -60,7 +60,14 @@ function BoardOfDirectors(props) {
     </StyledBODWrapper>
     </div>
     <div class="column">
-      <StyledImage5/>
+    < StyledImageWrapper>
+            <Image
+              src="/images/fun2.png"
+              width="402"
+              height="355"
+              alt="Teacher"
+            />
+          </StyledImageWrapper>
     </div>
 </Styled2Columns>
   )
