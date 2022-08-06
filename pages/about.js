@@ -178,7 +178,19 @@ export const Styled2Columns = styled.div`
   }
 `
 
+const Styled2Rows = styled.div`
+  flex-direction: row;
+  align-items: center;
+  align-content: left;
 
+  .row {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+`
 export const StyledImageWrapper = styled.div`
 display: inline-block;
 border: 10px solid ${props => props.theme.off_white37};
@@ -213,8 +225,11 @@ export function Overview(props) {
           <StyledP1>{overviewCopy[10]}</StyledP1>
         </div>
         </div> 
-        <div style={{ paddingLeft:"200px", marginLeft: "400px",marginTop:"150px", marginBottom:"50px", width: "100%", height: "100%" }}>
-            <StyledImageWrapper>
+
+        <div style={{ paddingLeft:"200px", marginLeft: "350px",marginTop:"10px", marginBottom:"50px", width: "100%", height: "100%" }}>
+          <Styled2Rows>
+            <div class="row">
+            <StyledImageWrapper style={{marginLeft:"50px"}}>
               <Image
                 src="/images/learn.png"
                 width="500"
@@ -222,6 +237,19 @@ export function Overview(props) {
                 alt="Learn"
               />
             </StyledImageWrapper>
+            </div>
+
+            <div class="row">
+            <StyledImageWrapper style={{marginLeft:"0px"}}>
+              <Image
+                src="/images/fun1.png"
+                width="500"
+                height="237"
+                alt="Learn"
+              />
+            </StyledImageWrapper>
+            </div>
+            </Styled2Rows>
           </div>
       </Styled2Columns>
 
@@ -242,7 +270,7 @@ export function CoreValues(props) {
             />
           </StyledImageWrapper>
         </div>
-        
+
         <div class="column">
           <div style={{ width: "100%", height: "120px" }}></div>
           <div style={{ marginLeft: "100px" }}>
@@ -253,7 +281,6 @@ export function CoreValues(props) {
                   <h2>{value.title}</h2>
                 </StyledCoreValue>
               )}
-
             </StyledCoreValuesList>
           </div>
         </div>
@@ -267,13 +294,13 @@ export function GoalList(props) {
       <Styled2Columns>
 
         <div class="column">
-          <div style={{ width: "100%", height: "100px", marginTop: "0px"  }}></div>
+          <div style={{ width: "100%", height: "50px", marginTop: "0px"  }}></div>
           <h1>Goals</h1>
           <StyledGoalList>
             <Goals />
           </StyledGoalList>
         </div>
-        <div style={{ width: "100%", height: "100%", marginTop: "150px" }}></div>
+        <div style={{ width: "100%", height: "100%", marginTop: "100px" }}></div>
         <div class="column">
           <StyledImageWrapper style={{ minWidth: "700px"}}>
             <Image
