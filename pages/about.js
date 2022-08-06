@@ -200,50 +200,6 @@ border: 10px solid ${props => props.theme.off_white37};
 max-width: 1000px;
 min-width: 200px;
 `
-export const StyledImageFun2 = styled.div`
-  width: 500px;
-  height: 300px;
-  background-color: white;
-  background-size: auto;
-  background: url("/images/fun2.png") no-repeat center top;
-}
-`
-export const StyledImageLearn = styled.div`
-  width: 500px;
-  min-height: 500px;
-  margin-top: 300px;
-  margin-bottom: 0px;
-  margin-left:0px;
-  background-color: white;
-  background: url("/images/learn.png") no-repeat left top;
-}
-`
-
-export const StyledImageIsiah1 = styled.div`
-  width: 700px;
-  min-height: 500px;
-  margin-top: 50px;
-  background-size: auto;
-  background-color: white;
-  background: url("/images/main2.png") no-repeat left top;
-}
-`
-export const StyledImageKeith2 = styled.div`
-  width: 500px;
-  min-height: 300px;
-  background-size: auto;
-  background-color: white;
-  background: url("/images/keith2.jpeg") no-repeat center top;
-}
-`
-export const StyledIsiahKeith = styled.div`
-  width: 500px;
-  min-height: 400px;
-  background-color: white;
-  background: url("/images/isiah-keith.png") no-repeat center top;
-}
-`
-
 
 export function Overview(props) {
   return (
