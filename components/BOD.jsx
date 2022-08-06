@@ -44,33 +44,33 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-<Styled2Columns>
-<div class="column" style={{marginTop:"20px"}}>
-    < StyledImageWrapper>
-            <Image
-              src="/images/fun2.png"
-              width="402"
-              height="355"
-              alt="fun2"
-            />
-          </StyledImageWrapper>
-    </div>
-    <div class="column">
-    <StyledBODWrapper>
-     <div style={{width: "100%", height: "100px"}}></div>
-      <h2 id="h2u">Board Of Directors</h2>
-     
-      <div style={{width: "100%", height: "20px"}}></div>
-        <li><StyledNameWrapper><h3>{bodMembers[0]}</h3></StyledNameWrapper></li>
-        <li><StyledNameWrapper><h3>{bodMembers[1]}</h3></StyledNameWrapper></li>
-        <li><StyledNameWrapper><h3>{bodMembers[2]}</h3></StyledNameWrapper></li>
-        <li><StyledNameWrapper><h3>{bodMembers[3]}</h3></StyledNameWrapper></li>
-        <li><StyledNameWrapper><h3>{bodMembers[4]}</h3></StyledNameWrapper></li>
-  
-    </StyledBODWrapper>
-    </div>
+    <Styled2Columns style={{marginTop:"60px"}}>
+      <div class="column">
+        < StyledImageWrapper>
+          <Image
+            src="/images/fun2.png"
+            width="402"
+            height="355"
+            alt="fun2"
+          />
+        </StyledImageWrapper>
+      </div>
+      <div class="column">
+        <StyledBODWrapper>
+          <div style={{ width: "100%", height: "100px" }}></div>
+          <h2 id="h2u">Board Of Directors</h2>
 
-</Styled2Columns>
+          <div style={{ width: "100%", height: "20px" }}></div>
+          <li><StyledNameWrapper><h3>{bodMembers[0]}</h3></StyledNameWrapper></li>
+          <li><StyledNameWrapper><h3>{bodMembers[1]}</h3></StyledNameWrapper></li>
+          <li><StyledNameWrapper><h3>{bodMembers[2]}</h3></StyledNameWrapper></li>
+          <li><StyledNameWrapper><h3>{bodMembers[3]}</h3></StyledNameWrapper></li>
+          <li><StyledNameWrapper><h3>{bodMembers[4]}</h3></StyledNameWrapper></li>
+
+        </StyledBODWrapper>
+      </div>
+
+    </Styled2Columns>
   )
 }
 
