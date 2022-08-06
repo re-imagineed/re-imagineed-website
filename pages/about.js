@@ -166,38 +166,23 @@ export const Styled2Columns = styled.div`
   .column {
     float: left;
     width: 50%;
-    padding: 50px;
-    margin-bottom: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
   }
 
   /* Clear floats after the columns */
   .row:after {
     content: "";
-    display: table;
+    display: flex;
     clear: both;
   }
 `
-const Styled2Rows = styled.div`
-  flex-direction: row;
-  align-items: center;
-  align-content: left;
-  font-weight: bold;
-  font-size: 1em;
-  line-height: 1.5em;
 
-  .row {
-    float: left;
-    width: 100%;
-    padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
-  }
-`
 
 export const StyledImageWrapper = styled.div`
-display: flex;
+display: inline-block;
 border: 10px solid ${props => props.theme.off_white37};
-max-width: 1000px;
+max-width: 1200px;
 min-width: 200px;
 `
 
@@ -207,8 +192,8 @@ export function Overview(props) {
         <div class="column">
           <h1>About Us</h1>
           <StyledDividerLine />
-          <div style={{ width: "100%", height: "50px" }}></div>
-          <StyledP1>{overviewCopy[0]}</StyledP1>
+          <div style={{  paddingLeft:"0px", marginLeft: "0px", marginTop:"50px", marginBottom:"50px", width: "100%", height: "100%" }}>
+          <StyledP1>{overviewCopy[0]}</StyledP1> 
           <StyledP1>{overviewCopy[1]}</StyledP1>
           <ul>
             <li>{overviewCopy[2]}</li>
@@ -227,21 +212,17 @@ export function Overview(props) {
           </ul>
           <StyledP1>{overviewCopy[10]}</StyledP1>
         </div>
-            
-        <div style={{ width: "100%", height: "300px" }}></div>
-   
+        </div> 
+        <div style={{ paddingLeft:"200px", marginLeft: "400px",marginTop:"150px", marginBottom:"50px", width: "100%", height: "100%" }}>
             <StyledImageWrapper>
               <Image
                 src="/images/learn.png"
-                width="700"
-                height="472"
-                style='margin: 50px 0; transform: rotate(180deg)'
+                width="500"
+                height="337"
                 alt="Learn"
               />
             </StyledImageWrapper>
-      
-          
-      
+          </div>
       </Styled2Columns>
 
   )
@@ -254,15 +235,16 @@ export function CoreValues(props) {
         <div class="column">
           <StyledImageWrapper>
             <Image
-              src="/images/fun1.png"
-              width="900"
+              src="/images/isiah2.jpeg"
+              width="400"
               height="500"
-              alt="Fun"
+              alt="Teacher"
             />
           </StyledImageWrapper>
         </div>
+        
         <div class="column">
-          <div style={{ width: "100%", height: "10px" }}></div>
+          <div style={{ width: "100%", height: "120px" }}></div>
           <div style={{ marginLeft: "100px" }}>
             <h1>Core Values</h1>
             <StyledCoreValuesList>
@@ -281,31 +263,30 @@ export function CoreValues(props) {
 
 export function GoalList(props) {
   return (
-    <StyledContainer>
+   // <StyledContainer>
       <Styled2Columns>
 
-
         <div class="column">
-          <div style={{ width: "100%", height: "100px" }}></div>
+          <div style={{ width: "100%", height: "100px", marginTop: "0px"  }}></div>
           <h1>Goals</h1>
           <StyledGoalList>
             <Goals />
           </StyledGoalList>
         </div>
-
+        <div style={{ width: "100%", height: "100%", marginTop: "150px" }}></div>
         <div class="column">
-          <StyledImageWrapper>
+          <StyledImageWrapper style={{ minWidth: "700px"}}>
             <Image
-              src="/images/isiah2.jpeg"
-              width="540"
-              height="720"
-              alt="Teacher"
+              width="1293"
+              height="491"
+              src="/images/main_big.png"
+              alt="main"
             />
           </StyledImageWrapper>
         </div>
 
       </Styled2Columns>
-    </StyledContainer>
+    //</StyledContainer>
   )
 }
 
@@ -365,6 +346,7 @@ export function AboutUs(props) {
       <StyledContainer>
         <Overview />
         <CoreValues />
+        {/* <div style={{ paddingLeft:"0px", marginLeft: "0px",marginTop:"10px", marginBottom:"50px", width: "100%", height: "100%" }}>
         <StyledImageWrapper>
           <Image
             src="/images/main_big.png"
@@ -373,6 +355,7 @@ export function AboutUs(props) {
             alt="main"
           />
         </StyledImageWrapper>
+        </div> */}
         <GoalList />
       </StyledContainer>
     )
