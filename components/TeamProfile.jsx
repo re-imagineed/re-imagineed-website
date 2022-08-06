@@ -68,27 +68,52 @@ const StyledProfileBody = styled.div`
 
 function TeamProfile(props) {
     return (
+
+        props.justification % 2 == 0 ?
         <StyledProfileWrapper>
-            <StyledProfileHead>
-                <StyledImageWrapper>
-                    <Image
-                        src={props.imageURL}
-                        alt={props.name}
-                        width={props.imageDimensions.width}
-                        height={props.imageDimensions.height}
-                    />
-                </StyledImageWrapper>
-                <StyledNameWrapper>
-                    <h2>{props.name}</h2>
-                    <h3>{props.title}</h3>
-                </StyledNameWrapper>
-            </StyledProfileHead>
-            <StyledProfileBody>
-                {props.copy.map( (p, i) => 
-                    <StyledP2 key={i}>{p}</StyledP2>
-                )}
-            </StyledProfileBody>
-        </StyledProfileWrapper>
+                <StyledProfileHead style={{ marginLeft: "0px", justifyContent: "left", width:"70%"}} >
+
+                    <><StyledImageWrapper>
+                        <Image
+                            src={props.imageURL}
+                            alt={props.name}
+                            width={props.imageDimensions.width}
+                            height={props.imageDimensions.height} />
+                    </StyledImageWrapper><StyledNameWrapper>
+                            <h2>{props.name}</h2>
+                            <h3>{props.title}</h3>
+                        </StyledNameWrapper></>
+                </StyledProfileHead>
+                <StyledProfileBody>
+                    {props.copy.map((p, i) =>
+                        <StyledP2 key={i}>{p}</StyledP2>
+                    )}
+                </StyledProfileBody>
+            </StyledProfileWrapper>
+            :
+            <StyledProfileWrapper>
+                <StyledProfileHead style={{ marginLeft: "200px", justifyContent: "right" , width:"70%"}}>
+                    <StyledNameWrapper>
+                        <h2>{props.name}</h2>
+                        <h3>{props.title}</h3>
+                    </StyledNameWrapper>
+                    <StyledImageWrapper>
+                        <Image
+                            src={props.imageURL}
+                            alt={props.name}
+                            width={props.imageDimensions.width}
+                            height={props.imageDimensions.height}
+                        />
+                    </StyledImageWrapper>
+
+                </StyledProfileHead>
+                <StyledProfileBody>
+                    {props.copy.map((p, i) =>
+                        <StyledP2 key={i}>{p}</StyledP2>
+                    )}
+                </StyledProfileBody>
+
+            </StyledProfileWrapper>
     )
 }
 

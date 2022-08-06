@@ -351,7 +351,7 @@ function TeamMembers(props) {
       copy={member.copy}
       justification={i % 2 == 0 ? 0 : 1}
     ></TeamProfile>
-    {i != teamMembers.length - 1 ? <StyledDividerLine /> : null}
+    {/* {i != teamMembers.length - 1 ? <StyledDividerLine /> : null} */}
   </div>
   )
 )

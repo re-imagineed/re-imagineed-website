@@ -45,9 +45,19 @@ const bodMembers = [
 function BoardOfDirectors(props) {
   return (
 <Styled2Columns>
+<div class="column" style={{marginTop:"20px"}}>
+    < StyledImageWrapper>
+            <Image
+              src="/images/fun2.png"
+              width="402"
+              height="355"
+              alt="fun2"
+            />
+          </StyledImageWrapper>
+    </div>
     <div class="column">
     <StyledBODWrapper>
-     <div style={{width: "100%", height: "40px"}}></div>
+     <div style={{width: "100%", height: "100px"}}></div>
       <h2 id="h2u">Board Of Directors</h2>
      
       <div style={{width: "100%", height: "20px"}}></div>
@@ -59,16 +69,7 @@ function BoardOfDirectors(props) {
   
     </StyledBODWrapper>
     </div>
-    <div class="column">
-    < StyledImageWrapper>
-            <Image
-              src="/images/fun2.png"
-              width="402"
-              height="355"
-              alt="Teacher"
-            />
-          </StyledImageWrapper>
-    </div>
+
 </Styled2Columns>
   )
 }
