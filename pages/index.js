@@ -81,28 +81,6 @@ const StyledFeatureContainer = styled.div`
   }
 `
 
-const StyledButtonLink = styled.a`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    background: ${props => props.theme.navy};
-    cursor: pointer;
-    outline: none;
-
-    &:hover {
-        opacity: 1;
-        background: ${props => props.theme.lightblue};
-    }
-
-    font-size: 1.2em;
-    font-weight: 500;
-    color: white;
-`
-
 export const StyledContentContainer = styled.div`
   display: flex;
   flex-direction: column;

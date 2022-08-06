@@ -4,10 +4,7 @@ import Link from 'next/link'
 import { useMediaQuery } from 'react-responsive'
 import { device } from '../utils/media-breakpoints'
 import { useState } from 'react'
-import NotificationBanner from './NotificationBanner'
 import { LogoWhiteS } from './Logo'
-import { LogoBlackL } from './Logo'
-import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine} from '../components/Styled'
 
 const slideIn = keyframes`
     0% {
@@ -96,6 +93,7 @@ const StyledRightContent = styled.div`
     display: flex;
     float: right;
     align-items: center;
+
 `
 
 const StyledLeftContent = styled.div`
@@ -153,83 +151,6 @@ const StyledNavLink = styled.a`
     }
 `
 
-const StyledDropdownWrapper = styled.div`
-    position: relative;
-    margin: 5px 0px 5px 20px;
-
-    @media ${device.laptop} {
-        margin: 5px 0px 5px 30px;
-    }
-
-    :hover {
-        div {
-            visibility: visible;
-        }
-    }
-
-    a {
-        margin: 5px 0;
-    }
-`
-
-const StyledDropdown = styled.div`
-    position: absolute;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 100%;
-
-    visibility: hidden;
-
-    @media ${device.laptop} {
-        height: 120px;
-    }
-
-    a {
-        margin: 0;
-    }
-`
-
-const StyledDropdownNavLinks = styled.a`
-    display: flex;
-    align-items: center;
-
-    color: ${props => props.theme.navy};
-    background-color: ${props => props.theme.yellow};
-    font-size: 0.8em;
-    font-style: normal;
-    font-weight: 400;
-
-    height: 40px;
-    width: 100%;
-
-    padding: 10px;
-
-    transition: background-color 0.15s;
-
-    cursor: pointer;
-
-    :hover {
-        background-color: ${props => props.theme.lightblue};
-        color: ${props => props.theme.white};
-        opacity: 1;
-    }
-
-    @media ${device.mobileM} {
-        font-size: 0.8em;
-    }
-
-    @media ${device.laptop} {
-        font-size: 1em;
-    }
-`
-
-const StyledCaretWrapper = styled.div`
-    display: inline-flex;
-    align-items: center;
-`
 const NavMenuButton = styled.button`
     display: flex;
     justify-content: center;
@@ -319,6 +240,28 @@ const StyledRedButtonLink = styled.a`
     font-weight: 500;
     color: white;
 `
+
+const StyledButtonLink = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: ${props => props.theme.sky};
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        opacity: 1;
+        background: ${props => props.theme.lightblue};
+    }
+
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+`
 function Header() {
 
     const [bannerPresent, setBannerPresent] = useState(true)
@@ -350,7 +293,6 @@ function Header() {
                                         <li><Link href="/#"><StyledNavLink>Home</StyledNavLink></Link></li>
                                         <li><Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link></li>
                                         <li><Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link></li>
-                                        <li><Link href="#contact"><StyledNavLink>Contact</StyledNavLink></Link></li>
                                     </StyledContentWrapper>
                                     :
                                     <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
@@ -367,12 +309,18 @@ function Header() {
                         </nav>
                     </StyledLeftContent>
                     <StyledRightContent>
+ 
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>
+                        <div style={{ width: "10px", height: "100%" }}></div>
                         <Link href="https://tinyurl.com/redonations"><a><StyledRedButtonLink>Donate</StyledRedButtonLink></a></Link>
+                        <div style={{ width: "20px", height: "100%" }}></div>
+                        <Link href="https://us7.list-manage.com/contact-form?u=5080e466c5f746c8b294721bc&form_id=e8ae05aca1f8eaf2371061d59e2e7222"><a><StyledButtonLink>Contact</StyledButtonLink></a></Link>
                         <li><Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link></li>
+         
                     </StyledRightContent>
+                
                 </StyledContentWrapper>
             </StyledHeader>
             {navMenuActive ?
@@ -381,7 +329,6 @@ function Header() {
                         <Link href="/#"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
                         <Link href="#about_us"><StyledNavLink onClick={toggleNavMenu}>About us</StyledNavLink></Link>
                         <Link href="#our_team"><StyledNavLink onClick={toggleNavMenu}>Team</StyledNavLink></Link>
-                        <Link href="#contact"><StyledNavLink onClick={toggleNavMenu}>Contact</StyledNavLink></Link>
                     </StyledLinksWrapper>
                 </StyledNavMenu>
                 :
