@@ -8,7 +8,8 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SubscribeBanner from '../components/SubscribeBanner'
 import { Team,  AboutUs } from './about'
-import ContactUs from '../components/ContactForm'
+import Image from 'next/image'
+
 
 const StyledFeatureSection = styled.section`
   display: flex;
@@ -22,14 +23,14 @@ const StyledFeatureSection = styled.section`
   background-color: ${props => props.theme.lightgrey};
 
   @media ${device.tablet} {
-    min-height: 700px;
+    min-height: 400px;
     width: 100%;
 
-    background-image: url("/images/team1.jpeg");
-    background-size: fill;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-blend-mode: normal;
+    // background-image: url("/images/team1.jpeg");
+    // background-size: fill;
+    // background-position: right center;
+    // background-repeat: no-repeat;
+    // background-blend-mode: normal;
   }
 `
 
@@ -40,18 +41,18 @@ const StyledFeatureContainer = styled.div`
   justify-content: center;
   align-content: center;
   width: 30%;
-  min-height: 400px;
-  
-  00px;
-  margin: 0px;
+  min-height: 500px;
+  margin-top:
+  margin: 20px;
   padding: 40px;
 
   background-color: ${props => props.theme.grapefruit};
-
+  border: 10px solid ${props => props.theme.off_white37};
   h1 {
     font-size: 2em;
     line-height: 1em;
     margin-top: 0px;
+    margin-left: 100px;
   }
 
   p {
@@ -75,7 +76,7 @@ const StyledFeatureContainer = styled.div`
 
     p {
       line-height: 1.4em;
-      margin-bottom: 40px;
+      margin-bottom: 0px;
     }
   }
 `
@@ -151,8 +152,9 @@ const StyledBigImageWrapper = styled.div`
   border: 10px solid ${props => props.theme.off_white37};
   max-width: 1200px;
   min-width: 200px;
-  height: auto;
   margin: 20px 0;
+  height: auto;
+  align-content: center;
 
   @media ${device.laptop} {
     max-width: 1024px;
@@ -161,35 +163,7 @@ const StyledBigImageWrapper = styled.div`
   }
 `
 
-const StyledAnimationWrapper = styled.div`
-display: flex;
-@keyframes example {
-  // from {background-color: red;}
-  // to {background-color: yellow;}
-  0%   {background-color: red;}
-  25%  {background-color: yellow;}
-  50%  {background-color: blue;}
-  100% {background-color: green;}
-}
-`
 
-const StyledAnimationImages = styled.div`
-
-width: 500px;
-min-height: 300px;
-animation-name: example;
-animation-duration: 4s
-background-color: white;
-background: url("/images/fun1.png") no-repeat  right top;
-}
-.fun1 {
-  background-image: url("/images/fun1.png");
-}
-
-.fun2 {
-  background-image: url("/images/fun2.png");
-}
-`
 
 function Home(props) {
     const isDesktop = useMediaQuery({
@@ -215,6 +189,17 @@ function Home(props) {
                 </StyledLogoWrapper>
               </div>
             </StyledFeatureContainer>
+            {/* <div style={{ width: "100%", height: "100%", marginTop: "100px" }}></div> */}
+        <div>
+          <StyledBigImageWrapper style={{ leftMargin: "0px", minWidth: "700px", width:"100%", height: "100%"}}>
+            <Image
+              width="975"
+              height="731"
+              src="/images/team1.jpeg"
+              alt="team"
+            />
+          </StyledBigImageWrapper>
+        </div>
           </StyledFeatureSection>
 
           {/* <StyledSection index={0}>

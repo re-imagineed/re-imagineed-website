@@ -25,8 +25,8 @@ const StyledSubscribeHeader = styled.h1`
 function SubscribeBanner(props) {
     return (
         <StyledContainer>
-            <StyledSectionContentWrapper>
-                <div style={{ width: "100%", height: "50px" }}></div>
+            <StyledSectionContentWrapper style={{marginBottom: "200px", marginTop: "250px"}}>
+      
                 <Styled2Columns>
                     <div class="column">
                         <StyledImageWrapper>
@@ -39,7 +39,6 @@ function SubscribeBanner(props) {
                         </StyledImageWrapper>
                     </div>
                     <div class="column">
-
                         <StyledSubscribeHeader>Join our email list for updates</StyledSubscribeHeader>
                         <Subscription
                             formDescription={""}

@@ -72,7 +72,6 @@ function TeamProfile(props) {
         props.justification % 2 == 0 ?
         <StyledProfileWrapper>
                 <StyledProfileHead style={{ marginLeft: "0px", justifyContent: "left", width:"70%"}} >
-
                     <><StyledImageWrapper>
                         <Image
                             src={props.imageURL}
@@ -112,7 +111,6 @@ function TeamProfile(props) {
                         <StyledP2 key={i}>{p}</StyledP2>
                     )}
                 </StyledProfileBody>
-
             </StyledProfileWrapper>
     )
 }

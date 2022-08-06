@@ -373,16 +373,6 @@ export function AboutUs(props) {
       <StyledContainer>
         <Overview />
         <CoreValues />
-        {/* <div style={{ paddingLeft:"0px", marginLeft: "0px",marginTop:"10px", marginBottom:"50px", width: "100%", height: "100%" }}>
-        <StyledImageWrapper>
-          <Image
-            src="/images/main_big.png"
-            width={1293}
-            height={491}
-            alt="main"
-          />
-        </StyledImageWrapper>
-        </div> */}
         <GoalList />
       </StyledContainer>
     )
