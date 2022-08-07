@@ -114,8 +114,8 @@ const StyledGoalNumberWrapper = styled.div`
 `
 
 export const  StyledGoalWrapper = styled.p`
-    font-size: 2em;
-    line-height: 2em;   
+    font-size: 1.5em;
+    line-height: 1.5em;   
     font-weight: normal;
   
     @media ${device.tablet} {
@@ -124,7 +124,7 @@ export const  StyledGoalWrapper = styled.p`
 
     dl {
       padding: 0.5em;
-      font-size: 1.2em;
+      font-size: 1.5em;
     }
     
     dl dt {
@@ -142,6 +142,8 @@ export const  StyledGoalWrapper = styled.p`
     dl dt::after {
       content: ":";
       font-weight: normal;
+      display: inline-block;
+      
     }
 
     dl dd {
@@ -152,6 +154,7 @@ export const  StyledGoalWrapper = styled.p`
     dl dd.normal {
       font-weight: normal;
     }
+}
   
 `
 export const Styled2Columns = styled.div`
@@ -159,9 +162,9 @@ export const Styled2Columns = styled.div`
   align-items: left;
   margin-bottom: 10px;
   align-content: left;
-  font-weight: bold;
-  font-size: 1em;
-  line-height: 1.5em;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: em;
 
   .column {
     float: left;
@@ -192,39 +195,44 @@ const Styled2Rows = styled.div`
   }
 `
 export const StyledImageWrapper = styled.div`
-display: inline-block;
-border: 10px solid ${props => props.theme.off_white37};
-max-width: 1200px;
-min-width: 200px;
+  display: inline-block;
+  border: 1px solid ${props => props.theme.off_white37};
+  max-width: 1200px;
+  min-width: 200px;
 `
 
 export function Overview(props) {
   return (
       <Styled2Columns>
-        <div class="column">
-          <h1>About Us</h1>
-          <StyledDividerLine />
-          <div style={{  paddingLeft:"0px", marginLeft: "0px", marginTop:"50px", marginBottom:"50px", width: "100%", height: "100%" }}>
-          <StyledP1>{overviewCopy[0]}</StyledP1> 
+      <div class="column">
+        <h1>About Us</h1>
+        <StyledDividerLine />
+        <div style={{ paddingLeft: "0px", marginLeft: "0px", marginTop: "50px", marginBottom: "50px", width: "100%", height: "100%" }}>
+          <StyledP1>{overviewCopy[0]}</StyledP1>
           <StyledP1>{overviewCopy[1]}</StyledP1>
-          <ul>
-            <li>{overviewCopy[2]}</li>
-            <li>{overviewCopy[3]}</li>
-            <li>{overviewCopy[4]}</li>
-          </ul>
-
+          <StyledP1>
+            <ul>
+              <li>{overviewCopy[2]}</li>
+              <li>{overviewCopy[3]}</li>
+              <li>{overviewCopy[4]}</li>
+            </ul>
+          </StyledP1>
+          <StyledP1></StyledP1>
           <StyledP1>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
-            teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:</StyledP1>
-          <ul>
-            <li>{overviewCopy[5]}</li>
-            <li>{overviewCopy[6]}</li>
-            <li>{overviewCopy[7]}</li>
-            <li>{overviewCopy[8]}</li>
-            <li>{overviewCopy[9]}</li>
-          </ul>
+            teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:
+          </StyledP1>
+          <StyledP1>
+            <ul>
+              <li>{overviewCopy[5]}</li>
+              <li>{overviewCopy[6]}</li>
+              <li>{overviewCopy[7]}</li>
+              <li>{overviewCopy[8]}</li>
+              <li>{overviewCopy[9]}</li>
+            </ul>
+          </StyledP1>
           <StyledP1>{overviewCopy[10]}</StyledP1>
         </div>
-        </div> 
+      </div> 
 
         <div style={{ paddingLeft:"200px", marginLeft: "350px",marginTop:"10px", marginBottom:"50px", width: "100%", height: "100%" }}>
           <Styled2Rows>
@@ -278,7 +286,7 @@ export function CoreValues(props) {
             <StyledCoreValuesList>
               {coreValues.map((value, i) =>
                 <StyledCoreValue key={i}>
-                  <h2>{value.title}</h2>
+                  <StyledP1>{value.title}</StyledP1>
                 </StyledCoreValue>
               )}
             </StyledCoreValuesList>
@@ -300,7 +308,7 @@ export function GoalList(props) {
             <Goals />
           </StyledGoalList>
         </div>
-        <div style={{ width: "100%", height: "100%", marginTop: "100px" }}></div>
+        <div style={{ width: "100%", height: "100%", marginTop: "120px" }}></div>
         <div class="column">
           <StyledImageWrapper style={{ minWidth: "700px"}}>
             <Image
@@ -320,21 +328,23 @@ export function GoalList(props) {
 
 function Goal(props) {
   return (
+    <div>
   <StyledGoalWrapper>
-      <dl> 
+      <dl>
         <dt class="underline">{props.goal}</dt>
         <dd class="normal">{props.description}</dd> 
-        <div></div>
       </dl>
+      
 </StyledGoalWrapper>
+</div>
   )
 }
 
 function Goals(props) {
-  return (goals.map((goal) => 
+  return (goals.map((g) => 
     <Goal
-      goal={goal.goal}
-      description={goal.description}
+      goal={g.goal}
+      description={g.description}
     ></Goal>
   ))
 

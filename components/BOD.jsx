@@ -56,7 +56,7 @@ function BoardOfDirectors(props) {
         </StyledImageWrapper>
       </div>
       <div class="column">
-        <StyledBODWrapper style={{marginLeft: "150px"}}>
+        <StyledBODWrapper style={{marginLeft: "80px", marginTop:"80px"}}>
           <div style={{ width: "100%", height: "50px" }}></div>
           <h2>Board Of Directors</h2>
 

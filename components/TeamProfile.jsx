@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { device } from '../utils/media-breakpoints'
 import Image from 'next/image'
-import { StyledP2 } from './Styled'
+import { StyledP2, StyledP1 } from './Styled'
 import BoardMember from './BOD'
 
 const StyledProfileWrapper = styled.article`
@@ -44,11 +44,12 @@ const StyledNameWrapper = styled.div`
     h2 {
         margin: 0;
         margin-bottom: 10px;
+        font-size: 1.5em;
     }
 
     h3 {
         margin: 0;
-        font-size: 1em;
+        font-size: 1.3em;
         font-weight: 500;
         color: ${props => props.theme.navy};
 
@@ -64,6 +65,8 @@ const StyledNameWrapper = styled.div`
 `
 
 const StyledProfileBody = styled.div`
+    font-size: 1.3em;
+    font-weight: normal;
 `
 
 function TeamProfile(props) {
@@ -84,8 +87,8 @@ function TeamProfile(props) {
                         </StyledNameWrapper></>
                 </StyledProfileHead>
                 <StyledProfileBody>
-                    {props.copy.map((p, i) =>
-                        <StyledP2 key={i}>{p}</StyledP2>
+                    {props.copy.map((p) => 
+                        <StyledP2>{p}</StyledP2>
                     )}
                 </StyledProfileBody>
             </StyledProfileWrapper>
@@ -107,8 +110,8 @@ function TeamProfile(props) {
 
                 </StyledProfileHead>
                 <StyledProfileBody>
-                    {props.copy.map((p, i) =>
-                        <StyledP2 key={i}>{p}</StyledP2>
+                    {props.copy.map((p) =>
+                        <StyledP2>{p}</StyledP2>
                     )}
                 </StyledProfileBody>
             </StyledProfileWrapper>

@@ -48,7 +48,7 @@ export const StyledSectionAnchor = styled.div`
 `
 
 export const StyledP1 = styled.p`
-    font-size: 1em;
+    font-size: 1.5em;
     line-height: 1.5em;
 
     @media ${device.tablet} {
@@ -57,7 +57,7 @@ export const StyledP1 = styled.p`
 `
 
 export const StyledP2 = styled.p`
-    font-size: 0.9em;
+    font-size: 1.2em;
     line-height: 1.5em;
 
     @media ${device.tablet} {
