@@ -282,8 +282,8 @@ export function CoreValues(props) {
         </div>
 
         <div class="column">
-          <div style={{ width: "100%", height: "120px" }}></div>
-          <div style={{ marginLeft: "100px" }}>
+          <div style={{ width: "100%"}}></div>
+          <div style={{ marginLeft: "100px", marginTop: "110px" }}>
             <h1>Core Values</h1>
             <StyledCoreValuesList>
               {coreValues.map((value, i) =>

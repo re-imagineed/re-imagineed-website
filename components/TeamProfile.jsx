@@ -73,28 +73,30 @@ function TeamProfile(props) {
     return (
 
         props.justification % 2 != 0 ?
-        <StyledProfileWrapper>
-                <StyledProfileHead style={{ marginLeft: "0px", justifyContent: "left", width:"70%"}} >
+            <StyledProfileWrapper>
+                <StyledProfileHead style={{ marginLeft: "0px", justifyContent: "left", width: "70%" }} >
+
                     <><StyledImageWrapper>
                         <Image
                             src={props.imageURL}
                             alt={props.name}
                             width={props.imageDimensions.width}
                             height={props.imageDimensions.height} />
-                    </StyledImageWrapper><StyledNameWrapper>
+                    </StyledImageWrapper>
+                        <StyledNameWrapper>
                             <h2>{props.name}</h2>
                             <h3>{props.title}</h3>
                         </StyledNameWrapper></>
                 </StyledProfileHead>
                 <StyledProfileBody>
-                    {props.copy.map((p) => 
+                    {props.copy.map((p) =>
                         <StyledP2>{p}</StyledP2>
                     )}
                 </StyledProfileBody>
             </StyledProfileWrapper>
             :
             <StyledProfileWrapper>
-                <StyledProfileHead style={{ marginLeft: "200px", justifyContent: "right" , width:"70%"}}>
+                <StyledProfileHead style={{ marginLeft: "200px", justifyContent: "right", width: "70%" }}>
                     <StyledNameWrapper>
                         <h2>{props.name}</h2>
                         <h3>{props.title}</h3>
