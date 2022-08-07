@@ -66,7 +66,7 @@ const StyledCoreValuesList = styled.ul`
   margin-left: 0px;
   padding-left: 20px;
   padding-bottom: 0px;
-
+  font-size: 1.2em;
   @media ${device.laptop} {
     margin-left: 20px;
   }
@@ -114,19 +114,19 @@ const StyledGoalNumberWrapper = styled.div`
 `
 
 export const  StyledGoalWrapper = styled.p`
-    font-size: 1.5em;
-    line-height: 1.5em;   
+    font-size: 1.2em;
+    line-height: 1.2em;
     font-weight: normal;
-  
+
     @media ${device.tablet} {
         font-size: 1em;
     }
 
     dl {
       padding: 0.5em;
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
-    
+
     dl dt {
       float: left;
       clear: left;
@@ -143,7 +143,7 @@ export const  StyledGoalWrapper = styled.p`
       content: ":";
       font-weight: normal;
       display: inline-block;
-      
+
     }
 
     dl dd {
@@ -153,9 +153,11 @@ export const  StyledGoalWrapper = styled.p`
 
     dl dd.normal {
       font-weight: normal;
+      display: flex;
+      flex-wrap: wrap; 
     }
 }
-  
+
 `
 export const Styled2Columns = styled.div`
   flex-direction: column;
@@ -232,9 +234,9 @@ export function Overview(props) {
           </StyledP1>
           <StyledP1>{overviewCopy[10]}</StyledP1>
         </div>
-      </div> 
+      </div>
 
-        <div style={{ paddingLeft:"200px", marginLeft: "350px",marginTop:"10px", marginBottom:"50px", width: "100%", height: "100%" }}>
+        <div style={{ paddingLeft:"200px", marginLeft: "350px",marginTop:"120px", marginBottom:"50px", width: "100%", height: "100%" }}>
           <Styled2Rows>
             <div class="row">
             <StyledImageWrapper style={{marginLeft:"50px"}}>
@@ -328,20 +330,20 @@ export function GoalList(props) {
 
 function Goal(props) {
   return (
-    <div>
-  <StyledGoalWrapper>
-      <dl>
-        <dt class="underline">{props.goal}</dt>
-        <dd class="normal">{props.description}</dd> 
-      </dl>
-      
-</StyledGoalWrapper>
-</div>
+    <StyledGoal>
+      <StyledGoalWrapper>
+        <dl>
+          <dt class="underline">{props.goal}</dt>
+          <dd class="normal">{props.description}</dd>
+        </dl>
+
+      </StyledGoalWrapper>
+    </StyledGoal>
   )
 }
 
 function Goals(props) {
-  return (goals.map((g) => 
+  return (goals.map((g) =>
     <Goal
       goal={g.goal}
       description={g.description}
@@ -351,7 +353,7 @@ function Goals(props) {
 }
 
 function TeamMembers(props) {
-  return (teamMembers.map((member, i) => 
+  return (teamMembers.map((member, i) =>
   <div key={i}>
     <TeamProfile
       name={member.name}
@@ -359,7 +361,7 @@ function TeamMembers(props) {
       imageURL={member.imageURL}
       imageDimensions={member.imageDimensions}
       copy={member.copy}
-      justification={i % 2 == 0 ? 0 : 1}
+      justification={i % 2 == 0}
     ></TeamProfile>
     {/* {i != teamMembers.length - 1 ? <StyledDividerLine /> : null} */}
   </div>

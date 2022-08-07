@@ -72,7 +72,7 @@ const StyledProfileBody = styled.div`
 function TeamProfile(props) {
     return (
 
-        props.justification % 2 == 0 ?
+        props.justification % 2 != 0 ?
         <StyledProfileWrapper>
                 <StyledProfileHead style={{ marginLeft: "0px", justifyContent: "left", width:"70%"}} >
                     <><StyledImageWrapper>

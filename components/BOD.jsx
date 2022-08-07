@@ -13,6 +13,10 @@ const StyledBODWrapper = styled.article`
       margin: 0;
       margin-bottom: 0px;
       text-decoration: underline;
+      font-weight: bold;
+    }
+    li {
+      margin-left: 20px;
     }
 `
 const StyledNameWrapper = styled.div`
@@ -56,11 +60,12 @@ function BoardOfDirectors(props) {
         </StyledImageWrapper>
       </div>
       <div class="column">
-        <StyledBODWrapper style={{marginLeft: "80px", marginTop:"80px"}}>
+        <StyledBODWrapper style={{marginLeft: "60px", marginTop:"80px"}}>
           <div style={{ width: "100%", height: "50px" }}></div>
           <h2>Board Of Directors</h2>
 
           <div style={{ width: "100%", height: "20px" }}></div>
+         
           <li><StyledNameWrapper><h3>{bodMembers[0]}</h3></StyledNameWrapper></li>
           <li><StyledNameWrapper><h3>{bodMembers[1]}</h3></StyledNameWrapper></li>
           <li><StyledNameWrapper><h3>{bodMembers[2]}</h3></StyledNameWrapper></li>
