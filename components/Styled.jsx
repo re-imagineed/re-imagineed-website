@@ -27,6 +27,7 @@ export const StyledSection = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     width: 100%;
 
@@ -36,7 +37,7 @@ export const StyledSection = styled.section`
 export const StyledSectionContentWrapper = styled.div`
     width: 60%;
     min-width: 300px;
-    margin: 40px 0px 60px 0px;
+    margin: 40px 0px 40px 0px;
 
     @media ${device.tablet} {
         margin: 60px 0px 100px 0px;

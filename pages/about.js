@@ -166,12 +166,12 @@ export const Styled2Columns = styled.div`
   align-content: left;
   font-weight: normal;
   font-size: 1.2em;
-  line-height: em;
+  line-height:  1.5em;
 
   .column {
     float: left;
     width: 50%;
-    padding: 30px;
+    padding: 20px;
     margin-bottom: 30px;
   }
 
@@ -236,7 +236,7 @@ export function Overview(props) {
         </div>
       </div>
 
-        <div style={{ paddingLeft:"200px", marginLeft: "350px",marginTop:"120px", marginBottom:"50px", width: "100%", height: "100%" }}>
+        <div style={{ paddingLeft:"200px", marginLeft: "350px",marginTop:"50px", marginBottom:"50px", width: "100%", height: "100%" }}>
           <Styled2Rows>
             <div class="row">
             <StyledImageWrapper style={{marginLeft:"50px"}}>

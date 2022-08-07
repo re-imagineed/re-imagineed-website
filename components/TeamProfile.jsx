@@ -38,23 +38,24 @@ const StyledNameWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    color: ${props => props.theme.navy};
     margin: 30px 0px 0px 0px;
 
     h2 {
         margin: 0;
         margin-bottom: 10px;
-        font-size: 1.5em;
+        font-size: 1.7em;
+        font-weight: bold;
     }
 
     h3 {
         margin: 0;
         font-size: 1.3em;
-        font-weight: 500;
+        font-weight: normal;
         color: ${props => props.theme.navy};
 
         @media ${device.laptop} {
-            font-size: 1.1em;
+            font-size: 1.3em;
         }
     }
 

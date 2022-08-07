@@ -10,7 +10,6 @@ import SubscribeBanner from '../components/SubscribeBanner'
 import { Team,  AboutUs } from './about'
 import Image from 'next/image'
 
-
 const StyledFeatureSection = styled.section`
   display: flex;
   flex-direction: row;
@@ -20,7 +19,7 @@ const StyledFeatureSection = styled.section`
   width: 100%;
 
   background-image: none;
-  background-color: ${props => props.theme.lightgrey};
+  background-color: ${props => props.theme.grapefruit};
 
   @media ${device.tablet} {
     min-height: 400px;
@@ -94,9 +93,10 @@ export const StyledContentContainer = styled.div`
 const StyledLogoWrapper = styled.div`
   display: flex;
   justify-content: center;
+  align-content: center;
   min-width: 200px;
   max-width: 250px;
-  margin: 30px 0px 30px 0px;
+  // margin: 30px 0px 30px 0px;
 
   @media ${device.tablet} {
     margin: 40px 0px 40px 0px;
@@ -127,7 +127,6 @@ const StyledImageWrapper = styled.div`
 
 const StyledBigImageWrapper = styled.div`
   display: flex;
-  border: 10px solid ${props => props.theme.off_white37};
   max-width: 1200px;
   min-width: 200px;
   margin: 20px 0;
@@ -137,11 +136,63 @@ const StyledBigImageWrapper = styled.div`
   @media ${device.laptop} {
     max-width: 1024px;
     min-width: 200px;
-    margin: ${props => props.justified == "right" ? "0px 0px 0px 40px" : "0px 40px 0px 0px"};
+    margin: ${props => props.justified == "right" ? "0px 0px 0px 10px" : "0px 10px 0px 0px"};
   }
 `
 
+const Styled2Columns = styled.div`
+  flex-direction: column;
+  align-items: left;
+  margin-bottom: 10px;
+  align-content: left;
+  font-weight: normal;
+  font-size: 1.2em;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 10px;
+  // background-color: ${props => props.theme.grapefruit};
 
+
+  h1 {
+    font-size: 2em;
+    line-height: 1em;
+    margin-top: 50px;
+    margin-left: 150px;
+  }
+
+  p {
+    line-height: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  .left {
+    float: left;
+    width: 45%;
+    padding: 30px;
+    height: 740;
+    justify-content: center;
+    align-content: center;;
+    // border: 5px solid ${props => props.theme.off_white37};
+  }
+
+  .right {
+    float: left;
+    width: 55%;
+    padding: 0px;
+    height: 740;
+    justify-content: center;
+    align-content: center;
+    // background-color: ${props => props.theme.grapefruit};
+
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: flex;
+    clear: both;
+  }
+`
 
 function Home(props) {
     const isDesktop = useMediaQuery({
@@ -149,79 +200,42 @@ function Home(props) {
     })
 
     return (
+ 
       <StyledContainer>
         <_Head/>
         <Header/>
         <StyledMain>
-
-          <StyledFeatureSection>
-            <StyledFeatureContainer>
-            <div>
-                <h1>Re-Imagine Education, Inc.</h1>
-                <StyledP1>
-                Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
-                </StyledP1>
-
-                <StyledLogoWrapper>
-                  <LogoBlackL />
-                </StyledLogoWrapper>
-              </div>
-            </StyledFeatureContainer>
-            {/* <div style={{ width: "100%", height: "100%", marginTop: "100px" }}></div> */}
-        <div>
-          <StyledBigImageWrapper style={{ leftMargin: "0px", minWidth: "700px", width:"100%", height: "100%"}}>
-            <Image
-              width="975"
-              height="731"
-              src="/images/team1.jpeg"
-              alt="team"
-            />
-          </StyledBigImageWrapper>
-        </div>
-          </StyledFeatureSection>
-
-          {/* <StyledSection index={0}>
-            <StyledSectionContentWrapper>
-              <StyledContentContainer>
-                <StyledLogoWrapper>
-                  <LogoBlackL />
-                </StyledLogoWrapper>
-                <div>
-                  <h1>Our Mission</h1>
-                  <StyledDividerLine />
+          <StyledSectionAnchor id={"home"} />
+          <StyledSection index={0}>
+              <Styled2Columns>
+                <div class="left">
+                  <h1>Re-Imagine Education, Inc.</h1>
                   <StyledP1>
-                    To attract, retain, and elevate aspiring and current educators of color. Creating a culture of inclusivity through mentorship, accountability, and partnership.
+                    Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
                   </StyledP1>
+                  <StyledLogoWrapper styles={{ marginRight: "100px" }}>
+                    <LogoBlackL />
+                  </StyledLogoWrapper>
                 </div>
 
-              </StyledContentContainer>
-            </StyledSectionContentWrapper>
-          </StyledSection> */}
-
-          {/* <StyledSection index={1}>
-            <StyledSectionContentWrapper>
-              <h1>Offerings & Support</h1>
-              <StyledDividerLine/>
-              <StyledP1>
-                Re-Imagine Education seeks to build connections through supports that include: networking and building a cohort, providing mentoring support, and professional learning.
-              </StyledP1>
-              <StyledP1>
-                RED members join the organization online and are placed in one of five cohorts, led by a Cohort Mentor; members set goals for their own growth and development each year, and Cohort Leaders are responsible for providing the support necessary to reach those goals.
-              </StyledP1>
-              <OfferingsTable/>
-              <div style={{display: "flex", justifyContent: "center", padding: "30px"}}>
-                <Link href="/programs"><StyledButtonLink>Explore Our Progams & Services</StyledButtonLink></Link>
-              </div>
-            </StyledSectionContentWrapper>
-          </StyledSection> */}
-      
+                <div class="right">
+                  <StyledBigImageWrapper>
+                    <Image
+                      width="975"
+                      height="731"
+                      src="/images/team1.jpeg"
+                      alt="team"
+                    />
+                  </StyledBigImageWrapper>
+                </div>
+              </Styled2Columns>
+          </StyledSection>
 
           <StyledSectionAnchor id={"about_us"} />
           <div style={{ width: "100%", height: "20px" }}></div>
           <StyledSection index={1}>
             <StyledSectionContentWrapper>
-       
-        <AboutUs/>
+                <AboutUs/>
             </StyledSectionContentWrapper>
           </StyledSection>
 

@@ -7,7 +7,7 @@ import { Styled2Columns, StyledImageWrapper, StyledImageLearn, StyledImageIsiah1
 const StyledBODWrapper = styled.article`
     display: flex;
     flex-direction: column;
-    margin: 10px 10;
+    // margin: 10px 10px;
 
     h2 {
       margin: 0;
@@ -15,6 +15,7 @@ const StyledBODWrapper = styled.article`
       text-decoration: underline;
       font-weight: bold;
     }
+
     li {
       margin-left: 20px;
     }
@@ -31,6 +32,8 @@ const StyledNameWrapper = styled.div`
     h3 {
       margin: 0;
       margin-bottom: 0px;
+      font-weight: bold;
+      font-size: 1.3em;
     }
 
     @media ${device.laptop} {
@@ -48,7 +51,7 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-    <Styled2Columns style={{marginTop:"60px"}}>
+    <Styled2Columns style={{marginTop:"50px"}}>
       <div class="column">
         < StyledImageWrapper>
           <Image
