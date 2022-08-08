@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import _Head from '../components/Head'
-import {StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine, StyledInlineLink} from '../components/Styled'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
+import {StyledContainer,StyledP1,StyledDividerLine, StyledInlineLink} from '../components/Styled'
 import TeamProfile from '../components/TeamProfile'
 import { device } from '../utils/media-breakpoints'
 import BoardOfDirectors from '../components/BOD'
@@ -80,9 +78,15 @@ const StyledCoreValue = styled.li`
   }
 `
 
+
+
 const StyledGoalList = styled.ul`
   margin-left: 0px;
   padding-left: 0px;
+  text-align: center;
+  h1 {
+    font-size: "1.5em"
+  }
 `
 
 const StyledGoal = styled.li`
@@ -96,20 +100,6 @@ const StyledGoal = styled.li`
 
   @media ${device.laptop} {
     padding-inline-start:10px;
-  }
-`
-const StyledGoalNumberWrapper = styled.div`
-  display: flex;
-  align-items: center;
-
-  min-width: 28px;
-  max-width: 28px;
-
-  margin: 20px 20px 20px 0px;
-
-  @media ${device.laptop} {
-    min-width: 48px;
-    margin: 20px 20px 20px 5px;
   }
 `
 
@@ -157,8 +147,8 @@ export const  StyledGoalWrapper = styled.p`
       flex-wrap: wrap; 
     }
 }
-
 `
+
 export const Styled2Columns = styled.div`
   flex-direction: column;
   align-items: left;
@@ -184,18 +174,31 @@ export const Styled2Columns = styled.div`
 `
 
 const Styled2Rows = styled.div`
-  flex-direction: row;
-  align-items: center;
-  align-content: left;
+  flex-direction: column;
+  align-items: ;
+  align-content: center;
+  justify-content: center;
+  display: block;
+  
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height:  1.2em;
 
   .row {
-    float: left;
+    float: center;
     width: 100%;
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+  }
+
+  .row h1 {
+    font-size: 1.5em";
+    text-align: "center;
   }
 `
+
 export const StyledImageWrapper = styled.div`
   display: inline-block;
   border: 1px solid ${props => props.theme.off_white37};
@@ -235,95 +238,86 @@ export function Overview(props) {
           <StyledP1>{overviewCopy[10]}</StyledP1>
         </div>
       </div>
+      <div class="column">
 
-        <div style={{ paddingLeft:"200px", marginLeft: "350px",marginTop:"50px", marginBottom:"50px", width: "100%", height: "100%" }}>
           <Styled2Rows>
-            <div class="row">
-            <StyledImageWrapper style={{marginLeft:"50px"}}>
+            <div class="row" style={{marginTop:"100px"}}>
+            <StyledImageWrapper style={{marginLeft:"30px"}}>
               <Image
                 src="/images/learn.png"
-                width="500"
-                height="337"
+                width="1031"
+                height="695"
                 alt="Learn"
               />
             </StyledImageWrapper>
             </div>
 
             <div class="row">
-            <StyledImageWrapper style={{marginLeft:"0px"}}>
+            <StyledImageWrapper>
               <Image
                 src="/images/fun1.png"
                 width="500"
                 height="237"
-                alt="Learn"
+                alt="Fun"
               />
             </StyledImageWrapper>
             </div>
             </Styled2Rows>
           </div>
       </Styled2Columns>
-
   )
 }
 
 export function CoreValues(props) {
   return (
-    <StyledContainer>
-      <Styled2Columns>
-        <div class="column">
-          <StyledImageWrapper>
-            <Image
-              src="/images/isiah2.jpeg"
-              width="400"
-              height="500"
-              alt="Teacher"
-            />
-          </StyledImageWrapper>
-        </div>
+    <Styled2Columns>
+      <div class="column">
+        <StyledImageWrapper>
+          <Image
+            src="/images/isiah2.jpeg"
+            width="400"
+            height="500"
+            alt="Teacher"
+          />
+        </StyledImageWrapper>
+      </div>
 
-        <div class="column">
-          <div style={{ width: "100%"}}></div>
-          <div style={{ marginLeft: "100px", marginTop: "110px" }}>
-            <h1>Core Values</h1>
-            <StyledCoreValuesList>
-              {coreValues.map((value, i) =>
-                <StyledCoreValue key={i}>
-                  <StyledP1>{value.title}</StyledP1>
-                </StyledCoreValue>
-              )}
-            </StyledCoreValuesList>
-          </div>
-        </div>
-      </Styled2Columns>
-    </StyledContainer>
+      <div class="column" style={{ marginTop: "100px" }}  >
+        <h1>Core Values</h1>
+        <StyledCoreValuesList>
+          {coreValues.map((value, i) =>
+            <StyledCoreValue key={i}>
+              <StyledP1>{value.title}</StyledP1>
+            </StyledCoreValue>
+          )}
+        </StyledCoreValuesList>
+      </div>
+    </Styled2Columns>
 )}
 
 export function GoalList(props) {
   return (
-   // <StyledContainer>
-      <Styled2Columns>
+    <Styled2Rows>
+      <div class="row">
+        <h1>Goals</h1>
+        <StyledGoalList>
+          <Goals />
+        </StyledGoalList>
+      </div>
 
-        <div class="column">
-          <div style={{ width: "100%", height: "50px", marginTop: "0px"  }}></div>
-          <h1>Goals</h1>
-          <StyledGoalList>
-            <Goals />
-          </StyledGoalList>
-        </div>
-        <div style={{ width: "100%", height: "100%", marginTop: "120px" }}></div>
-        <div class="column">
-          <StyledImageWrapper style={{ minWidth: "700px"}}>
-            <Image
-              width="1293"
-              height="491"
-              src="/images/main_big.png"
-              alt="main"
-            />
-          </StyledImageWrapper>
-        </div>
+      <div class="row">
+        <StyledImageWrapper>
+          <Image
+            width="1752"
+            height="587"
+            src="/images/main.png"
+            alt="goal"
+          />
+        </StyledImageWrapper>
+      </div>
 
-      </Styled2Columns>
-    //</StyledContainer>
+    </Styled2Rows>
+
   )
 }
 
