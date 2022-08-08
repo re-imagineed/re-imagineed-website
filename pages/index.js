@@ -94,8 +94,8 @@ const StyledLogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  min-width: 200px;
-  max-width: 250px;
+  min-width: 100px;
+  max-width: 400px;
   // margin: 30px 0px 30px 0px;
 
   @media ${device.tablet} {
@@ -103,9 +103,6 @@ const StyledLogoWrapper = styled.div`
   }
 
   @media ${device.laptop} {
-    min-width: 300px;
-    max-width: 400px;
-
     margin: 40px 100px 40px 150px;
   }
 `
