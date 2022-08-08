@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components'
-import { device } from '../utils/media-breakpoints'
 import Image from 'next/image'
-import { StyledP2 } from './Styled'
+import { device } from '../utils/media-breakpoints'
 import { Styled2Columns, StyledImageWrapper, StyledImageLearn, StyledImageIsiah1, StyledIsiahKeith, StyledImageFun2 } from '../pages/about'
 
 const StyledBODWrapper = styled.article`
@@ -34,6 +33,7 @@ const StyledNameWrapper = styled.div`
       margin-bottom: 0px;
       font-weight: bold;
       font-size: 1.3em;
+      line-height: 1.3em;
     }
 
     @media ${device.laptop} {
@@ -53,7 +53,7 @@ function BoardOfDirectors(props) {
   return (
     <Styled2Columns style={{marginTop:"50px"}}>
       <div class="column">
-        < StyledImageWrapper>
+        < StyledImageWrapper style={{ alignContent: "center" , marginRight: "10px"}} >
           <Image
             src="/images/fun2.png"
             width="402"
@@ -62,11 +62,10 @@ function BoardOfDirectors(props) {
           />
         </StyledImageWrapper>
       </div>
-      <div class="column">
-        <StyledBODWrapper style={{marginLeft: "60px", marginTop:"80px"}}>
+      <div class="column" style={{ alignContent: "center", marginTop: "40px"}}  >
+        <StyledBODWrapper>
           <div style={{ width: "100%", height: "50px" }}></div>
           <h2>Board Of Directors</h2>
-
           <div style={{ width: "100%", height: "20px" }}></div>
          
           <li><StyledNameWrapper><h3>{bodMembers[0]}</h3></StyledNameWrapper></li>

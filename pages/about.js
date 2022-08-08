@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import _Head from '../components/Head'
-import {StyledContainer,StyledP1,StyledDividerLine, StyledInlineLink} from '../components/Styled'
+import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink} from '../components/Styled'
 import TeamProfile from '../components/TeamProfile'
 import { device } from '../utils/media-breakpoints'
 import BoardOfDirectors from '../components/BOD'
@@ -94,16 +94,14 @@ const StyledGoal = styled.li`
   list-style: none;
   padding-inline-start: 0px;
 
-  margin-bottom: 50px 0;
+  margin-bottom: 20px 0;
 
-  @media ${device.laptop} {
-    padding-inline-start:10px;
-  }
 `
 export const  StyledGoalWrapper = styled.p`
-    font-size: 1.2em;
-    line-height: 1.2em;
+    font-size: 1.1em;
+    line-height:  1.0em; 
     font-weight: normal;
+    flex-direction: row;
 
     @media ${device.tablet} {
         font-size: 1em;
@@ -112,6 +110,7 @@ export const  StyledGoalWrapper = styled.p`
     dl {
       padding: 0.5em;
       font-size: 1.2em;
+      flex-wrap: wrap;
     }
 
     dl dt {
@@ -129,25 +128,24 @@ export const  StyledGoalWrapper = styled.p`
     dl dt::after {
       content: ":";
       font-weight: normal;
-      display: inline-block;
-
+      display: inline;
     }
 
     dl dd {
       margin: 0 0 0 0px;
-      padding: 0 0 0.7em 0;
+      padding: 0 0 0.5em 0;
     }
 
     dl dd.normal {
       font-weight: normal;
-      display: flex;
-      flex-wrap: wrap; 
+      display:  inline;
+      flex-wrap: wrap;
     }
 }
 `
 
 export const Styled2Columns = styled.div`
-  flex-direction: column;
+  flex-direction: row;
   align-items: left;
   margin-bottom: 10px;
   align-content: left;
@@ -156,12 +154,11 @@ export const Styled2Columns = styled.div`
   line-height:  1.0em;
 
   h1 {
-    font-size: 1.7em;
+    font-size: 1.6em;
     line-height: 1.5em;
     margin-top: 50px;
     text-decoration: underline;
   }
-
 
   .column {
     float: left;
@@ -179,14 +176,13 @@ export const Styled2Columns = styled.div`
 `
 
 const Styled2Rows = styled.div`
-  flex-direction: column;
-  align-items: ;
-  align-content: center;
-  justify-content: center;
-  display: inline-block;
-  
+  flex-direction: row;
+  align-items: center;
+  align-content: left;
+  justify-content: left;
+ 
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height:  1.0em;
 
   h1 {
@@ -197,7 +193,7 @@ const Styled2Rows = styled.div`
   }
 
   .row {
-    float: center;
+    float: left;
     width: 100%;
     padding: 10px;
     margin-top: 10px;
@@ -217,7 +213,7 @@ export function Overview(props) {
   return (
     <Styled2Columns>
       <div class="column">
-        <div style={{ paddingLeft: "0px", marginLeft: "0px", marginTop: "50px", marginBottom: "50px", width: "100%", height: "100%" }}>
+        <div style={{ marginTop: "50px", marginBottom: "50px", width: "100%", height: "100%" }}>
           <StyledP1>{overviewCopy[0]}</StyledP1>
           <StyledP1>{overviewCopy[1]}</StyledP1>
           <StyledP1>
@@ -245,9 +241,9 @@ export function Overview(props) {
       </div>
       <div class="column">
 
-        <Styled2Rows>
-          <div class="row" style={{ marginTop: "100px" }}>
-            <StyledImageWrapper style={{ marginLeft: "30px" }}>
+        <Styled2Rows style={{ justifyContent: "center"}}>
+          <div class="row">
+            <StyledImageWrapper style={{ marginLeft: "50px", marginTop: "20px",  width: "100%"}}>
               <Image
                 src="/images/learn.png"
                 width="1031"
@@ -258,7 +254,7 @@ export function Overview(props) {
           </div>
 
           <div class="row">
-            <StyledImageWrapper>
+            <StyledImageWrapper style={{ marginLeft: "0px", marginTop: "20px",  width: "100%" }}>
               <Image
                 src="/images/fun1.png"
                 width="500"
@@ -277,7 +273,7 @@ export function CoreValues(props) {
   return (
     <Styled2Columns>
       <div class="column">
-        <StyledImageWrapper>
+        <StyledImageWrapper style={{ alignContent: "center" , marginRight: "10px"}} >
           <Image
             src="/images/isiah2.jpeg"
             width="400"
@@ -287,12 +283,12 @@ export function CoreValues(props) {
         </StyledImageWrapper>
       </div>
 
-      <div class="column" style={{ marginTop: "100px" }}  >
+      <div class="column" style={{ alignContent: "center", marginTop: "50px"}}  >
         <h1>Core Values</h1>
-        <StyledCoreValuesList>
+        <StyledCoreValuesList >
           {coreValues.map((value, i) =>
             <StyledCoreValue key={i}>
-              <StyledP1>{value.title}</StyledP1>
+              <StyledP2>{value.title}</StyledP2>
             </StyledCoreValue>
           )}
         </StyledCoreValuesList>
@@ -333,7 +329,6 @@ function Goal(props) {
           <dt class="underline">{props.goal}</dt>
           <dd class="normal">{props.description}</dd>
         </dl>
-
       </StyledGoalWrapper>
     </StyledGoal>
   )

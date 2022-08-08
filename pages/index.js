@@ -107,21 +107,6 @@ const StyledLogoWrapper = styled.div`
   }
 `
 
-const StyledImageWrapper = styled.div`
-  display: flex;
-  border: 10px solid ${props => props.theme.off_white37};
-  max-width: 250px;
-  min-width: 200px;
-  height: auto;
-  margin: 20px 0;
-
-  @media ${device.laptop} {
-    max-width: 300px;
-    min-width: 200px;
-    margin: ${props => props.justified == "right" ? "0px 0px 0px 40px" : "0px 40px 0px 0px"};
-  }
-`
-
 const StyledBigImageWrapper = styled.div`
   display: flex;
   max-width: 1200px;
@@ -147,8 +132,6 @@ const Styled2Columns = styled.div`
   margin-top: 50px;
   margin-bottom: 0px;
   padding: 10px;
-  // background-color: ${props => props.theme.grapefruit};
-
 
   h1 {
     font-size: 2em;

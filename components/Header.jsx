@@ -301,9 +301,9 @@ function Header() {
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>
-                        <div style={{ width: "10px", height: "100%" }}></div>
+                        <div style={{ width: "15px", height: "100%" }}></div>
                         <Link href="https://tinyurl.com/redonations"><a><StyledRedButtonLink>Donate</StyledRedButtonLink></a></Link>
-                        <div style={{ width: "20px", height: "100%" }}></div>
+                        <div style={{ width: "15px", height: "100%" }}></div>
                         <Link href="https://us7.list-manage.com/contact-form?u=5080e466c5f746c8b294721bc&form_id=e8ae05aca1f8eaf2371061d59e2e7222"><a><StyledButtonLink>Contact Us</StyledButtonLink></a></Link>
                         <li><Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link></li>
          

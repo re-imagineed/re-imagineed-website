@@ -92,7 +92,7 @@ const lineExpand = keyframes`
 
 export const StyledDividerLine = styled.div`
   height: 2px;
-  width: 60%;
+  width: 90%;
   min-width: 200px;
   background-color: ${props => props.theme.grey};
 

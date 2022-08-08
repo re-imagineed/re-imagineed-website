@@ -34,7 +34,7 @@ const StyledImageWrapper = styled.div`
     height: auto;
 `
 
-const StyledNameWrapper = styled.div`
+export const StyledNameWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -44,13 +44,15 @@ const StyledNameWrapper = styled.div`
     h2 {
         margin: 0;
         margin-bottom: 10px;
-        font-size: 1.7em;
+        font-size: 1.5em;
         font-weight: bold;
+        line-height: 1.2em;
     }
 
     h3 {
         margin: 0;
         font-size: 1.3em;
+        line-height: 1.2em;
         font-weight: normal;
         color: ${props => props.theme.navy};
 
@@ -59,15 +61,15 @@ const StyledNameWrapper = styled.div`
         }
     }
 
-
     @media ${device.laptop} {
         margin: 0 30px;
     }
 `
 
 const StyledProfileBody = styled.div`
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: normal;
+    line-height:  1.0em;
 `
 
 function TeamProfile(props) {
