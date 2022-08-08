@@ -207,18 +207,6 @@ const StyledLinksWrapper = styled.div`
     }
 `
 
-const StyledSublinksWrapper = styled.div`
-    padding-left: 90px;
-
-    a {
-        font-size: 1.1em;
-        background-color: ${props => props.theme.navy};
-        color: ${props => props.theme.white};
-
-        padding: 10px;
-    }
-`
-
 const StyledRedButtonLink = styled.a`
     display: flex;
     justify-content: center;
