@@ -7,8 +7,9 @@ import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SubscribeBanner from '../components/SubscribeBanner'
-import { Team,  AboutUs } from './about'
+import AboutUs from './about'
 import Image from 'next/image'
+import Team from './team'
 
 const StyledFeatureSection = styled.section`
   display: flex;
@@ -25,11 +26,6 @@ const StyledFeatureSection = styled.section`
     min-height: 400px;
     width: 100%;
 
-    // background-image: url("/images/team1.jpeg");
-    // background-size: fill;
-    // background-position: right center;
-    // background-repeat: no-repeat;
-    // background-blend-mode: normal;
   }
 `
 

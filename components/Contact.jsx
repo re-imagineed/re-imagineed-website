@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components'
 import { device } from '../utils/media-breakpoints'
-import { StyledP2, StyledDividerLine } from './Styled'
 
-const StyledContact = styled.div`
+
+const StlyedContact = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -10,7 +10,7 @@ const StyledContact = styled.div`
     margin-bottom: 20px;
 
     * {
-        color: black;
+        color: white;
         margin-top: 0px;
     }
 
@@ -25,7 +25,7 @@ const StyledContactList = styled.span`
 const ContactItem = styled.div`
     margin-right: 60px;
     margin-bottom: 20px;
-    
+
     a {
         text-decoration: underline;
 
@@ -47,10 +47,8 @@ const ItemTitle = styled.span`
 
 function Contact(props) {
     return (
-        <StyledContact>
-            <h1>Contact</h1>
-            <StyledDividerLine />
-            <div style={{ width: "100%", height: "20px" }}></div>
+        <StlyedContact>
+            <h2>Contact</h2>
             <StyledContactList>
                 <ContactItem>
                     <p><ItemTitle name='true'>Isiah King</ItemTitle>
@@ -68,8 +66,7 @@ function Contact(props) {
                 </ContactItem>
                 <ContactItem><p>(414) 485-5817</p></ContactItem>
             </StyledContactList>
-        
-        </StyledContact>
+        </StlyedContact>
     )
 }
 
