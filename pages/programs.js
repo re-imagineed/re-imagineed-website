@@ -5,8 +5,6 @@ import _Head from '../components/Head'
 import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine, StyledInlineLink} from '../components/Styled'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
-import Donate from './donate'
-
 
 const programs = [
   // {title: "Cultural Understanding and Responsive Education (C.U.R.E) Mentoring Program", description: "C.U.R.E., the curriculum is broken into 5 modules focusing on 5 different concepts centered around cultural responsiveness/sensitivity. C.U.R.E. coaches will provide bi-weekly sessions (beginning of the month and end of the month) to schools that hire for the services.  During each professional learning institute, C.U.R.E coaches will give teacher reflection activities for staff to complete independently and collectively with students. C.U.R.E. coaches will pop in once a month to assigned schools to track data on school/teacher responsiveness. Coach will provide action steps and feedback to school staff/leaders monthly. Schools can be coached by C.U.R.E to understand modules to be the facilitator at their own personal site(additional charge for this service). Once individuals have completed all five modules, he/she becomes C.U.R.E Certified."},
@@ -125,7 +123,18 @@ function Programs(props) {
 
           <StyledSection index={2}>
             <StyledSectionContentWrapper>
-              <Donate />
+              <h1>Connect with R.E. | Donate to Support the Mission!</h1>
+              <StyledDividerLine/>
+              <StyledP2>Connect with Re-Imagine Education to discuss your organization's needs!</StyledP2>
+              <StyledOL>
+                <li>Schedule a 30 minute <StyledInlineLink target="_blank" href="https://calendly.com/isiah-king-1/30min">Consultation Meeting</StyledInlineLink> with our team</li>
+                <li>Complete our <StyledInlineLink target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfdFUadJx1nCJfO1siouNrgk23g-prQ3QNL02py7z5aFZwK2Q/viewform">Services Request Form</StyledInlineLink></li>
+              </StyledOL>              
+              <StyledP2>Help us to increase and diversify the teacher pipeline in education. Support the cause with a donation to Re-Imagine Education from your phone or computer:</StyledP2>
+              <StyledUL>
+                <li>Text “REIMAGINEED” to 53-555 or visit <StyledInlineLink target="_blank" href="https://givebutter.com/re-imagine-ed">givebutter.com/re-imagine-ed</StyledInlineLink></li>
+                <li>Tax Exempt/EIN #: 85-2324820</li>
+              </StyledUL>
             </StyledSectionContentWrapper>
           </StyledSection>
 
@@ -137,7 +146,6 @@ function Programs(props) {
       </StyledContainer>
     )
 }
-
 
 export async function getStaticProps() {
   return {
