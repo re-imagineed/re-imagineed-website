@@ -4,9 +4,7 @@ import Link from 'next/link'
 import { useMediaQuery } from 'react-responsive'
 import { device } from '../utils/media-breakpoints'
 import { useState } from 'react'
-import NotificationBanner from './NotificationBanner'
 import { LogoWhiteS } from './Logo'
-
 
 const slideIn = keyframes`
     0% {
@@ -27,28 +25,60 @@ const StyledHeaderWrapper = styled.div`
 `
 
 const StyledHeader = styled.header`
+  width: 100%;
 
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: ${(props) => props.theme.sky};
 
-    background-color: ${props => props.theme.navy};
+  h1 {
+    font-size: 1.2em;
+    color: ${(props) => props.theme.white};
+    margin: 5px 25px;
 
-    h1 {
-        font-size: 1.2em;
-        color: ${props => props.theme.white};
-        margin: 5px 0;
 
-        @media ${device.mobileM} {
-            font-size: 1.5em;
-        }
-
-        @media ${device.laptop} {
-            font-size: 2em;
-        }
+    @media ${device.mobileM} {
+      font-size: 1.5em;
     }
+
+    @media ${device.laptop} {
+      font-size: 2em;
+    }
+  }
+  
+  .navigation-bar ul {
+    padding: 0px;
+    margin: 5px 20px;
+    text-align: left;
+    display: flex;
+    vertical-align:top;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    white-space: nowrap;
+  }
+
+  li {
+    float: left;
+  }
+
+  li a {
+    display: block;
+    padding: 2px;
+    // border: 1px solid #bbb;
+  }
+  li a:hover {
+    background-color: ${(props) => props.theme.red};
+  }
+  
+.active {
+    background-color: ${(props) => props.theme.yellow};
 `
 
 const StyledContentWrapper = styled.div`
@@ -63,6 +93,7 @@ const StyledRightContent = styled.div`
     display: flex;
     float: right;
     align-items: center;
+
 `
 
 const StyledLeftContent = styled.div`
@@ -120,84 +151,6 @@ const StyledNavLink = styled.a`
     }
 `
 
-const StyledDropdownWrapper = styled.div`
-    position: relative;
-    margin: 5px 0px 5px 20px;
-
-    @media ${device.laptop} {
-        margin: 5px 0px 5px 30px;
-    }
-
-    :hover {
-        div {
-            visibility: visible;
-        }
-    }
-
-    a {
-        margin: 5px 0;
-    }
-`
-
-const StyledDropdown = styled.div`
-    position: absolute;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    width: 100%;
-
-    visibility: hidden;
-
-    @media ${device.laptop} {
-        height: 120px;
-    }
-
-    a {
-        margin: 0;
-    }
-`
-
-const StyledDropdownNavLinks = styled.a`
-    display: flex;
-    align-items: center;
-
-    color: ${props => props.theme.navy};
-    background-color: ${props => props.theme.yellow};
-    font-size: 0.8em;
-    font-style: normal;
-    font-weight: 400;
-
-    height: 40px;
-    width: 100%;
-
-    padding: 10px;
-
-    transition: background-color 0.15s;
-
-    cursor: pointer;
-
-    :hover {
-        background-color: ${props => props.theme.lightblue};
-        color: ${props => props.theme.white};
-        opacity: 1;
-    }
-
-    @media ${device.mobileM} {
-        font-size: 0.8em;
-    }
-
-    @media ${device.laptop} {
-        font-size: 1em;
-    }
-`
-
-const StyledCaretWrapper = styled.div`
-    display: inline-flex;
-    align-items: center;
-`
-
 const NavMenuButton = styled.button`
     display: flex;
     justify-content: center;
@@ -233,7 +186,7 @@ const NavMenuButton = styled.button`
 
 const StyledNavMenu = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 
     position: -webkit-sticky;
     z-index: 1;
@@ -254,18 +207,49 @@ const StyledLinksWrapper = styled.div`
     }
 `
 
-const StyledSublinksWrapper = styled.div`
-    padding-left: 90px;
+const StyledRedButtonLink = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: ${props => props.theme.red};
+    cursor: pointer;
+    outline: none;
 
-    a {
-        font-size: 1.1em;
-        background-color: ${props => props.theme.navy};
-        color: ${props => props.theme.white};
-
-        padding: 10px;
+    &:hover {
+        opacity: 1;
+        background: ${props => props.theme.lightblue};
     }
+
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
 `
 
+const StyledButtonLink = styled.a`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background: ${props => props.theme.sky};
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        opacity: 1;
+        background: ${props => props.theme.lightblue};
+    }
+
+    font-size: 1.2em;
+    font-weight: 500;
+    color: white;
+`
 function Header() {
 
     const [bannerPresent, setBannerPresent] = useState(true)
@@ -288,74 +272,52 @@ function Header() {
             <StyledHeader>
                 <StyledContentWrapper>
                     <StyledLeftContent>
-                        <Link href="/"><a>
-                            <StyledLogoWrapper>
-                                <LogoWhiteS/>
-                            </StyledLogoWrapper>
+                        <nav class="navigation-bar">
                             <h1>Re-Imagine Education</h1>
-                        </a></Link>
+                            <ul>
+                                {isTabletOrDesktop === true
+                                    ?
+                                    <StyledContentWrapper>
+                                        <li><Link href="/#"><StyledNavLink>Home</StyledNavLink></Link></li>
+                                        <li><Link href="#about_us"><StyledNavLink>About Us</StyledNavLink></Link></li>
+                                        <li><Link href="#our_team"><StyledNavLink>Team</StyledNavLink></Link></li>
+                                    </StyledContentWrapper>
+                                    :
+                                    <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
+                                        <Image
+                                            src={navMenuActive ? "/icons/close-white.svg" : "/icons/menu-24px.svg"}
+                                            alt="Menu"
+                                            fill="white"
+                                            width={48}
+                                            height={48}
+                                        />
+                                    </NavMenuButton>
+                                }
+                            </ul>
+                        </nav>
                     </StyledLeftContent>
                     <StyledRightContent>
-                        {isTabletOrDesktop === true
-                        ?
-                            <>
-                                <Link href="/"><StyledNavLink>Home</StyledNavLink></Link>
-                                <Link href="/programs"><StyledNavLink>Programs & Services</StyledNavLink></Link>
-                                <StyledDropdownWrapper>
-                                    <Link href="/about"><StyledNavLink>
-                                        About Us
-                                        <StyledCaretWrapper><Image
-                                            src="/icons/down_caret-24px.svg"
-                                            alt="Menu"
-                                            width={24}
-                                            height={24}
-                                        /></StyledCaretWrapper>
-                                    </StyledNavLink></Link>
-                                    <StyledDropdown>
-                                        <Link href="/about/#overview">
-                                            <StyledDropdownNavLinks>Overview</StyledDropdownNavLinks>
-                                            </Link>
-                                        <Link href="/about/#our_mission">
-                                            <StyledDropdownNavLinks>Mission</StyledDropdownNavLinks>
-                                        </Link>
-                                        <Link href="/about/#our_team">
-                                            <StyledDropdownNavLinks>Leadership</StyledDropdownNavLinks>
-                                        </Link>
-                                    </StyledDropdown>
-                                </StyledDropdownWrapper>
-                            </>
-                        :
-                            <NavMenuButton onClick={toggleNavMenu} isOpen={navMenuActive}>
-                                <Image
-                                    src={navMenuActive ? "/icons/close-white.svg" : "/icons/menu-24px.svg"}
-                                    alt="Menu"
-                                    fill="white"
-                                    width={48}
-                                    height={48}
-                                />
-                            </NavMenuButton>
-                        }
+ 
+                        <StyledLogoWrapper>
+                            <LogoWhiteS />
+                        </StyledLogoWrapper>
+                        <div style={{ width: "15px", height: "100%" }}></div>
+                        <Link href="https://tinyurl.com/redonations"><a><StyledRedButtonLink>Donate</StyledRedButtonLink></a></Link>
+                        <div style={{ width: "15px", height: "100%" }}></div>
+                        <Link href="https://us7.list-manage.com/contact-form?u=5080e466c5f746c8b294721bc&form_id=e8ae05aca1f8eaf2371061d59e2e7222"><a><StyledButtonLink>Contact Us</StyledButtonLink></a></Link>
+                        <li><Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link></li>
+         
                     </StyledRightContent>
+                
                 </StyledContentWrapper>
             </StyledHeader>
-            {navMenuActive ? 
+            {navMenuActive ?
                 <StyledNavMenu>
                     <StyledLinksWrapper>
-                        <Link href="/"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
-                        <Link href="/programs"><StyledNavLink onClick={toggleNavMenu}>Programs & Services</StyledNavLink></Link>
-                        <Link href="/about"><StyledNavLink onClick={toggleNavMenu}>About Us</StyledNavLink></Link>
+                        <Link href="/#"><StyledNavLink onClick={toggleNavMenu}>Home</StyledNavLink></Link>
+                        <Link href="#about_us"><StyledNavLink onClick={toggleNavMenu}>About us</StyledNavLink></Link>
+                        <Link href="#our_team"><StyledNavLink onClick={toggleNavMenu}>Team</StyledNavLink></Link>
                     </StyledLinksWrapper>
-                    <StyledSublinksWrapper>
-                        <Link href="/about/#overview">
-                            <StyledDropdownNavLinks onClick={toggleNavMenu}>Overview</StyledDropdownNavLinks>
-                        </Link>
-                        <Link href="/about/#our_mission">
-                            <StyledDropdownNavLinks onClick={toggleNavMenu}>Our Mission</StyledDropdownNavLinks>
-                        </Link>
-                        <Link href="/about/#our_team">
-                            <StyledDropdownNavLinks onClick={toggleNavMenu}>Our Team</StyledDropdownNavLinks>
-                        </Link>
-                    </StyledSublinksWrapper>
                 </StyledNavMenu>
                 :
                 null

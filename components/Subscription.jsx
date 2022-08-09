@@ -34,6 +34,7 @@ const StyledForm = styled.form`
     flex-direction: column;
     align-items: left;
     margin-bottom: 20px;
+    margin-left: 50px;
 
     @media ${device.laptop} {
         flex-direction: ${props => props.isFooter ? "column" : "row"};

@@ -10,10 +10,10 @@ const StyledFooter = styled.footer`
     height: auto;
     display: flex;
     justify-content: center;
-    background-color: ${props => props.theme.navy};
+    background-color: ${props => props.theme.sky};
 
     @media ${device.laptop} {
-        height: 350px;
+        height: 150px;
     }
 `
 
@@ -21,11 +21,12 @@ const StyledContentWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     width: 90%;
     max-width: 1400px;
     padding: 30px 0;
-
+    align-content: center;
     @media ${device.laptop} {
         flex-direction: row;
     }
@@ -54,7 +55,7 @@ function Footer(props) {
     return (
         <StyledFooter>
            <StyledContentWrapper>
-                <Contact/>
+    
                 {props.isHomePage ? null :
                     <StyledSubscriptionWrapper>
                         <h2>Subscribe</h2>
