@@ -1,5 +1,5 @@
 import _Head from '../components/Head'
-import {StyledContainer, StyledDividerLine } from '../components/Styled'
+import {StyledContainer, StyledH1, StyledDividerLine } from '../components/Styled'
 import TeamProfile from '../components/TeamProfile'
 import BoardOfDirectors from '../components/BOD'
 
@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Isiah King",
     title: "Co-Founder & Co-Chief Executive Officer",
     imageURL: "/images/isiah_5x4_cropped.png",
-    imageDimensions: { width: 1121, height: 897},
+    imageDimensions: { width: 453, height: 362},
     copy: [
       "Isiah King has served in public, charter, and private schools for over 16 years. Isiah has consulted and facilitated training and workshops in schools, districts, and networks to improve in a variety of areas including instructional coaching, culturally responsive practices, educational equity, restorative practice, and leadership development.",
       "Isiah brings best practices he’s learned regarding how to serve historically underserved students at an exceptionally high level. Isiah is charged with creating vibrant school cultures that support bold student achievement outcomes. He leads through a strong commitment to diversity and inclusiveness, assisting schools to build critical mindsets and tangible skill sets so school leaders and teachers can implement that vision with a high level of success."
@@ -45,6 +45,7 @@ function TeamMembers(props) {
 export function Team(props) {
   return (
     <StyledContainer>
+      <StyledH1>Team</StyledH1>
       <StyledDividerLine />
       <TeamMembers/>
       <BoardOfDirectors/>

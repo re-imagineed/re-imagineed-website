@@ -7,7 +7,7 @@ const StyledBODWrapper = styled.article`
     display: flex;
     flex-direction: column;
     // margin: 10px 10px;
-
+    margin: calc(0.3rem + 0.3vw);
     h2 {
       margin: 0;
       margin-bottom: 0px;
@@ -15,6 +15,17 @@ const StyledBODWrapper = styled.article`
       font-weight: bold;
     }
 
+    .h2-fluid {
+      font-size: calc(1rem + 0.5vw);
+      line-height: calc(1.4rem + 1.2vw);
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    
+    .h3-fluid {
+      font-size: calc(1rem + 0.4vw);
+      line-height: calc(1.4rem + 1vw);
+    }
     li {
       margin-left: 20px;
     }
@@ -51,9 +62,9 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-    <Styled2Columns style={{marginTop:"50px"}}>
-      <div class="column">
-        < StyledImageWrapper style={{ alignContent: "center" , marginRight: "10px"}} >
+    <Styled2Columns style={{marginTop:"5vw"}}>
+      <div class="left">
+        < StyledImageWrapper style={{ alignContent: "center" , marginRight: "2vw"}} >
           <Image
             src="/images/fun2.png"
             width="402"
@@ -62,17 +73,17 @@ function BoardOfDirectors(props) {
           />
         </StyledImageWrapper>
       </div>
-      <div class="column" style={{ alignContent: "center", marginTop: "40px"}}  >
+      <div class="right" style={{ alignContent: "center", marginTop: "1vw"}}  >
         <StyledBODWrapper>
-          <div style={{ width: "100%", height: "50px" }}></div>
-          <h2>Board Of Directors</h2>
-          <div style={{ width: "100%", height: "20px" }}></div>
+          <div style={{ width: "100%", height: "2vw" }}></div>
+          <div class="h2-fluid">Board Of Directors</div>
+          <div style={{ width: "100%", height: "1vw" }}></div>
          
-          <li><StyledNameWrapper><h3>{bodMembers[0]}</h3></StyledNameWrapper></li>
-          <li><StyledNameWrapper><h3>{bodMembers[1]}</h3></StyledNameWrapper></li>
-          <li><StyledNameWrapper><h3>{bodMembers[2]}</h3></StyledNameWrapper></li>
-          <li><StyledNameWrapper><h3>{bodMembers[3]}</h3></StyledNameWrapper></li>
-          <li><StyledNameWrapper><h3>{bodMembers[4]}</h3></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[0]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[1]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[2]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[3]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[4]}</div></StyledNameWrapper></li>
 
         </StyledBODWrapper>
       </div>

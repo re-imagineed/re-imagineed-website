@@ -7,14 +7,16 @@ const StyledProfileWrapper = styled.article`
     display: flex;
     flex-direction: column;
 
-    margin: 50px 0;
+    // margin: 50px 0;
+    margin: calc(0.3rem + 2vw);
 `
 
 const StyledProfileHead = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
+    margin: calc(0.3rem + 0.3vw);
 
     @media ${device.tablet} {
         flex-direction: column;
@@ -28,7 +30,7 @@ const StyledProfileHead = styled.div`
 const StyledImageWrapper = styled.div`
     display: flex;
     border: 10px solid ${props => props.theme.off_white37};
-    max-width: 300px;
+    max-width: 100%;
     min-width: 100px;
     height: auto;
 `
@@ -38,7 +40,8 @@ export const StyledNameWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     color: ${props => props.theme.navy};
-    margin: 30px 0px 0px 0px;
+    // margin: 30px 0px 0px 0px;
+    margin: calc(0.3rem + 0.3vw);
 
     h2 {
         margin: 0;
@@ -60,6 +63,18 @@ export const StyledNameWrapper = styled.div`
         }
     }
 
+
+    .h2-fluid {
+        font-size: calc(1rem + 0.5vw);
+        line-height: calc(1.4rem + 1.2vw);
+        text-decoration: underline;
+        font-weight: bold;
+      }
+      
+      .h3-fluid {
+        font-size: calc(1rem + 0.4vw);
+        line-height: calc(1.4rem + 1vw);
+      }
     @media ${device.laptop} {
         margin: 0 30px;
     }
@@ -77,7 +92,6 @@ function TeamProfile(props) {
         props.justification % 2 != 0 ?
             <StyledProfileWrapper>
                 <StyledProfileHead style={{ marginLeft: "0px", justifyContent: "left", width: "70%" }} >
-
                     <><StyledImageWrapper>
                         <Image
                             src={props.imageURL}
@@ -86,8 +100,8 @@ function TeamProfile(props) {
                             height={props.imageDimensions.height} />
                     </StyledImageWrapper>
                         <StyledNameWrapper>
-                            <h2>{props.name}</h2>
-                            <h3>{props.title}</h3>
+                            <div class="h2-fluid">{props.name}</div>
+                            <div class="h3-fluid">{props.title}</div>
                         </StyledNameWrapper></>
                 </StyledProfileHead>
                 <StyledProfileBody>
@@ -98,10 +112,10 @@ function TeamProfile(props) {
             </StyledProfileWrapper>
             :
             <StyledProfileWrapper>
-                <StyledProfileHead style={{ marginLeft: "200px", justifyContent: "right", width: "70%" }}>
+                <StyledProfileHead style={{ marginLeft: "20vw", justifyContent: "right", width: "70%" }}>
                     <StyledNameWrapper>
-                        <h2>{props.name}</h2>
-                        <h3>{props.title}</h3>
+                        <div class="h2-fluid">{props.name}</div>
+                        <div class="h3-fluid">{props.title}</div>
                     </StyledNameWrapper>
                     <StyledImageWrapper>
                         <Image

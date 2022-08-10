@@ -7,25 +7,30 @@ import Button from './Button'
 import { LottieError, LottieFail, LottieSuccess } from './LottieAnimations'
 
 const StyledInputField = styled.input`
-    height: 42px;
-    width: 260px;
+    height: calc(1rem + 2vw);
+    width: 20vw;
     border: none;
     border-radius: 5px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    padding-left: 15px;
-    font-size: 1em;
-    line-height: 28px;
+    margin-right: 2vw;
+    margin-bottom: 1vw;
+    padding-left: 1vw;
+    margin: calc(1rem + 0.2vw);
+    margin-left: 0;
+    margin-top: 0;
+    // font-size: 1em;
+    // line-height: 28px;
     outline: none;
+    font-size: calc(1rem + 0.5vw);
+    line-height: calc(1.4rem + 1vw);
 
     &::placeholder {
         color: #8C8C8C;
     }
 
-    @media ${device.laptop} {
-        width: 300px;
-        margin-bottom: ${props => props.isFooter ? "20px" : "0px"};
-    }
+    // @media ${device.laptop} {
+    //     width: 300px;
+    //     margin-bottom: ${props => props.isFooter ? "20px" : "0px"};
+    // }
 `
 
 const StyledForm = styled.form`
@@ -33,18 +38,21 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     align-items: left;
-    margin-bottom: 20px;
-    margin-left: 50px;
+    margin-bottom: 2vw;
+    margin-left: 0;
+    
 
-    @media ${device.laptop} {
-        flex-direction: ${props => props.isFooter ? "column" : "row"};
-        align-items: ${props => props.isFooter ? "left" : "center"};
-    }
+    // @media ${device.laptop} {
+    //     flex-direction: ${props => props.isFooter ? "column" : "row"};
+    //     align-items: ${props => props.isFooter ? "left" : "center"};
+    // }
 `
 
 const StyledFormDescription = styled.p`
     margin-top: 0px;
-    font-size: 1.2em;
+    margin-left: 0px;
+    // font-size: 1.2rem;
+    font-size: calc(1rem + 1vw);
 `
 
 const StyledSuccessNotif = styled.div`
@@ -54,7 +62,7 @@ const StyledSuccessNotif = styled.div`
     margin-bottom: 20px;
     p {
         color: ${props => props.theme.green};
-        font-size: 1.2em;
+        font-size: 1vw;
         font-weight: 500;
     }
 `

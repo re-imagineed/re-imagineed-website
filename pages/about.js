@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import _Head from '../components/Head'
-import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink} from '../components/Styled'
+import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink, StyledH1} from '../components/Styled'
 import { device } from '../utils/media-breakpoints'
 
 
@@ -74,18 +74,20 @@ const StyledGoal = styled.li`
 
 `
 export const  StyledGoalWrapper = styled.p`
-    font-size: 1.1em;
-    line-height:  1.0em; 
+    // font-size: 1.1em;
+    // line-height:  1.0em; 
     font-weight: normal;
     flex-direction: row;
+    font-size: calc(1rem + 0.2vw);
+    line-height: calc(1.4rem + 0.5vw)
 
-    @media ${device.tablet} {
-        font-size: 1em;
-    }
+    // @media ${device.tablet} {
+    //     font-size: 1em;
+    // }
 
     dl {
       padding: 0.5em;
-      font-size: 1.2em;
+      // font-size: 1.2em;
       flex-wrap: wrap;
     }
 
@@ -123,12 +125,37 @@ export const  StyledGoalWrapper = styled.p`
 export const Styled2Columns = styled.div`
   flex-direction: row;
   align-items: left;
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
   align-content: left;
   font-weight: normal;
-  font-size: 1.1em;
-  line-height:  1.0em;
+  // margin: calc(1rem + 0.1vw);
+  margin-left: 0;
 
+  .h1-fluid {
+    font-weight: bold;
+    font-size: calc(1rem + 0.7vw);
+    line-height: calc(1.4rem + 1.2vw);
+    text-decoration: underline;
+  }
+
+  .h2-fluid {
+    font-size: calc(1rem + 0.5vw);
+    line-height: calc(1.4rem + 1.1vw);
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  .h3-fluid {
+    font-size: calc(1rem + 0.2vw);
+    line-height: calc(1.4rem + 0.8vw);
+  }
+
+  .p-fluid {
+    font-size: calc(1rem + 0.vw);
+    line-height: calc(1rem + 0.2vw);
+  }
+
+  
   h1 {
     font-size: 1.6em;
     line-height: 1.5em;
@@ -136,12 +163,20 @@ export const Styled2Columns = styled.div`
     text-decoration: underline;
   }
 
-  .column {
+  .left {
     float: left;
-    width: 50%;
-    padding: 20px;
-    margin-bottom: 30px;
+    width: 49%;
+    // padding: 20px;
+    // margin-bottom: 30px;
   }
+
+  .right {
+    float: right;
+    width: 49%;
+    // padding: 20px;
+    // margin-bottom: 30px;
+  }
+
 
   /* Clear floats after the columns */
   .row:after {
@@ -154,12 +189,13 @@ export const Styled2Columns = styled.div`
 const Styled2Rows = styled.div`
   flex-direction: row;
   align-items: center;
-  align-content: left;
-  justify-content: left;
- 
+  align-content: center;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+  margin: 1rem;
   font-weight: normal;
-  font-size: 1.1em;
-  line-height:  1.0em;
 
   h1 {
     font-size: 1.7em;
@@ -168,42 +204,56 @@ const Styled2Rows = styled.div`
     text-decoration: underline;
   }
 
-  .row {
+  .h1-fluid {
+    font-weight: bold;
+    font-size: calc(1rem + 0.7vw);
+    line-height: calc(1.4rem + 2vw);
+    text-decoration: underline;
+  }
+
+  .top {
     float: left;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
+    padding: 1rem;
+  }
+
+  .bottom {
+    float: left;
+    padding: 1rem;
   }
 `
 
 export const StyledImageWrapper = styled.div`
   display: inline-block;
   border: 1px solid ${props => props.theme.off_white37};
-  max-width: 1200px;
-  min-width: 200px;
+  max-width: 100%;
+  height: auto;
+  // max-width: 1200px;
+  // min-width: 200px;
+  // margin: auto;
+  height: auto;
+  align-content: center;
+
 `
 
 export function Overview(props) {
   return (
     <Styled2Columns>
-      <div class="column">
-        <div style={{ marginTop: "50px", marginBottom: "50px", width: "100%", height: "100%" }}>
-          <StyledP1>{overviewCopy[0]}</StyledP1>
-          <StyledP1>{overviewCopy[1]}</StyledP1>
-          <StyledP1>
+      <div class="left">
+        <div>
+          <StyledP2>{overviewCopy[0]}</StyledP2>
+          <StyledP2>{overviewCopy[1]}</StyledP2>
+          <StyledP2>
             <ul>
               <li>{overviewCopy[2]}</li>
               <li>{overviewCopy[3]}</li>
               <li>{overviewCopy[4]}</li>
             </ul>
-          </StyledP1>
-          <StyledP1></StyledP1>
-          <StyledP1>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
+          </StyledP2>
+          <StyledP2></StyledP2>
+          <StyledP2>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
             teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:
-          </StyledP1>
-          <StyledP1>
+          </StyledP2>
+          <StyledP2>
             <ul>
               <li>{overviewCopy[5]}</li>
               <li>{overviewCopy[6]}</li>
@@ -211,15 +261,15 @@ export function Overview(props) {
               <li>{overviewCopy[8]}</li>
               <li>{overviewCopy[9]}</li>
             </ul>
-          </StyledP1>
-          <StyledP1>{overviewCopy[10]}</StyledP1>
+          </StyledP2>
+          <StyledP2>{overviewCopy[10]}</StyledP2>
         </div>
       </div>
-      <div class="column">
 
-        <Styled2Rows style={{ justifyContent: "center"}}>
-          <div class="row">
-            <StyledImageWrapper style={{ marginLeft: "50px", marginTop: "20px",  width: "100%"}}>
+      <div class="right">
+         <Styled2Rows>
+          <div class="top">
+            <StyledImageWrapper style={{ marginTop: "2vw"}}>
               <Image
                 src="/images/learn.png"
                 width="1031"
@@ -229,8 +279,8 @@ export function Overview(props) {
             </StyledImageWrapper>
           </div>
 
-          <div class="row">
-            <StyledImageWrapper style={{ marginLeft: "0px", marginTop: "20px",  width: "100%" }}>
+          <div class="bottom" style={{marginLeft: "3vw", marginTop: "3vw"}}>
+            <StyledImageWrapper>
               <Image
                 src="/images/fun1.png"
                 width="500"
@@ -239,6 +289,7 @@ export function Overview(props) {
               />
             </StyledImageWrapper>
           </div>
+          
         </Styled2Rows>
       </div>
     </Styled2Columns>
@@ -247,9 +298,9 @@ export function Overview(props) {
 
 export function CoreValues(props) {
   return (
-    <Styled2Columns>
-      <div class="column">
-        <StyledImageWrapper style={{ alignContent: "center" , marginRight: "10px"}} >
+    <Styled2Columns style={{marginTop:"5vw"}}>
+      <div class="left">
+        <StyledImageWrapper >
           <Image
             src="/images/isiah2.jpeg"
             width="400"
@@ -259,8 +310,8 @@ export function CoreValues(props) {
         </StyledImageWrapper>
       </div>
 
-      <div class="column" style={{ alignContent: "center", marginTop: "50px"}}  >
-        <h1>Core Values</h1>
+      <div class="right" style={{marginTop: "8vw"}} >
+        <div class="h1-fluid">Core Values</div>
         <StyledCoreValuesList >
           {coreValues.map((value, i) =>
             <StyledCoreValue key={i}>
@@ -274,16 +325,16 @@ export function CoreValues(props) {
 
 export function GoalList(props) {
   return (
-    <Styled2Rows>
-      <div class="row">
-        <h1>Goals</h1>
+    <Styled2Rows style={{marginTop: "5vw"}}>
+      <div class="top">
+        <div class="h1-fluid">Goals</div>
         <StyledGoalList>
           <Goals />
         </StyledGoalList>
       </div>
 
-      <div class="row">
-        <StyledImageWrapper>
+      <div class="bottom">
+        <StyledImageWrapper style={{width:"90%"}}>
           <Image
             width="1752"
             height="587"
@@ -322,7 +373,7 @@ function Goals(props) {
 export function AboutUs(props) {
     return (
       <StyledContainer>
-        <h1>About Us</h1>
+        <StyledH1>About Us</StyledH1>
         <StyledDividerLine />
         <Overview />
         <CoreValues />

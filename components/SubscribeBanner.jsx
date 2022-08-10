@@ -3,43 +3,38 @@ import Subscription from './Subscription'
 import { StyledSectionContentWrapper } from './Styled'
 import { Styled2Columns, StyledImageWrapper } from '../pages/about'
 import Image from 'next/image'
+
 const StyledContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 500px;
+    height: auto;
     background-image: url("graphics/subscribe-banner.svg");
     background-repeat: none;
     background-position: top center;
 `
 
-const StyledSubscribeHeader = styled.h1`
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 120px 0px 20px 50px;
-    
-`
 
 function SubscribeBanner(props) {
     return (
         <StyledContainer>
-            <StyledSectionContentWrapper style={{marginBottom: "200px", marginTop: "250px"}}>
+            <StyledSectionContentWrapper>
       
                 <Styled2Columns>
-                    <div class="column">
+                    <div class="left">
                         <StyledImageWrapper>
                             <Image
                                 src="/images/isiah-keith.png"
-                                width={399}
-                                height={400}
+                                width={765}
+                                height={655}
                                 alt="join"
                             />
                         </StyledImageWrapper>
                     </div>
-                    <div class="column">
-                        <StyledSubscribeHeader>Join our email list for updates</StyledSubscribeHeader>
+                    <div class="right" style={{marginLeft:"0.2vw", marginTop:"10vw"}}>
+                        <div class="h2-fluid">Join our email list for updates</div>
                         <Subscription
                             formDescription={""}
                             mailchimpURL={props.mailchimpURL}

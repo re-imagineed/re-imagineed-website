@@ -20,13 +20,12 @@ const StyledHeaderWrapper = styled.div`
     z-index: 1;
     position: sticky;
     top: 0;
-    max-width: 100vw;
+    max-width: 100%;
     height: 60px;
 `
 
 const StyledHeader = styled.header`
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,18 +33,20 @@ const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.sky};
 
   h1 {
-    font-size: 1.2em;
+    // font-size: 1.2em;
+    font-size: calc(1rem + 0.7vw);
     color: ${(props) => props.theme.white};
-    margin: 5px 25px;
+    // margin: 5px 25px;
+    margin: calc(0.2rem + 0.1vw);
 
 
-    @media ${device.mobileM} {
-      font-size: 1.5em;
-    }
+    // @media ${device.mobileM} {
+    //   font-size: 1.5em;
+    // }
 
-    @media ${device.laptop} {
-      font-size: 2em;
-    }
+    // @media ${device.laptop} {
+    //   font-size: 2em;
+    // }
   }
   
   .navigation-bar ul {
@@ -77,14 +78,15 @@ const StyledHeader = styled.header`
     background-color: ${(props) => props.theme.red};
   }
   
-.active {
+  .active {
     background-color: ${(props) => props.theme.yellow};
 `
 
 const StyledContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 12px 0;
+    // margin: 12px 0;
+    margin: calc(0.3rem + 0.3vw);
     width: 90%;
     max-width: 1400px;
 `
@@ -103,52 +105,53 @@ const StyledLeftContent = styled.div`
 `
 
 const StyledLogoWrapper = styled.div`
-    margin-right: 5px;
-
+    // margin-right: 5px;
+    margin: calc(0.3rem + 0.3vw);
     div {
         height: 0px;
         width: 0px;
     }
 
-    @media ${device.tablet} {
-        height: 36px;
-        margin-right: 15px;
-        div {
-            height: 36px;
-            width: 36px;
-        }
-    }
+    // @media ${device.tablet} {
+    //     height: 36px;
+    //     margin-right: 15px;
+    //     div {
+    //         height: 36px;
+    //         width: 36px;
+    //     }
+    // }
 
-    @media ${device.laptop} {
-        height: 48px;
-        margin-right: 20px;
+    // @media ${device.laptop} {
+    //     height: 48px;
+    //     margin-right: 20px;
 
-        div {
-            height: 48px;
-            width: 48px;
-        }
-    }
+    //     div {
+    //         height: 48px;
+    //         width: 48px;
+    //     }
+    // }
 `
 
 const StyledNavLink = styled.a`
     display: flex;
     align-items: center;
-    font-size: 1em;
+    // font-size: 1em;
+    font-size: calc(1rem + 0.2vw);
     font-style: normal;
     font-weight: 500;
     color: ${props => props.theme.white};
 
     cursor: pointer;
+    margin: calc(0.3rem + 0.3vw)
+    // @media ${device.mobileM} {
+    //     font-size: 1em;
+    //     margin: 5px 0px 5px 20px;
+    // }
 
-    @media ${device.mobileM} {
-        font-size: 1em;
-        margin: 5px 0px 5px 20px;
-    }
-
-    @media ${device.laptop} {
-        font-size: 1.3em;
-        margin: 5px 0px 5px 30px;
-    }
+    // @media ${device.laptop} {
+    //     font-size: 1.3em;
+    //     margin: 5px 0px 5px 30px;
+    // }
 `
 
 const NavMenuButton = styled.button`
@@ -224,7 +227,8 @@ const StyledRedButtonLink = styled.a`
         background: ${props => props.theme.lightblue};
     }
 
-    font-size: 1.2em;
+    // font-size: 1.2em;
+    font-size: calc(1rem + 0.2vw);
     font-weight: 500;
     color: white;
 `

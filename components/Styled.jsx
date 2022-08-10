@@ -35,10 +35,10 @@ export const StyledSection = styled.section`
 `
 
 export const StyledSectionContentWrapper = styled.div`
-    width: 60%;
+    width: 80%;
     min-width: 300px;
-    margin: 40px 0px 40px 0px;
-
+    // margin: 40px 0px 40px 0px;
+    margin: calc(2rem + 1vw);
     @media ${device.tablet} {
         margin: 60px 0px 100px 0px;
     }
@@ -48,30 +48,44 @@ export const StyledSectionAnchor = styled.div`
     transform: translateY(-60px);
 `
 
-export const StyledP1 = styled.p`
-    font-size: 1.2em;
-    line-height: 1.2em;
+export const StyledH1 = styled.h1`
+    font-size: calc(1rem + 1.0vw);
+    line-height: calc(1rem + 1vw);
+`
 
-    @media ${device.tablet} {
-        font-size: 1.2em;
-    }
+export const StyledP1 = styled.p`
+    // font-size: 1.2em;
+    // line-height: 1.2em;
+    font-size: calc(1rem + 0.3vw);
+    line-height: calc(1rem + 1vw);
+
+    // @media ${device.tablet} {
+    //     font-size: 1.2em;
+    // }
 `
 
 export const StyledP2 = styled.p`
-    font-size: 1.2em;
-    line-height: 1.5em;
+    // font-size: 1.2em;
+    // line-height: 1.5em;
 
-    @media ${device.tablet} {
-        font-size: 1em;
-    }
+    font-size: calc(1rem + 0.2vw);
+    line-height: calc(1rem + 0.7vw);
+
+    // @media ${device.tablet} {
+    //     font-size: 1em;
+    // }
 `
 
 export const StyledP3 = styled.p`
-    font-size: 0.8em;
+    // font-size: 0.8em;
 
-    @media ${device.tablet} {
-        font-size: 0.9em;
-    }
+    font-size: calc(1rem + 0.1vw);
+    line-height: calc(1rem + 0.5vw);
+
+
+    // @media ${device.tablet} {
+    //     font-size: 0.9em;
+    // }
 `
 
 export const StyledInlineLink = styled.a`
@@ -92,7 +106,7 @@ const lineExpand = keyframes`
 
 export const StyledDividerLine = styled.div`
   height: 2px;
-  width: 90%;
+  width: 100%;
   min-width: 200px;
   background-color: ${props => props.theme.grey};
 
