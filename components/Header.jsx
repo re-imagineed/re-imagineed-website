@@ -86,7 +86,7 @@ const StyledContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     // margin: 12px 0;
-    margin: calc(0.3rem + 0.3vw);
+    margin: calc(0.3rem + 0.1vw);
     width: 90%;
     max-width: 1400px;
 `
@@ -142,7 +142,7 @@ const StyledNavLink = styled.a`
     color: ${props => props.theme.white};
 
     cursor: pointer;
-    margin: calc(0.3rem + 0.3vw)
+    margin: calc(1rem + 1vw)
     // @media ${device.mobileM} {
     //     font-size: 1em;
     //     margin: 5px 0px 5px 20px;
@@ -301,7 +301,6 @@ function Header() {
                         </nav>
                     </StyledLeftContent>
                     <StyledRightContent>
- 
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>

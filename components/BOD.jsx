@@ -7,7 +7,8 @@ const StyledBODWrapper = styled.article`
     display: flex;
     flex-direction: column;
     // margin: 10px 10px;
-    margin: calc(0.3rem + 0.3vw);
+    margin: calc(1rem + 1vw);
+    margin-left: 0;
     h2 {
       margin: 0;
       margin-bottom: 0px;
@@ -62,18 +63,18 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-    <Styled2Columns style={{marginTop:"5vw"}}>
-      <div class="left">
-        < StyledImageWrapper style={{ alignContent: "center" , marginRight: "2vw"}} >
+    <Styled2Columns style={{marginTop:"5vw", marginLeft: "5vw"}}>
+      <div class="left" style={{width:"45%"}}>
+        < StyledImageWrapper>
           <Image
             src="/images/fun2.png"
-            width="402"
-            height="355"
+            width="502"
+            height="444"
             alt="fun2"
           />
         </StyledImageWrapper>
       </div>
-      <div class="right" style={{ alignContent: "center", marginTop: "1vw"}}  >
+      <div class="right" style={{width:"53%", marginTop: "1vw", marginLeft:"5vw"}}  >
         <StyledBODWrapper>
           <div style={{ width: "100%", height: "2vw" }}></div>
           <div class="h2-fluid">Board Of Directors</div>

@@ -35,7 +35,7 @@ export const StyledSection = styled.section`
 `
 
 export const StyledSectionContentWrapper = styled.div`
-    width: 80%;
+    width: 75%;
     min-width: 300px;
     // margin: 40px 0px 40px 0px;
     margin: calc(2rem + 1vw);

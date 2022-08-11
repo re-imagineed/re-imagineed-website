@@ -123,8 +123,10 @@ export const  StyledGoalWrapper = styled.p`
 `
 
 export const Styled2Columns = styled.div`
-  flex-direction: row;
-  align-items: left;
+  display: flex;
+  flex-direction: column;
+  // flex-direction: row;
+  // align-items: left;
   // margin-bottom: 10px;
   align-content: left;
   font-weight: normal;
@@ -165,14 +167,14 @@ export const Styled2Columns = styled.div`
 
   .left {
     float: left;
-    width: 49%;
+    width: 48%;
     // padding: 20px;
     // margin-bottom: 30px;
   }
 
   .right {
     float: right;
-    width: 49%;
+    width: 51%;
     // padding: 20px;
     // margin-bottom: 30px;
   }
@@ -184,6 +186,15 @@ export const Styled2Columns = styled.div`
     display: flex;
     clear: both;
   }
+
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: row;
+ }
+  
 `
 
 const Styled2Rows = styled.div`
@@ -224,14 +235,13 @@ const Styled2Rows = styled.div`
 
 export const StyledImageWrapper = styled.div`
   display: inline-block;
-  border: 1px solid ${props => props.theme.off_white37};
-  max-width: 100%;
+  border: 5px solid ${props => props.theme.off_white37};
+  // max-width: 90%;
   height: auto;
-  // max-width: 1200px;
-  // min-width: 200px;
+  max-width: 1200px;
+  min-width: 200px;
   // margin: auto;
-  height: auto;
-  align-content: center;
+  align-content: left;
 
 `
 
@@ -269,23 +279,23 @@ export function Overview(props) {
       <div class="right">
          <Styled2Rows>
           <div class="top">
-            <StyledImageWrapper style={{ marginTop: "2vw"}}>
+            <StyledImageWrapper style={{ marginTop: "1vw", width: "70%"}}>
               <Image
                 src="/images/learn.png"
-                width="1031"
-                height="695"
-                alt="Learn"
+                width="773"
+                height="531"
+                alt="learn"
               />
             </StyledImageWrapper>
           </div>
 
-          <div class="bottom" style={{marginLeft: "3vw", marginTop: "3vw"}}>
+          <div class="bottom" style={{marginLeft: "2vw", marginTop: "1vw", width:"80%"}}>
             <StyledImageWrapper>
               <Image
                 src="/images/fun1.png"
                 width="500"
                 height="237"
-                alt="Fun"
+                alt="fun1"
               />
             </StyledImageWrapper>
           </div>
@@ -305,7 +315,7 @@ export function CoreValues(props) {
             src="/images/isiah2.jpeg"
             width="400"
             height="500"
-            alt="Teacher"
+            alt="isiah2"
           />
         </StyledImageWrapper>
       </div>
@@ -325,7 +335,7 @@ export function CoreValues(props) {
 
 export function GoalList(props) {
   return (
-    <Styled2Rows style={{marginTop: "5vw"}}>
+    <Styled2Rows style={{marginTop: "3vw"}}>
       <div class="top">
         <div class="h1-fluid">Goals</div>
         <StyledGoalList>
@@ -334,12 +344,12 @@ export function GoalList(props) {
       </div>
 
       <div class="bottom">
-        <StyledImageWrapper style={{width:"90%"}}>
+        <StyledImageWrapper style={{width:"90%", marginTop:"1vw"}}>
           <Image
             width="1752"
             height="587"
             src="/images/main.png"
-            alt="goal"
+            alt="main"
           />
         </StyledImageWrapper>
       </div>

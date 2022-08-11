@@ -48,26 +48,27 @@ const StyledBigImageWrapper = styled.div`
 `
 
 const Styled2Columns = styled.div`
+  display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
   justify-content: center;
-  padding: calc(2rem + 0.2vw);
+  padding: calc(4rem + 0.2vw);
   margin: calc(0.1rem + 1vw);
   height: auto;
   margin-left: 0;
 
   .h1-fluid {
-    padding: 1.5vw;
+    padding: 4vw;
     font-size: calc(1rem + 1vw);
-    line-height: calc(1.4rem + 1vw);
+    line-height: calc(1rem + 1vw);
     font-weight: bold;
     margin-left: 4vw;
   }
 
   .p-fluid {
     font-size: calc(1rem + 0.3vw);
-    line-height: calc(1rem + 1vw);
+    line-height: calc(1rem + 0.8vw);
   }
 
   .left {
@@ -86,6 +87,13 @@ const Styled2Columns = styled.div`
     display: flex;
     clear: both;
   }
+  @media ${device.tablet} {
+    flex-direction: column;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: row;
+ }
 `
 
 function Home(props) {
@@ -120,7 +128,7 @@ function Home(props) {
                     width="975"
                     height="731"
                     src="/images/team1.jpeg"
-                    alt="team"
+                    alt="team1"
                   />
                 </StyledBigImageWrapper>
               </div>
