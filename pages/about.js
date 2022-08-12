@@ -164,35 +164,6 @@ export const StyledColumns = styled.div`
   
 `
 
-const StyledRows = styled.div`
-  flex-direction: column;
-  align-items: center;
-  align-content: left;
-  justify-content: left;
-
-  width: 100%;
-  height: auto;
-  margin: 1rem;
-  padding: 1rem;
-  font-weight: normal;
-
-  .h1-fluid {
-    font-weight: bold;
-    font-size: calc(1rem + 0.7vw);
-    line-height: calc(1.4rem + 2vw);
-    text-decoration: underline;
-  }
-
-  @media ${device.tablet} {
-    flex-direction: column;
-    margin: 0;
-  }
-
-  @media ${device.laptop} {
-    flex-direction: row;
- }
-`
-
 export const StyledImageWrapper = styled.div`
   display: inline-block;
   border: 5px solid ${props => props.theme.off_white37};
@@ -208,59 +179,54 @@ export const StyledImageWrapper = styled.div`
 export function Overview(props) {
   return (
     <StyledColumns>
-      {/* <div class="left"> */}
-        <div>
-          <StyledP2>{overviewCopy[0]}</StyledP2>
-          <StyledP2>{overviewCopy[1]}</StyledP2>
-          <StyledP2>
-            <ul>
-              <li>{overviewCopy[2]}</li>
-              <li>{overviewCopy[3]}</li>
-              <li>{overviewCopy[4]}</li>
-            </ul>
-          </StyledP2>
-          <StyledP2></StyledP2>
-          <StyledP2>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
-            teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:
-          </StyledP2>
-          <StyledP2>
-            <ul>
-              <li>{overviewCopy[5]}</li>
-              <li>{overviewCopy[6]}</li>
-              <li>{overviewCopy[7]}</li>
-              <li>{overviewCopy[8]}</li>
-              <li>{overviewCopy[9]}</li>
-            </ul>
-          </StyledP2>
-          <StyledP2>{overviewCopy[10]}</StyledP2>
-        </div>
-      {/* </div> */}
-         <div style={{ width: "100%", height: "10px" }}></div>
-         <StyledRows>
-          {/* <div class="top"> */}
- 
-            <StyledImageWrapper>
-              <Image
-                src="/images/learn.png"
-                width="773"
-                height="531"
-                alt="learn"
-              />
-            </StyledImageWrapper>
-     
-        
-            <div style={{ width: "100%", height: "10px" }}></div>
-            <StyledImageWrapper style={{marginLeft:"3vw"}}>
+      <div>
+        <StyledP2>{overviewCopy[0]}</StyledP2>
+        <StyledP2>{overviewCopy[1]}</StyledP2>
+        <StyledP2>
+          <ul>
+            <li>{overviewCopy[2]}</li>
+            <li>{overviewCopy[3]}</li>
+            <li>{overviewCopy[4]}</li>
+          </ul>
+        </StyledP2>
+        <StyledP2></StyledP2>
+        <StyledP2>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
+          teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:
+        </StyledP2>
+        <StyledP2>
+          <ul>
+            <li>{overviewCopy[5]}</li>
+            <li>{overviewCopy[6]}</li>
+            <li>{overviewCopy[7]}</li>
+            <li>{overviewCopy[8]}</li>
+            <li>{overviewCopy[9]}</li>
+          </ul>
+        </StyledP2>
+        <StyledP2>{overviewCopy[10]}</StyledP2>
+      </div>
+
+      <div>
+        <div style={{ marginTop: "2vw", marginLeft:"2vw" }}>
+          <StyledImageWrapper>
+            <Image
+              src="/images/learn.png"
+              width="1031"
+              height="695"
+              alt="learn"
+            />
+          </StyledImageWrapper>
+
+          <StyledImageWrapper style={{marginLeft: "2vw", marginTop: "2vw"}}>
               <Image
                 src="/images/fun1.png"
                 width="500"
                 height="237"
                 alt="fun1"
               />
-            </StyledImageWrapper>
-      
-        </StyledRows>
-      {/* </div> */}
+              </StyledImageWrapper>
+        </div>
+
+      </div>
     </StyledColumns>
   )
 }
