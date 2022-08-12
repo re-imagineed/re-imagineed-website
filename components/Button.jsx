@@ -5,7 +5,7 @@ const StyledButton = styled.button`
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding: 15px;
+    padding: 0.8vw;
     border-radius: 5px;
     border: none;
     background: ${props => props.theme.navy};
@@ -17,8 +17,12 @@ const StyledButton = styled.button`
         background: ${props => props.theme.lightblue};
     }
 
-    font-size: 1.2em;
+    // font-size: 1.2em;
     font-weight: 500;
+    padding: 1vw;
+    margin-left: 0vw;
+    font-size: calc(1rem + 0.2vw);
+    line-height: 1.4rem;
     color: white;
 `
 
