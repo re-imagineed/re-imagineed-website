@@ -57,6 +57,10 @@ export const StyledH2 = styled.h2`
     font-size: calc(1rem + 0.8vw);
     line-height: calc(1rem + 0.9vw);
 `
+export const StyledH3 = styled.h2`
+    font-size: calc(1rem + 0.5vw);
+    line-height: calc(1rem + 0.9vw);
+`
 
 export const StyledP1 = styled.p`
     // font-size: 1.2em;

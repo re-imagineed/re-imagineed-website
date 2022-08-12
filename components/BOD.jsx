@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import Image from 'next/image'
 import { device } from '../utils/media-breakpoints'
-import { Styled2Columns, StyledImageWrapper, StyledImageLearn, StyledImageIsiah1, StyledIsiahKeith, StyledImageFun2 } from '../pages/about'
+import { StyledColumns, StyledImageWrapper, StyledImageLearn, StyledImageIsiah1, StyledIsiahKeith, StyledImageFun2 } from '../pages/about'
 
 const StyledBODWrapper = styled.article`
     display: flex;
@@ -63,7 +63,7 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-    <Styled2Columns style={{marginTop:"5vw", marginLeft: "5vw"}}>
+    <StyledColumns style={{marginTop:"5vw", marginLeft: "5vw"}}>
       {/* <div class="left" style={{width:"45%"}}> */}
         < StyledImageWrapper>
           <Image
@@ -74,7 +74,7 @@ function BoardOfDirectors(props) {
           />
         </StyledImageWrapper>
       {/* </div> */}
-      {/* <div class="right" style={{width:"53%", marginTop: "1vw", marginLeft:"5vw"}}  > */}
+      <div style={{marginLeft: "8vw"}}>
         <StyledBODWrapper>
           <div style={{ width: "100%", height: "2vw" }}></div>
           <div class="h2-fluid">Board Of Directors</div>
@@ -87,9 +87,9 @@ function BoardOfDirectors(props) {
           <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[4]}</div></StyledNameWrapper></li>
 
         </StyledBODWrapper>
-      {/* </div> */}
+       </div>
 
-    </Styled2Columns>
+    </StyledColumns>
   )
 }
 

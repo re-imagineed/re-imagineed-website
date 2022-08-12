@@ -121,7 +121,7 @@ export const  StyledGoalWrapper = styled.p`
 }
 `
 
-export const Styled2Columns = styled.div`
+export const StyledColumns = styled.div`
   display: flex;
   flex-direction: column;
   align-content: left;
@@ -129,29 +129,29 @@ export const Styled2Columns = styled.div`
   margin-left: 0;
   width: 100%
 
-  .h1-fluid {
-    font-weight: bold;
-    font-size: calc(1rem + 0.7vw);
-    line-height: calc(1.4rem + 2vw);
-    text-decoration: underline;
-  }
+  // .h1-fluid {
+  //   font-weight: bold;
+  //   font-size: calc(1rem + 0.7vw);
+  //   line-height: calc(1.4rem + 2vw);
+  //   text-decoration: underline;
+  // }
 
-  .h2-fluid {
-    font-weight: bold;
-    font-size: calc(1rem + 0.5vw);
-    line-height: calc(1rem + 0.9vw);
-    text-decoration: underline;
-  }
+  // .h2-fluid {
+  //   font-weight: bold;
+  //   font-size: calc(1rem + 0.5vw);
+  //   line-height: calc(1rem + 0.9vw);
+  //   text-decoration: underline;
+  // }
 
-  .h3-fluid {
-    font-size: calc(1rem + 0.2vw);
-    line-height: calc(1rem + 0.8vw);
-  }
+  // .h3-fluid {
+  //   font-size: calc(1rem + 0.2vw);
+  //   line-height: calc(1rem + 0.8vw);
+  // }
 
-  .p-fluid {
-    font-size: calc(1rem + 0.1vw);
-    line-height: calc(1rem + 0.2vw);
-  }
+  // .p-fluid {
+  //   font-size: calc(1rem + 0.1vw);
+  //   line-height: calc(1rem + 0.2vw);
+  // }
 
   @media ${device.tablet} {
     flex-direction: column;
@@ -165,7 +165,7 @@ export const Styled2Columns = styled.div`
 `
 
 const StyledRows = styled.div`
-flex-direction: column;
+  flex-direction: column;
   align-items: center;
   align-content: left;
   justify-content: left;
@@ -207,7 +207,7 @@ export const StyledImageWrapper = styled.div`
 
 export function Overview(props) {
   return (
-    <Styled2Columns>
+    <StyledColumns>
       {/* <div class="left"> */}
         <div>
           <StyledP2>{overviewCopy[0]}</StyledP2>
@@ -250,7 +250,7 @@ export function Overview(props) {
      
         
             <div style={{ width: "100%", height: "10px" }}></div>
-            <StyledImageWrapper>
+            <StyledImageWrapper style={{marginLeft:"3vw"}}>
               <Image
                 src="/images/fun1.png"
                 width="500"
@@ -261,13 +261,14 @@ export function Overview(props) {
       
         </StyledRows>
       {/* </div> */}
-    </Styled2Columns>
+    </StyledColumns>
   )
 }
 
 export function CoreValues(props) {
   return (
-    <Styled2Columns>
+    <StyledColumns>
+      <div>
         <StyledImageWrapper >
           <Image
             src="/images/isiah2.jpeg"
@@ -276,7 +277,7 @@ export function CoreValues(props) {
             alt="isiah2"
           />
         </StyledImageWrapper>
-
+      </div>
       <div style={{ marginTop: "10vw", marginLeft: "10vw" }}>
         <StyledH2 style={{ textDecoration: "underline" }}>Core Values</StyledH2>
 
@@ -288,13 +289,13 @@ export function CoreValues(props) {
           )}
         </StyledCoreValuesList>
       </div>
-    </Styled2Columns>
+    </StyledColumns>
 )}
 
 export function GoalList(props) {
   return (
   
-    <StyledRows>
+    <div>
       {/* <div class="top"> */}
         <StyledH2 style={{textDecoration: "underline"}}>Goals</StyledH2>
         <StyledGoalList>
@@ -312,7 +313,7 @@ export function GoalList(props) {
           />
         </StyledImageWrapper>
       {/* </div> */}
-    </StyledRows>
+    </div>
    
   )
 }
