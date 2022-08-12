@@ -4,7 +4,6 @@ import _Head from '../components/Head'
 import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink, StyledH1} from '../components/Styled'
 import { device } from '../utils/media-breakpoints'
 
-
 const overviewCopy = [
   "Our mission is to attract, retain,and elevate educators of color. To create a culture of inclusivity through mentorship, accountability, and partnership.",
   "Re-Imagine Education was created by Isiah King and Keith Streicher, who have more than a decade of education experience at the K-12 and University level. Our purpose is to:",
@@ -125,95 +124,10 @@ export const  StyledGoalWrapper = styled.p`
 export const Styled2Columns = styled.div`
   display: flex;
   flex-direction: column;
-  // flex-direction: row;
-  // align-items: left;
-  // margin-bottom: 10px;
   align-content: left;
   font-weight: normal;
-  // margin: calc(1rem + 0.1vw);
   margin-left: 0;
-
-  .h1-fluid {
-    font-weight: bold;
-    font-size: calc(1rem + 0.7vw);
-    line-height: calc(1.4rem + 1.2vw);
-    text-decoration: underline;
-  }
-
-  .h2-fluid {
-    font-size: calc(1rem + 0.5vw);
-    line-height: calc(1.4rem + 1.1vw);
-    text-decoration: underline;
-    font-weight: bold;
-  }
-
-  .h3-fluid {
-    font-size: calc(1rem + 0.2vw);
-    line-height: calc(1.4rem + 0.8vw);
-  }
-
-  .p-fluid {
-    font-size: calc(1rem + 0.vw);
-    line-height: calc(1rem + 0.2vw);
-  }
-
-  
-  h1 {
-    font-size: 1.6em;
-    line-height: 1.5em;
-    margin-top: 50px;
-    text-decoration: underline;
-  }
-
-  .left {
-    float: left;
-    width: 48%;
-    // padding: 20px;
-    // margin-bottom: 30px;
-  }
-
-  .right {
-    float: right;
-    width: 51%;
-    // padding: 20px;
-    // margin-bottom: 30px;
-  }
-
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: flex;
-    clear: both;
-  }
-
-  @media ${device.tablet} {
-    flex-direction: column;
-  }
-
-  @media ${device.laptop} {
-    flex-direction: row;
- }
-  
-`
-
-const Styled2Rows = styled.div`
-  flex-direction: row;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-
-  width: 100%;
-  height: auto;
-  margin: 1rem;
-  font-weight: normal;
-
-  h1 {
-    font-size: 1.7em;
-    line-height: 1.5em;
-    margin-top: 20px;
-    text-decoration: underline;
-  }
+  width: 100%
 
   .h1-fluid {
     font-weight: bold;
@@ -222,24 +136,70 @@ const Styled2Rows = styled.div`
     text-decoration: underline;
   }
 
-  .top {
-    float: left;
-    padding: 1rem;
+  .h2-fluid {
+    font-weight: bold;
+    font-size: calc(1rem + 0.5vw);
+    line-height: calc(1rem + 0.9vw);
+    text-decoration: underline;
   }
 
-  .bottom {
-    float: left;
-    padding: 1rem;
+  .h3-fluid {
+    font-size: calc(1rem + 0.2vw);
+    line-height: calc(1rem + 0.8vw);
   }
+
+  .p-fluid {
+    font-size: calc(1rem + 0.1vw);
+    line-height: calc(1rem + 0.2vw);
+  }
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: row;
+ }
+  
+`
+
+const StyledRows = styled.div`
+flex-direction: column;
+  align-items: center;
+  align-content: left;
+  justify-content: left;
+
+  width: 100%;
+  height: auto;
+  margin: 1rem;
+  padding: 1rem;
+  font-weight: normal;
+
+  .h1-fluid {
+    font-weight: bold;
+    font-size: calc(1rem + 0.7vw);
+    line-height: calc(1.4rem + 2vw);
+    text-decoration: underline;
+  }
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  @media ${device.laptop} {
+    flex-direction: row;
+ }
 `
 
 export const StyledImageWrapper = styled.div`
   display: inline-block;
   border: 5px solid ${props => props.theme.off_white37};
-  // max-width: 90%;
+  // max-width: 100%;
   height: auto;
   max-width: 1200px;
-  min-width: 200px;
+  // min-width: 200px;
   // margin: auto;
   align-content: left;
 
@@ -248,7 +208,7 @@ export const StyledImageWrapper = styled.div`
 export function Overview(props) {
   return (
     <Styled2Columns>
-      <div class="left">
+      {/* <div class="left"> */}
         <div>
           <StyledP2>{overviewCopy[0]}</StyledP2>
           <StyledP2>{overviewCopy[1]}</StyledP2>
@@ -274,12 +234,12 @@ export function Overview(props) {
           </StyledP2>
           <StyledP2>{overviewCopy[10]}</StyledP2>
         </div>
-      </div>
-
-      <div class="right">
-         <Styled2Rows>
-          <div class="top">
-            <StyledImageWrapper style={{ marginTop: "1vw", width: "70%"}}>
+      {/* </div> */}
+         <div style={{ width: "100%", height: "10px" }}></div>
+         <StyledRows>
+          {/* <div class="top"> */}
+ 
+            <StyledImageWrapper>
               <Image
                 src="/images/learn.png"
                 width="773"
@@ -287,9 +247,9 @@ export function Overview(props) {
                 alt="learn"
               />
             </StyledImageWrapper>
-          </div>
-
-          <div class="bottom" style={{marginLeft: "2vw", marginTop: "1vw", width:"80%"}}>
+     
+        
+            <div style={{ width: "100%", height: "10px" }}></div>
             <StyledImageWrapper>
               <Image
                 src="/images/fun1.png"
@@ -298,18 +258,17 @@ export function Overview(props) {
                 alt="fun1"
               />
             </StyledImageWrapper>
-          </div>
-          
-        </Styled2Rows>
-      </div>
+      
+        </StyledRows>
+      {/* </div> */}
     </Styled2Columns>
   )
 }
 
 export function CoreValues(props) {
   return (
-    <Styled2Columns style={{marginTop:"5vw"}}>
-      <div class="left">
+    <Styled2Columns>
+      
         <StyledImageWrapper >
           <Image
             src="/images/isiah2.jpeg"
@@ -318,10 +277,11 @@ export function CoreValues(props) {
             alt="isiah2"
           />
         </StyledImageWrapper>
-      </div>
+      
 
-      <div class="right" style={{marginTop: "8vw"}} >
-        <div class="h1-fluid">Core Values</div>
+      {/* <div> */}
+        {/* <div class="h1-fluid">Core Values</div> */}
+        <div class="h1-fluid">Gore Values</div>
         <StyledCoreValuesList >
           {coreValues.map((value, i) =>
             <StyledCoreValue key={i}>
@@ -329,31 +289,33 @@ export function CoreValues(props) {
             </StyledCoreValue>
           )}
         </StyledCoreValuesList>
-      </div>
+      {/* </div> */}
     </Styled2Columns>
 )}
 
 export function GoalList(props) {
   return (
-    <Styled2Rows style={{marginTop: "3vw"}}>
-      <div class="top">
+  
+    <StyledRows>
+      {/* <div class="top"> */}
         <div class="h1-fluid">Goals</div>
         <StyledGoalList>
           <Goals />
         </StyledGoalList>
-      </div>
+      {/* </div> */}
 
-      <div class="bottom">
-        <StyledImageWrapper style={{width:"90%", marginTop:"1vw"}}>
+      {/* <div class="bottom"> */}
+        <StyledImageWrapper>
           <Image
-            width="1752"
-            height="587"
+            width="1051"
+            height="352"
             src="/images/main.png"
             alt="main"
           />
         </StyledImageWrapper>
-      </div>
-    </Styled2Rows>
+      {/* </div> */}
+    </StyledRows>
+   
   )
 }
 
@@ -386,8 +348,10 @@ export function AboutUs(props) {
         <StyledH1>About Us</StyledH1>
         <StyledDividerLine />
         <Overview />
+        <div style={{ width: "100%", height: "10px" }}></div>
         <CoreValues />
         <GoalList />
+        <div style={{ width: "100%", height: "10px" }}></div>
       </StyledContainer>
     )
 }

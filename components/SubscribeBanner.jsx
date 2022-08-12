@@ -16,30 +16,25 @@ const StyledContainer = styled.div`
     background-position: top center;
 `
 
-
 function SubscribeBanner(props) {
     return (
         <StyledContainer>
             <StyledSectionContentWrapper>
-      
                 <Styled2Columns style={{marginLeft: "5vw"}}>
-                    <div class="left">
                         <StyledImageWrapper>
                             <Image
                                 src="/images/isiah-keith.png"
-                                width={573}
-                                height={491}
+                                width="502"
+                                height="444"
                                 alt="join"
                             />
                         </StyledImageWrapper>
-                    </div>
-                    <div class="right" style={{marginLeft:"2vw", marginTop:"10vw"}}>
+              
                         <div class="h2-fluid">Join our email list for updates</div>
                         <Subscription
                             formDescription={""}
                             mailchimpURL={props.mailchimpURL}
                         />
-                    </div>
 
                 </Styled2Columns>
             </StyledSectionContentWrapper>

@@ -112,24 +112,24 @@ const StyledLogoWrapper = styled.div`
         width: 0px;
     }
 
-    // @media ${device.tablet} {
-    //     height: 36px;
-    //     margin-right: 15px;
-    //     div {
-    //         height: 36px;
-    //         width: 36px;
-    //     }
-    // }
+    @media ${device.tablet} {
+        height: 36px;
+        margin-right: 15px;
+        div {
+            height: 36px;
+            width: 36px;
+        }
+    }
 
-    // @media ${device.laptop} {
-    //     height: 48px;
-    //     margin-right: 20px;
+    @media ${device.laptop} {
+        height: 48px;
+        margin-right: 20px;
 
-    //     div {
-    //         height: 48px;
-    //         width: 48px;
-    //     }
-    // }
+        div {
+            height: 48px;
+            width: 48px;
+        }
+    }
 `
 
 const StyledNavLink = styled.a`

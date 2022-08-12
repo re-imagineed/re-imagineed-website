@@ -47,7 +47,7 @@ const StyledBigImageWrapper = styled.div`
   }
 `
 
-const Styled2Columns = styled.div`
+const StyledColumns = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,22 +71,6 @@ const Styled2Columns = styled.div`
     line-height: calc(1rem + 0.8vw);
   }
 
-  .left {
-    float: left;
-    width: 45%;
-  }
-
-  .right {
-    float: right;
-    width: 55%;
-  }
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: flex;
-    clear: both;
-  }
   @media ${device.tablet} {
     flex-direction: column;
   }
@@ -109,10 +93,7 @@ function Home(props) {
         <StyledMain>
           <StyledSectionAnchor id={"home"} />
           <StyledSection index={0}>
-
-            <Styled2Columns>
-              <div class="left">
-                <div>
+            <StyledColumns>
                   <div class="h1-fluid">Re-Imagine Education, Inc.</div>
                   <div class="p-fluid">
                     Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
@@ -120,9 +101,6 @@ function Home(props) {
                   <StyledLogoWrapper>
                     <LogoBlackL />
                   </StyledLogoWrapper>
-                </div>
-              </div>
-              <div class="right">
                 <StyledBigImageWrapper>
                   <Image
                     width="975"
@@ -131,8 +109,7 @@ function Home(props) {
                     alt="team1"
                   />
                 </StyledBigImageWrapper>
-              </div>
-            </Styled2Columns>
+            </StyledColumns>
           </StyledSection>
 
           <StyledSectionAnchor id={"about_us"} />

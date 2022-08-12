@@ -21,6 +21,7 @@ const StyledProfileHead = styled.div`
 
     @media ${device.tablet} {
         flex-direction: column;
+        margin: 0;
     }
 
     @media ${device.laptop} {
@@ -33,7 +34,6 @@ export const StyledNameWrapper = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     color: ${props => props.theme.navy};
-    // margin: 30px 0px 0px 0px;
     margin: calc(0.3rem + 0.3vw);
 
     h2 {
@@ -74,9 +74,7 @@ export const StyledNameWrapper = styled.div`
 `
 
 const StyledProfileBody = styled.div`
-    // font-size: 1.2em;
     font-weight: normal;
-    // line-height:  1.0em;
     font-size: calc(1rem + 0.3vw);
     line-height: calc(1rem + 1vw);
 `
