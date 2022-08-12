@@ -8,29 +8,22 @@ import { LottieError, LottieFail, LottieSuccess } from './LottieAnimations'
 
 const StyledInputField = styled.input`
     height: calc(1rem + 2vw);
-    width: 20vw;
+    width: calc(5rem + 20vw);
     border: none;
-    border-radius: 5px;
+    border-radius: 2vw;
     margin-right: 2vw;
     margin-bottom: 1vw;
     padding-left: 1vw;
-    margin: calc(1rem + 0.2vw);
+    margin: calc(1rem + 0.5vw);
     margin-left: 0;
     margin-top: 0;
-    // font-size: 1em;
-    // line-height: 28px;
     outline: none;
     font-size: calc(1rem + 0.5vw);
-    line-height: calc(1.4rem + 1vw);
+    line-height: calc(3ddrem + 2vw);
 
     &::placeholder {
         color: #8C8C8C;
     }
-
-    // @media ${device.laptop} {
-    //     width: 300px;
-    //     margin-bottom: ${props => props.isFooter ? "20px" : "0px"};
-    // }
 `
 
 const StyledForm = styled.form`
@@ -40,12 +33,7 @@ const StyledForm = styled.form`
     align-items: left;
     margin-bottom: 2vw;
     margin-left: 0;
-    
 
-    // @media ${device.laptop} {
-    //     flex-direction: ${props => props.isFooter ? "column" : "row"};
-    //     align-items: ${props => props.isFooter ? "left" : "center"};
-    // }
 `
 
 const StyledFormDescription = styled.p`
