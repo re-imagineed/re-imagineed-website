@@ -86,7 +86,7 @@ const StyledContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     // margin: 12px 0;
-    margin: calc(0.3rem + 0.1vw);
+    margin: calc(0.1rem + 0.1vw);
     width: 90%;
     max-width: 1400px;
 `
@@ -210,29 +210,6 @@ const StyledLinksWrapper = styled.div`
     }
 `
 
-const StyledRedButtonLink = styled.a`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 0.2vw;
-    border-radius: 1vw;
-    border: none;
-    background: ${props => props.theme.red};
-    cursor: pointer;
-    outline: none;
-
-    &:hover {
-        opacity: 1;
-        background: ${props => props.theme.lightblue};
-    }
-
-    // font-size: 1.2em;
-    font-size: calc(1rem + 0.2vw);
-    font-weight: 500;
-    color: white;
-`
-
 const StyledButtonLink = styled.a`
     display: flex;
     justify-content: center;
@@ -300,7 +277,7 @@ function Header() {
                             </ul>
                         </nav>
                     </StyledLeftContent>
-                    <StyledRightContent>
+                    <StyledRightContent style={{marginTop: "4vw"}}>
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>
@@ -308,7 +285,7 @@ function Header() {
                         <Link href="https://tinyurl.com/redonations"><a><StyledButtonLink style={{background: "red"}}>Donate</StyledButtonLink></a></Link>
                         <div style={{ width: "2vw"}}></div>
                         <Link href="https://us7.list-manage.com/contact-form?u=5080e466c5f746c8b294721bc&form_id=e8ae05aca1f8eaf2371061d59e2e7222"><a><StyledButtonLink>Contact Us</StyledButtonLink></a></Link>
-                        <div style={{ width: "1.5vw"}}></div>
+                        <div style={{ width: "1vw"}}></div>
                         <Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link>
                         </div>
          
