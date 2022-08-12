@@ -65,12 +65,11 @@ const GlobalStyle = createGlobalStyle`
     // height: 100%
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     font-family: Helvetica Neue, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     color: ${theme.navy};
-    line-height: 150%;
-
+    line-height: 150%;;
  
   }
 

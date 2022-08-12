@@ -57,9 +57,6 @@ const StyledGoalList = styled.ul`
   margin-left: 0px;
   padding-left: 0px;
   text-align: center;
-  h1 {
-    font-size: "1.5em"
-  }
 `
 
 const StyledGoal = styled.li`
@@ -79,10 +76,6 @@ export const  StyledGoalWrapper = styled.p`
     flex-direction: row;
     font-size: calc(1rem + 0.2vw);
     line-height: calc(1.4rem + 0.5vw)
-
-    // @media ${device.tablet} {
-    //     font-size: 1em;
-    // }
 
     dl {
       padding: 0.5em;
@@ -262,12 +255,10 @@ export function GoalList(props) {
   return (
   
     <div>
-      {/* <div class="top"> */}
         <StyledH2 style={{textDecoration: "underline"}}>Goals</StyledH2>
         <StyledGoalList>
           <Goals />
         </StyledGoalList>
-      {/* </div> */}
 
       <div style={{ width: "100%", height: "2vw" }}></div>
         <StyledImageWrapper>
@@ -278,7 +269,6 @@ export function GoalList(props) {
             alt="main"
           />
         </StyledImageWrapper>
-      {/* </div> */}
     </div>
    
   )

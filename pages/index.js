@@ -3,7 +3,7 @@ import { LogoBlackL } from '../components/Logo'
 import _Head from '../components/Head'
 import { device } from '../utils/media-breakpoints'
 import { useMediaQuery } from 'react-responsive'
-import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1, StyledP2, StyledP3, StyledDividerLine} from '../components/Styled'
+import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledH1, StyledP1, StyledP3, StyledDividerLine} from '../components/Styled'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SubscribeBanner from '../components/SubscribeBanner'
@@ -15,10 +15,6 @@ const StyledLogoWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  // margin: auto;
-  // height: auto;
-  // width: auto;
-  // min-width: 100vw;
   max-width: 100%;
   height: auto;
   margin: calc(2rem + 2vw);
@@ -58,18 +54,18 @@ const StyledColumns = styled.div`
   height: auto;
   margin-left: 0;
 
-  .h1-fluid {
-    padding: 4vw;
-    font-size: calc(1rem + 1vw);
-    line-height: calc(1rem + 1vw);
-    font-weight: bold;
-    margin-left: 4vw;
-  }
+  // .h1-fluid {
+  //   padding: 4vw;
+  //   font-size: calc(1rem + 1vw);
+  //   line-height: calc(1rem + 1vw);
+  //   font-weight: bold;
+  //   margin-left: 4vw;
+  // }
 
-  .p-fluid {
-    font-size: calc(1rem + 0.3vw);
-    line-height: calc(1rem + 0.8vw);
-  }
+  // .p-fluid {
+  //   font-size: calc(1rem + 0.3vw);
+  //   line-height: calc(1rem + 0.8vw);
+  // }
 
   @media ${device.tablet} {
     flex-direction: column;
@@ -94,11 +90,11 @@ function Home(props) {
           <StyledSectionAnchor id={"home"} />
           <StyledSection index={0}>
             <StyledColumns>
-              <div style={{width:"50%"}}>
-                  <div class="h1-fluid">Re-Imagine Education, Inc.</div>
-                  <div class="p-fluid">
+              <div style={{width:"50%", marginTop: "5vw"}}>
+                  <StyledH1 style={{marginLeft: "5vw"}}>Re-Imagine Education, Inc.</StyledH1>
+                  <StyledP1>
                     Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
-                  </div>
+                  </StyledP1>
                   <StyledLogoWrapper>
                     <LogoBlackL />
                   </StyledLogoWrapper>
