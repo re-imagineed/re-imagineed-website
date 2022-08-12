@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import _Head from '../components/Head'
-import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink, StyledH1} from '../components/Styled'
+import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink, StyledH1, StyledH2} from '../components/Styled'
 import { device } from '../utils/media-breakpoints'
 
 const overviewCopy = [
@@ -268,7 +268,6 @@ export function Overview(props) {
 export function CoreValues(props) {
   return (
     <Styled2Columns>
-      
         <StyledImageWrapper >
           <Image
             src="/images/isiah2.jpeg"
@@ -277,11 +276,10 @@ export function CoreValues(props) {
             alt="isiah2"
           />
         </StyledImageWrapper>
-      
 
-      {/* <div> */}
-        {/* <div class="h1-fluid">Core Values</div> */}
-        <div class="h1-fluid">Gore Values</div>
+      <div style={{ marginTop: "10vw", marginLeft: "10vw" }}>
+        <StyledH2 style={{ textDecoration: "underline" }}>Core Values</StyledH2>
+
         <StyledCoreValuesList >
           {coreValues.map((value, i) =>
             <StyledCoreValue key={i}>
@@ -289,7 +287,7 @@ export function CoreValues(props) {
             </StyledCoreValue>
           )}
         </StyledCoreValuesList>
-      {/* </div> */}
+      </div>
     </Styled2Columns>
 )}
 
@@ -298,13 +296,13 @@ export function GoalList(props) {
   
     <StyledRows>
       {/* <div class="top"> */}
-        <div class="h1-fluid">Goals</div>
+        <StyledH2 style={{textDecoration: "underline"}}>Goals</StyledH2>
         <StyledGoalList>
           <Goals />
         </StyledGoalList>
       {/* </div> */}
 
-      {/* <div class="bottom"> */}
+      <div style={{ width: "100%", height: "2vw" }}></div>
         <StyledImageWrapper>
           <Image
             width="1051"
@@ -348,10 +346,11 @@ export function AboutUs(props) {
         <StyledH1>About Us</StyledH1>
         <StyledDividerLine />
         <Overview />
-        <div style={{ width: "100%", height: "10px" }}></div>
+        <div style={{ width: "100%", height: "5vw" }}></div>
         <CoreValues />
+        <div style={{ width: "100%", height: "5vw" }}></div>
         <GoalList />
-        <div style={{ width: "100%", height: "10px" }}></div>
+    
       </StyledContainer>
     )
 }

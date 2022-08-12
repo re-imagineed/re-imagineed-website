@@ -57,7 +57,7 @@ const StyledHeader = styled.header`
     vertical-align:top;
 
     list-style-type: none;
-    margin: 0;
+    margin: calc(0.2rem + 0.1vw);
     padding: 0;
     overflow: hidden;
     position: -webkit-sticky; /* Safari */
@@ -277,7 +277,7 @@ function Header() {
                 <StyledContentWrapper>
                     <StyledLeftContent>
                         <nav class="navigation-bar">
-                            <h1>Re-Imagine Education</h1>
+                            <h1 style={{marginTop:"2vw"}}>Re-Imagine Education</h1>
                             <ul>
                                 {isTabletOrDesktop === true
                                     ?
@@ -300,7 +300,7 @@ function Header() {
                             </ul>
                         </nav>
                     </StyledLeftContent>
-                    <StyledRightContent>
+                    <StyledRightContent style={{marginRight: "2vw"}}>
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>
