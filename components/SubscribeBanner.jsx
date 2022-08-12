@@ -21,6 +21,7 @@ function SubscribeBanner(props) {
         <StyledContainer>
             <StyledSectionContentWrapper>
                 <StyledColumns style={{ marginLeft: "5vw" }}>
+                    <div>
                     <StyledImageWrapper>
                         <Image
                             src="/images/isiah-keith.png"
@@ -29,6 +30,7 @@ function SubscribeBanner(props) {
                             alt="join"
                         />
                     </StyledImageWrapper>
+                    </div>
                     <div style={{ marginTop: "8vw", marginLeft: "5vw" }}>
                         <StyledH3 >Join our email list for updates</StyledH3>
                         <Subscription

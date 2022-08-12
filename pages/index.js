@@ -68,7 +68,7 @@ function Home(props) {
           <StyledSectionAnchor id={"home"} />
           <StyledSection index={0}>
             <StyledColumns>
-              <div style={{width:"50%", marginTop: "5vw", marginRight: "1vw"}}>
+              <div style={{marginTop: "5vw", marginRight: "1vw"}}>
                   <StyledH1 style={{marginLeft: "5vw"}}>Re-Imagine Education, Inc.</StyledH1>
                   <StyledP1>
                     Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
@@ -77,7 +77,7 @@ function Home(props) {
                     <LogoBlackL />
                   </StyledLogoWrapper>
                   </div>
-                <StyledBigImageWrapper>
+                <StyledBigImageWrapper style={{marginTop: "2vw", width: "100%"}}>
                   <Image
                     width="975"
                     height="731"

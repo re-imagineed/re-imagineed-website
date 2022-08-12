@@ -64,7 +64,7 @@ const bodMembers = [
 function BoardOfDirectors(props) {
   return (
     <StyledColumns style={{marginTop:"5vw", marginLeft: "5vw"}}>
-      {/* <div class="left" style={{width:"45%"}}> */}
+      <div>
         < StyledImageWrapper>
           <Image
             src="/images/fun2.png"
@@ -73,7 +73,7 @@ function BoardOfDirectors(props) {
             alt="fun2"
           />
         </StyledImageWrapper>
-      {/* </div> */}
+      </div>
       <div style={{marginLeft: "8vw"}}>
         <StyledBODWrapper>
           <div style={{ width: "100%", height: "2vw" }}></div>
