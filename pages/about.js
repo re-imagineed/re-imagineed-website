@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 import _Head from '../components/Head'
-import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink} from '../components/Styled'
+import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink, StyledH1, StyledH2} from '../components/Styled'
 import { device } from '../utils/media-breakpoints'
-
 
 const overviewCopy = [
   "Our mission is to attract, retain,and elevate educators of color. To create a culture of inclusivity through mentorship, accountability, and partnership.",
@@ -58,9 +57,6 @@ const StyledGoalList = styled.ul`
   margin-left: 0px;
   padding-left: 0px;
   text-align: center;
-  h1 {
-    font-size: "1.5em"
-  }
 `
 
 const StyledGoal = styled.li`
@@ -74,18 +70,16 @@ const StyledGoal = styled.li`
 
 `
 export const  StyledGoalWrapper = styled.p`
-    font-size: 1.1em;
-    line-height:  1.0em; 
+    // font-size: 1.1em;
+    // line-height:  1.0em; 
     font-weight: normal;
     flex-direction: row;
-
-    @media ${device.tablet} {
-        font-size: 1em;
-    }
+    font-size: calc(1rem + 0.2vw);
+    line-height: calc(1.4rem + 0.5vw)
 
     dl {
       padding: 0.5em;
-      font-size: 1.2em;
+      // font-size: 1.2em;
       flex-wrap: wrap;
     }
 
@@ -120,147 +114,108 @@ export const  StyledGoalWrapper = styled.p`
 }
 `
 
-export const Styled2Columns = styled.div`
-  flex-direction: row;
-  align-items: left;
-  margin-bottom: 10px;
+export const StyledColumns = styled.div`
+  display: flex;
+  flex-direction: column;
   align-content: left;
   font-weight: normal;
-  font-size: 1.1em;
-  line-height:  1.0em;
+  margin-left: 0;
+  width: 100%
 
-  h1 {
-    font-size: 1.6em;
-    line-height: 1.5em;
-    margin-top: 50px;
-    text-decoration: underline;
+  @media ${device.tablet} {
+    flex-direction: column;
+    margin: 0;
   }
 
-  .column {
-    float: left;
-    width: 50%;
-    padding: 20px;
-    margin-bottom: 30px;
-  }
-
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: flex;
-    clear: both;
-  }
-`
-
-const Styled2Rows = styled.div`
-  flex-direction: row;
-  align-items: center;
-  align-content: left;
-  justify-content: left;
- 
-  font-weight: normal;
-  font-size: 1.1em;
-  line-height:  1.0em;
-
-  h1 {
-    font-size: 1.7em;
-    line-height: 1.5em;
-    margin-top: 20px;
-    text-decoration: underline;
-  }
-
-  .row {
-    float: left;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
-  }
+  @media ${device.laptop} {
+    flex-direction: row;
+ }
+  
 `
 
 export const StyledImageWrapper = styled.div`
   display: inline-block;
-  border: 1px solid ${props => props.theme.off_white37};
+  border: 5px solid ${props => props.theme.off_white37};
+  // max-width: 100%;
+  height: auto;
   max-width: 1200px;
-  min-width: 200px;
+  // min-width: 200px;
+  // margin: auto;
+  align-content: left;
+
 `
 
 export function Overview(props) {
   return (
-    <Styled2Columns>
-      <div class="column">
-        <div style={{ marginTop: "50px", marginBottom: "50px", width: "100%", height: "100%" }}>
-          <StyledP1>{overviewCopy[0]}</StyledP1>
-          <StyledP1>{overviewCopy[1]}</StyledP1>
-          <StyledP1>
-            <ul>
-              <li>{overviewCopy[2]}</li>
-              <li>{overviewCopy[3]}</li>
-              <li>{overviewCopy[4]}</li>
-            </ul>
-          </StyledP1>
-          <StyledP1></StyledP1>
-          <StyledP1>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
-            teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:
-          </StyledP1>
-          <StyledP1>
-            <ul>
-              <li>{overviewCopy[5]}</li>
-              <li>{overviewCopy[6]}</li>
-              <li>{overviewCopy[7]}</li>
-              <li>{overviewCopy[8]}</li>
-              <li>{overviewCopy[9]}</li>
-            </ul>
-          </StyledP1>
-          <StyledP1>{overviewCopy[10]}</StyledP1>
-        </div>
+    <StyledColumns>
+      <div>
+        <StyledP2>{overviewCopy[0]}</StyledP2>
+        <StyledP2>{overviewCopy[1]}</StyledP2>
+        <StyledP2>
+          <ul>
+            <li>{overviewCopy[2]}</li>
+            <li>{overviewCopy[3]}</li>
+            <li>{overviewCopy[4]}</li>
+          </ul>
+        </StyledP2>
+        <StyledP2></StyledP2>
+        <StyledP2>Launched in July 2020, Re-Imagine Education is focused on increasing and diversifying the
+          teacher pipeline. A more diverse teacher and leader workforce is crucial for all students. A <StyledInlineLink target="_blank" href='https://learningpolicyinstitute.org/product/diversifying-teaching-profession-brief'>Learning Policy Institute</StyledInlineLink> study found that having teachers of color in the classroom affects students of color in several ways, including:
+        </StyledP2>
+        <StyledP2>
+          <ul>
+            <li>{overviewCopy[5]}</li>
+            <li>{overviewCopy[6]}</li>
+            <li>{overviewCopy[7]}</li>
+            <li>{overviewCopy[8]}</li>
+            <li>{overviewCopy[9]}</li>
+          </ul>
+        </StyledP2>
+        <StyledP2>{overviewCopy[10]}</StyledP2>
       </div>
-      <div class="column">
 
-        <Styled2Rows style={{ justifyContent: "center"}}>
-          <div class="row">
-            <StyledImageWrapper style={{ marginLeft: "50px", marginTop: "20px",  width: "100%"}}>
-              <Image
-                src="/images/learn.png"
-                width="1031"
-                height="695"
-                alt="Learn"
-              />
-            </StyledImageWrapper>
-          </div>
+      <div>
+        <div style={{ marginTop: "2vw", marginLeft:"2vw" }}>
+          <StyledImageWrapper>
+            <Image
+              src="/images/learn.png"
+              width="1031"
+              height="695"
+              alt="learn"
+            />
+          </StyledImageWrapper>
 
-          <div class="row">
-            <StyledImageWrapper style={{ marginLeft: "0px", marginTop: "20px",  width: "100%" }}>
+          <StyledImageWrapper style={{marginLeft: "2vw", marginTop: "2vw"}}>
               <Image
                 src="/images/fun1.png"
                 width="500"
                 height="237"
-                alt="Fun"
+                alt="fun1"
               />
-            </StyledImageWrapper>
-          </div>
-        </Styled2Rows>
+              </StyledImageWrapper>
+        </div>
+
       </div>
-    </Styled2Columns>
+    </StyledColumns>
   )
 }
 
 export function CoreValues(props) {
   return (
-    <Styled2Columns>
-      <div class="column">
-        <StyledImageWrapper style={{ alignContent: "center" , marginRight: "10px"}} >
+    <StyledColumns>
+      <div>
+        <StyledImageWrapper >
           <Image
             src="/images/isiah2.jpeg"
             width="400"
             height="500"
-            alt="Teacher"
+            alt="isiah2"
           />
         </StyledImageWrapper>
       </div>
+      <div style={{ marginTop: "10vw", marginLeft: "10vw" }}>
+        <StyledH2 style={{ textDecoration: "underline" }}>Core Values</StyledH2>
 
-      <div class="column" style={{ alignContent: "center", marginTop: "50px"}}  >
-        <h1>Core Values</h1>
         <StyledCoreValuesList >
           {coreValues.map((value, i) =>
             <StyledCoreValue key={i}>
@@ -269,30 +224,29 @@ export function CoreValues(props) {
           )}
         </StyledCoreValuesList>
       </div>
-    </Styled2Columns>
+    </StyledColumns>
 )}
 
 export function GoalList(props) {
   return (
-    <Styled2Rows>
-      <div class="row">
-        <h1>Goals</h1>
+  
+    <div>
+        <StyledH2 style={{textDecoration: "underline"}}>Goals</StyledH2>
         <StyledGoalList>
           <Goals />
         </StyledGoalList>
-      </div>
 
-      <div class="row">
+      <div style={{ width: "100%", height: "2vw" }}></div>
         <StyledImageWrapper>
           <Image
-            width="1752"
-            height="587"
+            width="1051"
+            height="352"
             src="/images/main.png"
-            alt="goal"
+            alt="main"
           />
         </StyledImageWrapper>
-      </div>
-    </Styled2Rows>
+    </div>
+   
   )
 }
 
@@ -322,11 +276,14 @@ function Goals(props) {
 export function AboutUs(props) {
     return (
       <StyledContainer>
-        <h1>About Us</h1>
+        <StyledH1>About Us</StyledH1>
         <StyledDividerLine />
         <Overview />
+        <div style={{ width: "100%", height: "5vw" }}></div>
         <CoreValues />
+        <div style={{ width: "100%", height: "5vw" }}></div>
         <GoalList />
+    
       </StyledContainer>
     )
 }

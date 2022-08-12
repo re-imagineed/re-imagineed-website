@@ -13,8 +13,8 @@ export function LogoBlackL() {
       <Image
         src="/logo/logo-1280px.png"
         alt="Re-Imagine Education"
-        width={250}
-        height={250}
+        width="250vw"
+        height="250vw"
       />
     </ImageWrapper>
   )

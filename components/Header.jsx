@@ -20,13 +20,12 @@ const StyledHeaderWrapper = styled.div`
     z-index: 1;
     position: sticky;
     top: 0;
-    max-width: 100vw;
+    max-width: 100%;
     height: 60px;
 `
 
 const StyledHeader = styled.header`
   width: 100%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,18 +33,20 @@ const StyledHeader = styled.header`
   background-color: ${(props) => props.theme.sky};
 
   h1 {
-    font-size: 1.2em;
+    // font-size: 1.2em;
+    font-size: calc(1rem + 0.7vw);
     color: ${(props) => props.theme.white};
-    margin: 5px 25px;
+    // margin: 5px 25px;
+    margin: calc(0.2rem + 0.1vw);
 
 
-    @media ${device.mobileM} {
-      font-size: 1.5em;
-    }
+    // @media ${device.mobileM} {
+    //   font-size: 1.5em;
+    // }
 
-    @media ${device.laptop} {
-      font-size: 2em;
-    }
+    // @media ${device.laptop} {
+    //   font-size: 2em;
+    // }
   }
   
   .navigation-bar ul {
@@ -56,7 +57,7 @@ const StyledHeader = styled.header`
     vertical-align:top;
 
     list-style-type: none;
-    margin: 0;
+    margin: calc(0.2rem + 0.1vw);
     padding: 0;
     overflow: hidden;
     position: -webkit-sticky; /* Safari */
@@ -77,14 +78,15 @@ const StyledHeader = styled.header`
     background-color: ${(props) => props.theme.red};
   }
   
-.active {
+  .active {
     background-color: ${(props) => props.theme.yellow};
 `
 
 const StyledContentWrapper = styled.div`
     display: flex;
     justify-content: space-between;
-    margin: 12px 0;
+    // margin: 12px 0;
+    margin: calc(0.1rem + 0.1vw);
     width: 90%;
     max-width: 1400px;
 `
@@ -103,8 +105,8 @@ const StyledLeftContent = styled.div`
 `
 
 const StyledLogoWrapper = styled.div`
-    margin-right: 5px;
-
+    // margin-right: 5px;
+    margin: calc(0.3rem + 0.3vw);
     div {
         height: 0px;
         width: 0px;
@@ -133,22 +135,23 @@ const StyledLogoWrapper = styled.div`
 const StyledNavLink = styled.a`
     display: flex;
     align-items: center;
-    font-size: 1em;
+    // font-size: 1em;
+    font-size: calc(1rem + 0.2vw);
     font-style: normal;
     font-weight: 500;
     color: ${props => props.theme.white};
 
     cursor: pointer;
+    margin: calc(1rem + 1vw)
+    // @media ${device.mobileM} {
+    //     font-size: 1em;
+    //     margin: 5px 0px 5px 20px;
+    // }
 
-    @media ${device.mobileM} {
-        font-size: 1em;
-        margin: 5px 0px 5px 20px;
-    }
-
-    @media ${device.laptop} {
-        font-size: 1.3em;
-        margin: 5px 0px 5px 30px;
-    }
+    // @media ${device.laptop} {
+    //     font-size: 1.3em;
+    //     margin: 5px 0px 5px 30px;
+    // }
 `
 
 const NavMenuButton = styled.button`
@@ -207,35 +210,13 @@ const StyledLinksWrapper = styled.div`
     }
 `
 
-const StyledRedButtonLink = styled.a`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    padding: 15px;
-    border-radius: 5px;
-    border: none;
-    background: ${props => props.theme.red};
-    cursor: pointer;
-    outline: none;
-
-    &:hover {
-        opacity: 1;
-        background: ${props => props.theme.lightblue};
-    }
-
-    font-size: 1.2em;
-    font-weight: 500;
-    color: white;
-`
-
 const StyledButtonLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 1vw;
+    border-radius: 0.2vw;
     border: none;
     background: ${props => props.theme.sky};
     cursor: pointer;
@@ -246,7 +227,7 @@ const StyledButtonLink = styled.a`
         background: ${props => props.theme.lightblue};
     }
 
-    font-size: 1.2em;
+    font-size: calc(1rem + 0.1vw);
     font-weight: 500;
     color: white;
 `
@@ -273,7 +254,7 @@ function Header() {
                 <StyledContentWrapper>
                     <StyledLeftContent>
                         <nav class="navigation-bar">
-                            <h1>Re-Imagine Education</h1>
+                            <h1 style={{marginTop:"2vw"}}>Re-Imagine Education</h1>
                             <ul>
                                 {isTabletOrDesktop === true
                                     ?
@@ -296,16 +277,17 @@ function Header() {
                             </ul>
                         </nav>
                     </StyledLeftContent>
-                    <StyledRightContent>
- 
+                    <StyledRightContent style={{marginTop: "4vw"}}>
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>
-                        <div style={{ width: "15px", height: "100%" }}></div>
-                        <Link href="https://tinyurl.com/redonations"><a><StyledRedButtonLink>Donate</StyledRedButtonLink></a></Link>
-                        <div style={{ width: "15px", height: "100%" }}></div>
+                        <div style={{ display: "flex", flexDirection: "row"}}>
+                        <Link href="https://tinyurl.com/redonations"><a><StyledButtonLink style={{background: "red"}}>Donate</StyledButtonLink></a></Link>
+                        <div style={{ width: "2vw"}}></div>
                         <Link href="https://us7.list-manage.com/contact-form?u=5080e466c5f746c8b294721bc&form_id=e8ae05aca1f8eaf2371061d59e2e7222"><a><StyledButtonLink>Contact Us</StyledButtonLink></a></Link>
-                        <li><Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link></li>
+                        <div style={{ width: "1vw"}}></div>
+                        <Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link>
+                        </div>
          
                     </StyledRightContent>
                 
