@@ -215,8 +215,8 @@ const StyledRedButtonLink = styled.a`
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 0.2vw;
+    border-radius: 1vw;
     border: none;
     background: ${props => props.theme.red};
     cursor: pointer;
@@ -238,8 +238,8 @@ const StyledButtonLink = styled.a`
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding: 15px;
-    border-radius: 5px;
+    padding: 1vw;
+    border-radius: 0.2vw;
     border: none;
     background: ${props => props.theme.sky};
     cursor: pointer;
@@ -250,7 +250,7 @@ const StyledButtonLink = styled.a`
         background: ${props => props.theme.lightblue};
     }
 
-    font-size: 1.2em;
+    font-size: calc(1rem + 0.1vw);
     font-weight: 500;
     color: white;
 `
@@ -300,15 +300,17 @@ function Header() {
                             </ul>
                         </nav>
                     </StyledLeftContent>
-                    <StyledRightContent style={{marginRight: "2vw"}}>
+                    <StyledRightContent>
                         <StyledLogoWrapper>
                             <LogoWhiteS />
                         </StyledLogoWrapper>
-                        <div style={{ width: "15px", height: "100%" }}></div>
-                        <Link href="https://tinyurl.com/redonations"><a><StyledRedButtonLink>Donate</StyledRedButtonLink></a></Link>
-                        <div style={{ width: "15px", height: "100%" }}></div>
+                        <div style={{ display: "flex", flexDirection: "row"}}>
+                        <Link href="https://tinyurl.com/redonations"><a><StyledButtonLink style={{background: "red"}}>Donate</StyledButtonLink></a></Link>
+                        <div style={{ width: "2vw"}}></div>
                         <Link href="https://us7.list-manage.com/contact-form?u=5080e466c5f746c8b294721bc&form_id=e8ae05aca1f8eaf2371061d59e2e7222"><a><StyledButtonLink>Contact Us</StyledButtonLink></a></Link>
+                        <div style={{ width: "1.5vw"}}></div>
                         <Link href="#subscribe"><StyledNavLink>Subscribe</StyledNavLink></Link>
+                        </div>
          
                     </StyledRightContent>
                 

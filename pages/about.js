@@ -122,30 +122,6 @@ export const StyledColumns = styled.div`
   margin-left: 0;
   width: 100%
 
-  // .h1-fluid {
-  //   font-weight: bold;
-  //   font-size: calc(1rem + 0.7vw);
-  //   line-height: calc(1.4rem + 2vw);
-  //   text-decoration: underline;
-  // }
-
-  // .h2-fluid {
-  //   font-weight: bold;
-  //   font-size: calc(1rem + 0.5vw);
-  //   line-height: calc(1rem + 0.9vw);
-  //   text-decoration: underline;
-  // }
-
-  // .h3-fluid {
-  //   font-size: calc(1rem + 0.2vw);
-  //   line-height: calc(1rem + 0.8vw);
-  // }
-
-  // .p-fluid {
-  //   font-size: calc(1rem + 0.1vw);
-  //   line-height: calc(1rem + 0.2vw);
-  // }
-
   @media ${device.tablet} {
     flex-direction: column;
     margin: 0;
