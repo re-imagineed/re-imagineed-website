@@ -77,14 +77,14 @@ function Home(props) {
                 </StyledP1>
               </div>
               <div>
-              <StyledBigImageWrapper style={{ marginTop: "2vw", width: "100%" }}>
-                <Image
-                  width="2016"
-                  height="1512"
-                  src="/images/team1.png"
-                  alt="team1"
-                />
-              </StyledBigImageWrapper>
+                <StyledBigImageWrapper style={{ marginTop: "2vw", width: "100%" }}>
+                  <Image
+                    width="2016"
+                    height="1512"
+                    src="/images/team1.jpeg"
+                    alt="team1"
+                  />
+                </StyledBigImageWrapper>
               </div>
             </StyledColumns>
           </StyledSection>
