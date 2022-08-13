@@ -12,7 +12,7 @@ import Image from 'next/image'
 import Team from './team'
 
 const StyledLogoWrapper = styled.div`
-  display: flex;
+  display: column;
   justify-content: center;
   align-content: center;
   max-width: 100%;
@@ -68,23 +68,24 @@ function Home(props) {
           <StyledSectionAnchor id={"home"} />
           <StyledSection index={0}>
             <StyledColumns>
-              <div style={{marginTop: "5vw", marginRight: "1vw"}}>
-                  <StyledH1 style={{marginLeft: "5vw"}}>Re-Imagine Education, Inc.</StyledH1>
-                  <StyledP1>
-                    Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
-                  </StyledP1>
-                  <StyledLogoWrapper>
-                    <LogoBlackL />
-                  </StyledLogoWrapper>
-                  </div>
-                <StyledBigImageWrapper style={{marginTop: "2vw", width: "100%"}}>
-                  <Image
-                    width="975"
-                    height="731"
-                    src="/images/team1.jpeg"
-                    alt="team1"
-                  />
-                </StyledBigImageWrapper>
+              <div style={{ marginTop: "3vw", marginRight: "1vw" }}>
+                <StyledLogoWrapper>
+                  <LogoBlackL />
+                </StyledLogoWrapper>
+                <StyledP1>
+                  Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
+                </StyledP1>
+              </div>
+              <div>
+              <StyledBigImageWrapper style={{ marginTop: "2vw", width: "100%" }}>
+                <Image
+                  width="2016"
+                  height="1512"
+                  src="/images/team1.png"
+                  alt="team1"
+                />
+              </StyledBigImageWrapper>
+              </div>
             </StyledColumns>
           </StyledSection>
 

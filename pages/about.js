@@ -102,7 +102,7 @@ export const  StyledGoalWrapper = styled.p`
     }
 
     dl dd {
-      margin: 0 0 0 0px;
+      margin: 0 0 0 0.5vw;
       padding: 0 0 0.5em 0;
     }
 
@@ -213,7 +213,7 @@ export function CoreValues(props) {
           />
         </StyledImageWrapper>
       </div>
-      <div style={{ marginTop: "10vw", marginLeft: "10vw" }}>
+      <div style={{ marginTop: "5vw", marginLeft: "10vw" }}>
         <StyledH2 style={{ textDecoration: "underline" }}>Core Values</StyledH2>
 
         <StyledCoreValuesList >
@@ -279,9 +279,9 @@ export function AboutUs(props) {
         <StyledH1>About Us</StyledH1>
         <StyledDividerLine />
         <Overview />
-        <div style={{ width: "100%", height: "5vw" }}></div>
+        <div style={{ width: "100%", height: "3vw" }}></div>
         <CoreValues />
-        <div style={{ width: "100%", height: "5vw" }}></div>
+        <div style={{ width: "100%", height: "3vw" }}></div>
         <GoalList />
     
       </StyledContainer>
