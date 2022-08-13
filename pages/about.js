@@ -174,28 +174,27 @@ export function Overview(props) {
         <StyledP2>{overviewCopy[10]}</StyledP2>
       </div>
 
-      <div>
-        <div style={{ marginTop: "2vw", marginLeft:"2vw" }}>
-          <StyledImageWrapper>
-            <Image
-              src="/images/learn.png"
-              width="1031"
-              height="695"
-              alt="learn"
-            />
-          </StyledImageWrapper>
 
-          <StyledImageWrapper style={{marginLeft: "2vw", marginTop: "2vw"}}>
-              <Image
-                src="/images/fun1.png"
-                width="500"
-                height="237"
-                alt="fun1"
-              />
-              </StyledImageWrapper>
-        </div>
+      <div style={{ marginTop: "2vw", marginLeft: "2vw" }}>
+        <StyledImageWrapper>
+          <Image
+            src="/images/learn.png"
+            width="1031"
+            height="695"
+            alt="learn"
+          />
+        </StyledImageWrapper>
 
+        <StyledImageWrapper style={{ marginTop: "2vw", marginLeft: "2vw" }}>
+          <Image
+            src="/images/fun1.png"
+            width="500"
+            height="237"
+            alt="fun1"
+          />
+        </StyledImageWrapper>
       </div>
+
     </StyledColumns>
   )
 }
