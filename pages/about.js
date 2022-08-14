@@ -102,7 +102,7 @@ export const  StyledGoalWrapper = styled.p`
     }
 
     dl dd {
-      margin: 0 0 0 0px;
+      margin: 0 0 0 0.5vw;
       padding: 0 0 0.5em 0;
     }
 
@@ -174,28 +174,27 @@ export function Overview(props) {
         <StyledP2>{overviewCopy[10]}</StyledP2>
       </div>
 
-      <div>
-        <div style={{ marginTop: "2vw", marginLeft:"2vw" }}>
-          <StyledImageWrapper>
-            <Image
-              src="/images/learn.png"
-              width="1031"
-              height="695"
-              alt="learn"
-            />
-          </StyledImageWrapper>
 
-          <StyledImageWrapper style={{marginLeft: "2vw", marginTop: "2vw"}}>
-              <Image
-                src="/images/fun1.png"
-                width="500"
-                height="237"
-                alt="fun1"
-              />
-              </StyledImageWrapper>
-        </div>
+      <div style={{ marginTop: "2vw", marginLeft: "2vw" }}>
+        <StyledImageWrapper>
+          <Image
+            src="/images/learn.png"
+            width="1031"
+            height="695"
+            alt="learn"
+          />
+        </StyledImageWrapper>
 
+        <StyledImageWrapper style={{ marginTop: "2vw", marginLeft: "2vw" }}>
+          <Image
+            src="/images/fun1.png"
+            width="500"
+            height="237"
+            alt="fun1"
+          />
+        </StyledImageWrapper>
       </div>
+
     </StyledColumns>
   )
 }
@@ -213,7 +212,7 @@ export function CoreValues(props) {
           />
         </StyledImageWrapper>
       </div>
-      <div style={{ marginTop: "10vw", marginLeft: "10vw" }}>
+      <div style={{ marginTop: "5vw", marginLeft: "10vw" }}>
         <StyledH2 style={{ textDecoration: "underline" }}>Core Values</StyledH2>
 
         <StyledCoreValuesList >
@@ -279,9 +278,9 @@ export function AboutUs(props) {
         <StyledH1>About Us</StyledH1>
         <StyledDividerLine />
         <Overview />
-        <div style={{ width: "100%", height: "5vw" }}></div>
+        <div style={{ width: "100%", height: "3vw" }}></div>
         <CoreValues />
-        <div style={{ width: "100%", height: "5vw" }}></div>
+        <div style={{ width: "100%", height: "3vw" }}></div>
         <GoalList />
     
       </StyledContainer>
