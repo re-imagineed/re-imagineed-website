@@ -3,11 +3,11 @@ import { LogoBlackL } from '../components/Logo'
 import _Head from '../components/Head'
 import { device } from '../utils/media-breakpoints'
 import { useMediaQuery } from 'react-responsive'
-import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledH1, StyledP1} from '../components/Styled'
+import { StyledContainer, StyledMain, StyledSection, StyledSectionContentWrapper, StyledSectionAnchor, StyledP1} from '../components/Styled'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import SubscribeBanner from '../components/SubscribeBanner'
-import AboutUs from './about'
+import {AboutUs, StyledImageWrapper, StyledColumns} from './about'
 import Image from 'next/image'
 import Team from './team'
 
@@ -18,40 +18,6 @@ const StyledLogoWrapper = styled.div`
   max-width: 100%;
   height: auto;
   margin: calc(2rem + 2vw);
-`
-
-const StyledBigImageWrapper = styled.div`
-  display: flex;
-  max-width: 100%;
-  margin: auto;
-  height: auto;
-  align-content: center;
-
-  @media ${device.laptop} {
-    // max-width: 1024px;
-    // min-width: 200px;
-    margin: ${props => props.justified == "right" ? "0px 0px 0px 10px" : "0px 10px 0px 0px"};
-  }
-`
-
-const StyledColumns = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  padding: calc(4rem + 0.2vw);
-  margin: calc(0.1rem + 1vw);
-  height: auto;
-  margin-left: 0;
-
-  @media ${device.tablet} {
-    flex-direction: column;
-  }
-
-  @media ${device.laptop} {
-    flex-direction: row;
- }
 `
 
 function Home(props) {
@@ -67,8 +33,9 @@ function Home(props) {
         <StyledMain>
           <StyledSectionAnchor id={"home"} />
           <StyledSection index={0}>
-            <StyledColumns>
-              <div style={{ marginTop: "3vw", marginRight: "1vw" }}>
+            <StyledColumns style={{ margin: "calc(0.5rem + 1vw)", marginLeft: "0.5vw", padding: "calc(2rem + 0.2vw)" }}>
+            
+              <div style={{ marginTop: "2vw", marginRight: "1vw" }}>
                 <StyledLogoWrapper>
                   <LogoBlackL />
                 </StyledLogoWrapper>
@@ -76,16 +43,15 @@ function Home(props) {
                   Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
                 </StyledP1>
               </div>
-              <div>
-                <StyledBigImageWrapper style={{ marginTop: "2vw", width: "100%" }}>
-                  <Image
-                    width="2016"
-                    height="1512"
-                    src="/images/team1.jpeg"
-                    alt="team1"
-                  />
-                </StyledBigImageWrapper>
-              </div>
+
+              <StyledImageWrapper style={{ marginTop: "5vw", width: "100%", border: "0" }}>
+                <Image
+                  width="2016"
+                  height="1512"
+                  src="/images/team1.jpeg"
+                  alt="team1"
+                />
+              </StyledImageWrapper>
             </StyledColumns>
           </StyledSection>
 
