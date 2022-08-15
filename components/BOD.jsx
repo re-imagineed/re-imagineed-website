@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import Image from 'next/image'
 import { device } from '../utils/media-breakpoints'
-import { StyledColumns, StyledImageWrapper, StyledImageLearn, StyledImageIsiah1, StyledIsiahKeith, StyledImageFun2 } from '../pages/about'
+import { StyledColumns, StyledImageWrapper} from '../pages/about'
 
 const StyledBODWrapper = styled.article`
     display: flex;
@@ -9,12 +9,6 @@ const StyledBODWrapper = styled.article`
     // margin: 10px 10px;
     margin: calc(1rem + 1vw);
     margin-left: 0;
-    h2 {
-      margin: 0;
-      margin-bottom: 0px;
-      text-decoration: underline;
-      font-weight: bold;
-    }
 
     .h2-fluid {
       font-size: calc(1rem + 0.5vw);
@@ -22,14 +16,7 @@ const StyledBODWrapper = styled.article`
       text-decoration: underline;
       font-weight: bold;
     }
-    
-    .h3-fluid {
-      font-size: calc(1rem + 0.4vw);
-      line-height: calc(1.4rem + 1vw);
-    }
-    li {
-      margin-left: 20px;
-    }
+  
 `
 const StyledNameWrapper = styled.div`
     display: flex;
@@ -40,17 +27,14 @@ const StyledNameWrapper = styled.div`
 
     margin: 0px 0px 0px 0px;
 
-    h3 {
-      margin: 0;
-      margin-bottom: 0px;
-      font-weight: bold;
-      font-size: 1.3em;
-      line-height: 1.3em;
+    .h3-fluid {
+      font-size: calc(1rem + 0.3vw);
+      line-height: calc(1rem + 1vw);
     }
 
-    @media ${device.laptop} {
-        margin: 0 10px;
-    }
+    // @media ${device.laptop} {
+    //     margin: 0 1vw;
+    // }
 `
 
 const bodMembers = [
@@ -63,7 +47,7 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-    <StyledColumns style={{marginTop:"5vw", marginLeft: "5vw"}}>
+    <StyledColumns style={{ marginTop: "5vw", marginLeft: "5vw" }}>
       <div>
         < StyledImageWrapper>
           <Image
@@ -74,21 +58,19 @@ function BoardOfDirectors(props) {
           />
         </StyledImageWrapper>
       </div>
-      <div style={{marginLeft: "8vw"}}>
+      <div style={{ marginLeft: "8vw", width: "100%" }}>
         <StyledBODWrapper>
           <div style={{ width: "100%", height: "2vw" }}></div>
           <div class="h2-fluid">Board Of Directors</div>
-          <div style={{ width: "100%", height: "1vw" }}></div>
-         
-          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[0]}</div></StyledNameWrapper></li>
-          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[1]}</div></StyledNameWrapper></li>
-          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[2]}</div></StyledNameWrapper></li>
-          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[3]}</div></StyledNameWrapper></li>
-          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[4]}</div></StyledNameWrapper></li>
-
+          <ul>
+            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[0]}</div></StyledNameWrapper></li>
+            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[1]}</div></StyledNameWrapper></li>
+            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[2]}</div></StyledNameWrapper></li>
+            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[3]}</div></StyledNameWrapper></li>
+            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[4]}</div></StyledNameWrapper></li>
+          </ul>
         </StyledBODWrapper>
-       </div>
-
+      </div>
     </StyledColumns>
   )
 }
