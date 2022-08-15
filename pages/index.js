@@ -35,7 +35,7 @@ function Home(props) {
           <StyledSection index={0}>
             <StyledColumns style={{ margin: "calc(0.5rem + 1vw)", marginLeft: "0.5vw", padding: "calc(2rem + 0.2vw)" }}>
             
-              <div style={{ marginTop: "2vw", marginRight: "1vw" }}>
+              <div style={{ marginTop: "6vw", marginRight: "1vw" }}>
                 <StyledLogoWrapper>
                   <LogoBlackL />
                 </StyledLogoWrapper>
