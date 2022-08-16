@@ -33,7 +33,7 @@ function Home(props) {
         <StyledMain>
           <StyledSectionAnchor id={"home"} />
           <StyledSection index={0}>
-            <StyledColumns style={{ margin: "calc(0.5rem + 1vw)", marginLeft: "0.5vw", padding: "calc(2rem + 0.2vw)" }}>
+            <StyledColumns style={{ margin: "calc(0.5rem + 1vw)", marginLeft: "0.5vw", marginTop: "5vw", padding: "calc(2rem + 0.2vw)" }}>
 
               <div style={{ display: "block", margin: "auto", width: "100%" }}>
                 <StyledLogoWrapper>

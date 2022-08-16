@@ -47,8 +47,8 @@ const bodMembers = [
 
 function BoardOfDirectors(props) {
   return (
-    <StyledColumns style={{ marginTop: "5vw", marginLeft: "5vw" }}>
-      <div>
+    <StyledColumns style={{ marginTop: "5vw" }}>
+      <div  style={{ display: "block", marginLeft: "5vw"}}>
         < StyledImageWrapper>
           <Image
             src="/images/fun2.png"
@@ -58,19 +58,19 @@ function BoardOfDirectors(props) {
           />
         </StyledImageWrapper>
       </div>
-      <div style={{ marginLeft: "8vw", width: "100%" }}>
-        <StyledBODWrapper>
-          <div style={{ width: "100%", height: "2vw" }}></div>
-          <div class="h2-fluid">Board Of Directors</div>
-          <ul>
-            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[0]}</div></StyledNameWrapper></li>
-            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[1]}</div></StyledNameWrapper></li>
-            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[2]}</div></StyledNameWrapper></li>
-            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[3]}</div></StyledNameWrapper></li>
-            <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[4]}</div></StyledNameWrapper></li>
-          </ul>
-        </StyledBODWrapper>
-      </div>
+
+      <StyledBODWrapper style={{marginLeft: "5vw"}}>
+        <div style={{ width: "100%", height: "2vw" }}></div>
+        <div class="h2-fluid">Board Of Directors</div>
+        <ul>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[0]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[1]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[2]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[3]}</div></StyledNameWrapper></li>
+          <li><StyledNameWrapper><div class="h3-fluid">{bodMembers[4]}</div></StyledNameWrapper></li>
+        </ul>
+      </StyledBODWrapper>
+
     </StyledColumns>
   )
 }
