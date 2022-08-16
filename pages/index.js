@@ -34,17 +34,17 @@ function Home(props) {
           <StyledSectionAnchor id={"home"} />
           <StyledSection index={0}>
             <StyledColumns style={{ margin: "calc(0.5rem + 1vw)", marginLeft: "0.5vw", padding: "calc(2rem + 0.2vw)" }}>
-            
-              <div style={{ marginTop: "6vw", marginRight: "1vw" }}>
+
+              <div style={{ display: "block", margin: "auto", width: "100%" }}>
                 <StyledLogoWrapper>
                   <LogoBlackL />
                 </StyledLogoWrapper>
-                <StyledP1>
+                <StyledP1 style={{ margin: "auto", width: "80%" }}>
                   Re-Imagine Education, Inc. is a non-profit 501(c)(3) with a mission to attract BIPOC talent to education careers and leverage intentional pathways for retention, career grooming, and upward mobility through meaningful mentorship channels.
                 </StyledP1>
               </div>
 
-              <StyledImageWrapper style={{ marginTop: "5vw", width: "100%", border: "0" }}>
+              <StyledImageWrapper style={{ display: "block", margin: "auto", border: "0" }}>
                 <Image
                   width="2016"
                   height="1512"
