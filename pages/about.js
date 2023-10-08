@@ -205,10 +205,10 @@ export function CoreValues(props) {
       <div>
         <StyledImageWrapper >
           <Image
-            src="/images/isiah2.jpeg"
+            src="/images/core_values.png"
             width="400"
             height="500"
-            alt="isiah2"
+            alt="core_values"
           />
         </StyledImageWrapper>
       </div>
@@ -238,10 +238,10 @@ export function GoalList(props) {
       <div style={{ width: "100%", height: "2vw" }}></div>
         <StyledImageWrapper>
           <Image
-            width="1051"
-            height="352"
-            src="/images/main.png"
-            alt="main"
+            width="400"
+            height="500"
+            src="/images/goals.png"
+            alt="goals"
           />
         </StyledImageWrapper>
     </div>

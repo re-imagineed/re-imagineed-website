@@ -45,7 +45,7 @@ const theme = {
   yellow: '#FFCB11',
   white: '#FFFFFF',
   green: '#41A87F',
-  orange: '#F8A645',
+  orange: '#FFA500',
   red: '#CF4749'
 }
 
