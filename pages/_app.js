@@ -27,7 +27,7 @@ const theme = {
 
   // #37 Sunny Citrus of https://www.canva.com/learn/100-color-combinations/
   citrus: '#faaf08',
-  grapefruit: '#fa812f',
+  grapefruit: '#ff6900',
   ruby_red: '#fa4032',
   off_white37: '#fef3e2',
 

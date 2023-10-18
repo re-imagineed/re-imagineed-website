@@ -7,11 +7,11 @@ const teamMembers = [
   {
     name: "Isiah King",
     title: "Co-Founder & Co-Chief Executive Officer",
-    imageURL: "/images/isiah_5x4_cropped.png",
-    imageDimensions: { width: 340, height: 272},
+    imageURL: "/images/isiah_headshot.png",
+    imageDimensions: { width: 280, height: 272},
     copy: [
-      "Isiah King has served in public, charter, and private schools for over 16 years. Isiah has consulted and facilitated training and workshops in schools, districts, and networks to improve in a variety of areas including instructional coaching, culturally responsive practices, educational equity, restorative practice, and leadership development.",
-      "Isiah brings best practices he’s learned regarding how to serve historically underserved students at an exceptionally high level. Isiah is charged with creating vibrant school cultures that support bold student achievement outcomes. He leads through a strong commitment to diversity and inclusiveness, assisting schools to build critical mindsets and tangible skill sets so school leaders and teachers can implement that vision with a high level of success."
+      "As a strategist, Isiah brings a wealth of knowledge of best practices on how to best serve historically underserved students at an exceptionally high level. Through a commitment to equity, diversity, and inclusivity, he assists teams in developing critical mindsets and tangible skill sets so that educational leaders can achieve high levels of success.",
+      "Isiah is a Partner at Fulcrum Education Solutions and Chief Executive Officer of Re-Imagine Education, Inc. He spent over 19 years in various roles through-out the EDTech sector and K-12 schools. Isiah’s impact has involved helping schools nationwide and internationally improve systems and structures that support bold student achievement outcomes."
     ]
   },
   {

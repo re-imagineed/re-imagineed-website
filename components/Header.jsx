@@ -282,7 +282,7 @@ function Header() {
                             <LogoWhiteS />
                         </StyledLogoWrapper>
                         <div style={{ display: "flex", flexDirection: "row"}}>
-                        <Link href="https://tinyurl.com/redonations"><a><StyledButtonLink style={{background: "red"}}>Donate</StyledButtonLink></a></Link>
+                        <Link href="https://givebutter.com/JQ4JgN"><a><StyledButtonLink style={{background: "red"}}>Donate</StyledButtonLink></a></Link>
                         <div style={{ width: "2vw"}}></div>
                         <Link href="https://us7.list-manage.com/contact-form?u=5080e466c5f746c8b294721bc&form_id=e8ae05aca1f8eaf2371061d59e2e7222"><a><StyledButtonLink>Contact Us</StyledButtonLink></a></Link>
                         <div style={{ width: "1vw"}}></div>
