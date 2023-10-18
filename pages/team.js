@@ -8,7 +8,7 @@ const teamMembers = [
     name: "Isiah King",
     title: "Co-Founder & Co-Chief Executive Officer",
     imageURL: "/images/isiah_headshot.png",
-    imageDimensions: { width: 300, height: 272},
+    imageDimensions: { width: 280, height: 272},
     copy: [
       "As a strategist, Isiah brings a wealth of knowledge of best practices on how to best serve historically underserved students at an exceptionally high level. Through a commitment to equity, diversity, and inclusivity, he assists teams in developing critical mindsets and tangible skill sets so that educational leaders can achieve high levels of success.",
       "Isiah is a Partner at Fulcrum Education Solutions and Chief Executive Officer of Re-Imagine Education, Inc. He spent over 19 years in various roles through-out the EDTech sector and K-12 schools. Isiah’s impact has involved helping schools nationwide and internationally improve systems and structures that support bold student achievement outcomes."
