@@ -5,7 +5,7 @@ import {StyledContainer,StyledP1, StyledP2, StyledDividerLine, StyledInlineLink,
 import { device } from '../utils/media-breakpoints'
 
 const overviewCopy = [
-  "Our mission is to attract, retain,and elevate educators of color. To create a culture of inclusivity through mentorship, accountability, and partnership.",
+  "Our mission is to attract, retain, and elevate educators of color. To create a culture of inclusivity through mentorship, accountability, and partnership.",
   "Re-Imagine Education was created by Isiah King and Keith Streicher, who have more than a decade of education experience at the K-12 and University level. Our purpose is to:",
   "Offer embed equity and cultural responsiveness in teacher preparation and professional learning",
   "Support for teachers during critical early years",
@@ -141,7 +141,7 @@ export const StyledImageWrapper = styled.div`
   max-width: 1200px;
   // min-width: 200px;
   // margin: auto;
-  align-content: left;
+  align-content: center;
 
 `
 
